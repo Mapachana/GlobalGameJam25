@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://btj21b5h01xqm"]
+
+[ext_resource type="Script" path="res://Scenes/muñeco_prueba.gd" id="1_gm3yw"]
+[ext_resource type="Texture2D" uid="uid://dy1k8rwor08e8" path="res://Music/prueba/rectanguloverde.png" id="1_v8a48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljjr1"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_gm3yw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(7.25, 7.25)
+shape = SubResource("RectangleShape2D_ljjr1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_v8a48")
