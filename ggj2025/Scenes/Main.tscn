@@ -219,7 +219,7 @@ offset_bottom = 40.0
 texture = ExtResource("34_kqd0y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(2635, 607)
+position = Vector2(2629, 607)
 scale = Vector2(5.9375, 5.9375)
 color = Color(0.955473, 0.306717, 0, 1)
 energy = 1.4
