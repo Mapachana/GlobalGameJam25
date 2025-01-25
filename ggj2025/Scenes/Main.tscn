@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=93 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
+[ext_resource type="PackedScene" uid="uid://b2u36kir16up8" path="res://Scenes/gato.tscn" id="64_64fbg"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -799,3 +800,6 @@ texture = ExtResource("60_undnq")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2164, -1210)
 texture = ExtResource("61_v8jou")
+
+[node name="gato" parent="." instance=ExtResource("64_64fbg")]
+position = Vector2(932, 552)
