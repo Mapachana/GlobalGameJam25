@@ -2,6 +2,8 @@ extends Node
 
 # Nodo musica del nivel
 var nodo_musica = null
+var nodo_ambiente = null
+var nodo_ambiente2 = null
 
 # Contador de decisiones del nivel
 var cont_decision = null

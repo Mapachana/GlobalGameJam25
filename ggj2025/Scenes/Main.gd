@@ -27,6 +27,8 @@ var cont_decision = 0
 func _ready():
 	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
+	ScriptGlobal.nodo_ambiente = $audioambiente
+	ScriptGlobal.nodo_ambiente2 = $audioambiente2
 	ScriptGlobal.cont_decision = cont_decision
 	pass # Replace with function body.
 

@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://c70njrpj2p2vw" path="res://Images/pj IDLE/idle0006.png" id="11_w25dd"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dttyofobqp1p3" path="res://Images/pj IDLE/idle0007.png" id="12_y5rp1"]
 [ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
@@ -64,7 +64,7 @@
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
-[ext_resource type="PackedScene" path="res://Scenes/gato.tscn" id="64_64fbg"]
+[ext_resource type="PackedScene" uid="uid://b2u36kir16up8" path="res://Scenes/gato.tscn" id="64_64fbg"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -99,6 +99,21 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="Animation" id="Animation_8a7xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_nn3at"]
 resource_name = "new_animation"
 length = 2.0
@@ -114,21 +129,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.0698132, 0.0698132, -0.0698132]
-}
-
-[sub_resource type="Animation" id="Animation_8a7xt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uetyg"]
@@ -936,3 +936,7 @@ texture = ExtResource("61_v8jou")
 
 [node name="gato" parent="." instance=ExtResource("64_64fbg")]
 position = Vector2(932, 552)
+
+[node name="audioambiente" type="AudioStreamPlayer" parent="."]
+
+[node name="audioambiente2" type="AudioStreamPlayer" parent="."]
