@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=11 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
 [ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="5_ktr3t"]
+[ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
+[ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
 radius = 14.3333
@@ -67,3 +69,11 @@ zoom = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sala2"]
 position = Vector2(1831, 398)
 shape = SubResource("RectangleShape2D_0jp81")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_t5vac")
+autoplay = true
+parameters/looping = true
+
+[node name="Area2D" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(981, 411)
