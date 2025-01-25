@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvbcywxsht86n"
+path="res://.godot/imported/Music Box (no-FX).wav-b4eab9389d863f7d578603a69041ce5e.sample"
+
+[deps]
+
+source_file="res://Music/fondo_fx/Music Box (no-FX).wav"
+dest_files=["res://.godot/imported/Music Box (no-FX).wav-b4eab9389d863f7d578603a69041ce5e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

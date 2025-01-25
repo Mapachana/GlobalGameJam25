@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnfc7rlhsbsvt"
+path="res://.godot/imported/Ambiente 2 (no-FX).wav-bfde78c38bf1bec9d90c250bf9920ddb.sample"
+
+[deps]
+
+source_file="res://Music/fondo_fx/Ambiente 2 (no-FX).wav"
+dest_files=["res://.godot/imported/Ambiente 2 (no-FX).wav-bfde78c38bf1bec9d90c250bf9920ddb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
