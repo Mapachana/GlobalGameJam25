@@ -16,6 +16,7 @@ var camera_follows = false #si la cámara está siguiendo al jugador
 var x_movement = true #si el movimiento es horizontal
 var target_threshold = 0
 var room = 0;
+var has_started = false
 
 # Contador de decisiones
 var cont_decision = 0
@@ -29,7 +30,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") && not has_started:
+		has_started = true
 		intro_animation()
 	
 	if camera_follows:

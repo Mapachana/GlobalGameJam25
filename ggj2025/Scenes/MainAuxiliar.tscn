@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cep4p040035fl"]
+[gd_scene load_steps=47 format=3 uid="uid://do1twlpqybkgf"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
