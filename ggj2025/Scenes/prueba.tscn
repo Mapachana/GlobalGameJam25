@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://3wm5y65ri0x6"]
+[gd_scene load_steps=7 format=3 uid="uid://3wm5y65ri0x6"]
 
 [ext_resource type="Script" path="res://Scenes/prueba.gd" id="1_poksu"]
-[ext_resource type="PackedScene" uid="uid://btj21b5h01xqm" path="res://Scenes/Muñeco_prueba.tscn" id="1_y22r5"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="2_3bkv4"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="3_amcv3"]
+[ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_q6q2s"]
+[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="5_28owb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ktt1m"]
+radius = 14.3333
+height = 46.6667
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_poksu")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_y22r5")]
 
 [node name="Area2D" parent="." instance=ExtResource("2_3bkv4")]
 position = Vector2(429, 12)
@@ -18,3 +21,15 @@ stream = ExtResource("3_amcv3")
 autoplay = true
 playback_type = 1
 parameters/looping = true
+
+[node name="PJ" type="CharacterBody2D" parent="."]
+position = Vector2(105.84, 119.265)
+motion_mode = 1
+script = ExtResource("4_q6q2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="PJ"]
+texture = ExtResource("5_28owb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PJ"]
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_ktt1m")

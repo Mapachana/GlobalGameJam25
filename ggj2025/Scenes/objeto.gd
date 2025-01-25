@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 	pass
 
 
+# Si el personaje elige este objeto paro la musica y reproduzco el trozo de cancion y efectos
 func _on_body_entered(body: Node2D) -> void:
 	$Sprite2D.hide()
 	$CollisionShape2D.queue_free()
@@ -24,6 +25,7 @@ func _on_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 
 
+# Una vez ha terminado la cancion y efectos pongo la musica desde el principio
 func _on_audio_stream_player_finished() -> void:
 	ScriptGlobal.nodo_musica.play()
 	queue_free()
