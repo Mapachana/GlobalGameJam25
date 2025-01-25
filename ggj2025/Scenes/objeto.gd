@@ -55,7 +55,8 @@ func _process(delta: float) -> void:
 
 # Si esta en el area:
 func _on_body_entered(body: Node2D) -> void:
-	perso_en_area = true
+	if body.is_in_group("pj"):
+		perso_en_area = true
 
 	pass 
 	

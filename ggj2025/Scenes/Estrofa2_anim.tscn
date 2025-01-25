@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://co1y2smwhfuv7"]
 
-[ext_resource type="Texture2D" uid="uid://bfmy6g4yytdjr" path="res://Images/DRAMA.png" id="1_xfm2x"]
+[ext_resource type="Texture2D" uid="uid://ckwgs27kt2ixq" path="res://Images/cosas salon/salon fondo.png" id="1_ehdg2"]
 
 [sub_resource type="Gradient" id="Gradient_m4pro"]
 offsets = PackedFloat32Array(0.547718, 0.962656, 1)
@@ -87,7 +87,7 @@ _data = {
 modulate = Color(1, 1, 1, 0)
 position = Vector2(721, 410)
 scale = Vector2(1.26957, 1.26957)
-texture = ExtResource("1_xfm2x")
+texture = ExtResource("1_ehdg2")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 offset_left = 1141.0

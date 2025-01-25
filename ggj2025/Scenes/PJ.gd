@@ -16,6 +16,7 @@ func _ready():
 	tween = get_tree().create_tween()
 	rotation = deg_to_rad(-target_angle)
 	start_rotation()
+	self.add_to_group("pj")
 
 
 func start_rotation():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=75 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
 [ext_resource type="Texture2D" uid="uid://bid536u4ornod" path="res://Images/estudio sucio.jpg" id="5_2dtpk"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
-[ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
 [ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
@@ -46,14 +45,25 @@
 [ext_resource type="Texture2D" uid="uid://c3ewlmdqv23a" path="res://Images/ilum suelo buhardilla.png" id="41_qlss1"]
 [ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
 [ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
+[ext_resource type="Texture2D" uid="uid://bv2ml5jl1tdb8" path="res://Images/suelo detalle salon 2.png" id="43_pxu3q"]
+[ext_resource type="Texture2D" uid="uid://b35qjo2ntd7tm" path="res://Images/salon luz 2.png" id="44_r4hhc"]
 [ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
 [ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
 [ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
 [ext_resource type="Texture2D" uid="uid://ddbdc28moknao" path="res://Images/cosas salon/sofa y reposapies.png" id="48_d4wyc"]
 
-[sub_resource type="Gradient" id="Gradient_7gbkl"]
-offsets = PackedFloat32Array(0, 0.0266667, 1)
-colors = PackedColorArray(0.220588, 0.220588, 0.220588, 1, 0.833439, 0.679624, 0.389241, 1, 1, 1, 1, 1)
+[sub_resource type="Gradient" id="Gradient_hwerc"]
+offsets = PackedFloat32Array(0.346154, 0.700855, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_548se"]
+gradient = SubResource("Gradient_hwerc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_dxhqh"]
+_data = [Vector2(0.103704, 0.266768), 0.0, 0.0, 0, 0, Vector2(0.52963, 0.980183), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -342,39 +352,36 @@ position = Vector2(-487.807, 281)
 scale = Vector2(0.996542, 1)
 texture = ExtResource("5_0lyv4")
 
-[node name="Cuadro" type="Sprite2D" parent="Salon"]
-position = Vector2(404.098, -77)
-scale = Vector2(0.996542, 1)
-texture = ExtResource("6_p13jp")
-
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Salon"]
-position = Vector2(408.084, 162)
-amount = 5
-lifetime = 2.0
+position = Vector2(410.077, 222)
+amount = 40
+lifetime = 10.0
 explosiveness = 0.16
 randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
 emission_shape = 1
-emission_sphere_radius = 8.0
-direction = Vector2(0, 0)
-spread = 10.0
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 5.0
-initial_velocity_max = 8.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
 angle_max = 90.0
-scale_amount_min = 4.0
-scale_amount_max = 9.0
-color = Color(1, 1, 0.705882, 1)
-color_ramp = SubResource("Gradient_7gbkl")
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
-[node name="SalonBorde" type="Sprite2D" parent="."]
+[node name="SalonBorde" type="Sprite2D" parent="Salon"]
 z_index = 1
-position = Vector2(722.5, 405)
-scale = Vector2(1.00347, 1)
 texture = ExtResource("4_dy0fd")
 
 [node name="Cocina" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
 texture = ExtResource("3_40vug")
+
+[node name="SalonBorde" type="Sprite2D" parent="Cocina"]
+z_index = 1
+texture = ExtResource("4_dy0fd")
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
@@ -390,6 +397,38 @@ texture = ExtResource("4_ufxyl")
 position = Vector2(2167.5, -405)
 scale = Vector2(1.00347, 1)
 texture = ExtResource("5_2dtpk")
+
+[node name="SalonBorde" type="Sprite2D" parent="Dormitorio"]
+z_index = 1
+texture = ExtResource("4_dy0fd")
+
+[node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1128, 330)
+cancion = "explotar.mp3"
+anim = 1
+
+[node name="Obj2" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1134, 610)
+tipo = 1
+anim = 1
+
+[node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2728, 740)
+anim = 3
+
+[node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2586, 286)
+tipo = 1
+anim = 4
+
+[node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2694, -145)
+anim = 5
+
+[node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1635, -434)
+tipo = 1
+anim = 6
 
 [node name="PJ" type="CharacterBody2D" parent="."]
 position = Vector2(227, 615)
@@ -515,6 +554,17 @@ position = Vector2(423, 423)
 energy = 0.6
 texture = ExtResource("38_aecbm")
 
+[node name="IlumSuelo3" type="PointLight2D" parent="."]
+position = Vector2(394, 699)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("43_pxu3q")
+
+[node name="IlumVentana3" type="PointLight2D" parent="."]
+position = Vector2(532, 538)
+energy = 0.6
+texture = ExtResource("44_r4hhc")
+
 [node name="IlumVentana2" type="PointLight2D" parent="."]
 position = Vector2(2547, 448)
 energy = 0.6
@@ -617,31 +667,3 @@ position = Vector2(1440, 0)
 
 [node name="EstrofaAnim6" parent="." instance=ExtResource("33_n074a")]
 position = Vector2(1440, 0)
-
-[node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(1124, 322)
-cancion = "explotar.mp3"
-anim = 1
-
-[node name="Obj2" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(1134, 610)
-tipo = 1
-anim = 2
-
-[node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2728, 740)
-anim = 3
-
-[node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2586, 286)
-tipo = 1
-anim = 4
-
-[node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2694, -145)
-anim = 5
-
-[node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(1635, -434)
-tipo = 1
-anim = 6

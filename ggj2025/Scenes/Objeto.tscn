@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_kxa58"]
 [ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="2_43r4o"]
 [ext_resource type="Shader" path="res://Shaders/Objeto.gdshader" id="2_i7tvo"]
+[ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="3_1s1fv"]
 [ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="3_gm0cg"]
-[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_hk622"]
 [ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="4_5xbnr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1j233"]
@@ -36,8 +36,7 @@ shape = SubResource("CircleShape2D_1j233")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6slwi")
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_hk622")
+texture = ExtResource("3_1s1fv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPlaylist_02yk6")
