@@ -29,7 +29,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Si el personaje esta en el area del objeto y pulsa paro la musica y reproduzco el trozo de cancion y efectos
 	# TODO cambiar boton a pulsar
-	if perso_en_area and Input.is_action_just_pressed("ui_down"):
+	if perso_en_area and Input.is_action_just_pressed("ui_accept"):
 		# Parar musica y reproducir efectos de sonido
 		#$Sprite2D.hide()
 		$CollisionShape2D.queue_free()
@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 		tween.tween_property(
 			self,                  # Nodo objetivo
 			"scale",             # Propiedad a interpolar
-			Vector2(1.1,1.1),         # Valor final
+			Vector2(1.15,1.15),         # Valor final
 			0.3         # Duración
 		).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 		
@@ -59,9 +59,9 @@ func _process(delta: float) -> void:
 		
 	
 	# Si pulso el botón cambia que sonido reproduce. Esto luego se cambia a si tomo una decision u otra
-	if Input.is_action_just_pressed("ui_accept") and not $AudioStreamPlayer.playing:		
-		var recurso = ruta+cancion
-		$AudioStreamPlayer.stream.set_list_stream(1, load(recurso))
+	#if Input.is_action_just_pressed("ui_accept") and not $AudioStreamPlayer.playing:		
+		#var recurso = ruta+cancion
+		#$AudioStreamPlayer.stream.set_list_stream(1, load(recurso))
 	
 	pass
 

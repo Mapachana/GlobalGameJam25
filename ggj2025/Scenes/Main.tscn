@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=97 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -98,6 +98,44 @@ animations = [{
 "name": &"default",
 "speed": 9.0
 }]
+
+[sub_resource type="Animation" id="Animation_nn3at"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0698132, 0.0698132, -0.0698132]
+}
+
+[sub_resource type="Animation" id="Animation_8a7xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uetyg"]
+_data = {
+"RESET": SubResource("Animation_8a7xt"),
+"new_animation": SubResource("Animation_nn3at")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -482,14 +520,65 @@ z_index = 1
 position = Vector2(-33.5, 277)
 texture = ExtResource("14_wi0mp")
 
-[node name="PlantaColgante" type="Sprite2D" parent="Cocina"]
+[node name="Node2D" type="Node2D" parent="Cocina"]
+position = Vector2(-350.5, -395)
+
+[node name="PlantaColgante" type="Sprite2D" parent="Cocina/Node2D"]
 z_index = 1
-position = Vector2(-350.5, -236)
+position = Vector2(0, 157)
 texture = ExtResource("59_fb0l2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cocina/Node2D/PlantaColgante"]
+libraries = {
+"": SubResource("AnimationLibrary_uetyg")
+}
+autoplay = "new_animation"
 
 [node name="SalonBorde" type="Sprite2D" parent="Cocina"]
 z_index = 1
 texture = ExtResource("13_i8347")
+
+[node name="humo" type="CPUParticles2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-46.5, 186)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="humo2" type="CPUParticles2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-124.5, 186)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
@@ -509,6 +598,50 @@ texture = ExtResource("15_3moe2")
 [node name="SalonBorde" type="Sprite2D" parent="Dormitorio"]
 z_index = 1
 texture = ExtResource("4_dy0fd")
+
+[node name="humo3" type="CPUParticles2D" parent="Dormitorio"]
+z_index = 1
+position = Vector2(28.4015, 18)
+scale = Vector2(0.996542, 1)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="humo4" type="CPUParticles2D" parent="Dormitorio"]
+z_index = 1
+position = Vector2(577.496, 134)
+scale = Vector2(0.996542, 1)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
 [node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1128, 330)
