@@ -2,6 +2,10 @@ extends Node2D
 @onready var pj = $PJ
 @onready var animacionE1 = $EstrofaAnim/AnimationPlayer
 @onready var animacionE2 = $EstrofaAnim2/AnimationPlayer
+@onready var animacionE3 = $EstrofaAnim3/AnimationPlayer
+@onready var animacionE4 = $EstrofaAnim4/AnimationPlayer
+@onready var animacionE5 = $EstrofaAnim5/AnimationPlayer
+@onready var animacionE6 = $EstrofaAnim6/AnimationPlayer
 
 
 #variables de cosas del control de cámara
@@ -72,6 +76,14 @@ func activar_animacion(numero):
 			animacionE1.play("estrofa")
 		2:
 			animacionE2.play("estrofa")
+		3:
+			animacionE3.play("estrofa")
+		4:
+			animacionE4.play("estrofa")
+		5:
+			animacionE5.play("estrofa")
+		6:
+			animacionE6.play("estrofa")
 			
 	print("He hecho play")
 	
