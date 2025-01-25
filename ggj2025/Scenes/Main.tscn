@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=45 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
-[ext_resource type="PackedScene" uid="uid://d2fyi7i84tc4h" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
 [ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
@@ -133,6 +133,23 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 
+[sub_resource type="Gradient" id="Gradient_jembb"]
+offsets = PackedFloat32Array(0.262009, 0.384279, 0.755459)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.724891, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kn7pw"]
+gradient = SubResource("Gradient_jembb")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_rrcx7"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.358491, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_tvg56"]
+offsets = PackedFloat32Array(0, 0.189873, 0.852321, 1)
+colors = PackedColorArray(0, 0.239216, 0.290196, 0, 7.21961e-08, 0.132888, 0.165445, 0.184314, 0.203922, 0.592157, 0.615686, 0.368627, 0, 0.239216, 0.290196, 0)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
@@ -206,9 +223,6 @@ frame_progress = 0.0322324
 
 [node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
 
-[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
-position = Vector2(1440, 0)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
@@ -224,3 +238,27 @@ scale = Vector2(5.9375, 5.9375)
 color = Color(0.955473, 0.306717, 0, 1)
 energy = 1.4
 texture = SubResource("GradientTexture2D_7d2cb")
+
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+position = Vector2(1440, -405)
+amount = 500
+lifetime = 5.0
+preprocess = 5.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_kn7pw")
+emission_shape = 3
+emission_rect_extents = Vector2(1440, 2430)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 8.0
+angle_max = 90.0
+scale_amount_min = 0.02
+scale_amount_max = 0.3
+scale_amount_curve = SubResource("Curve_rrcx7")
+color_ramp = SubResource("Gradient_tvg56")
+
+[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
