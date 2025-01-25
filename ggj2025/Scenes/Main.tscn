@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=41 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
+[ext_resource type="Texture2D" uid="uid://w64ko26aboab" path="res://Images/salon sucio.png" id="2_3u1wu"]
 [ext_resource type="Texture2D" uid="uid://cj87dpptiyawx" path="res://Images/fondo atico.png" id="2_p0o4a"]
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
@@ -31,8 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
-[ext_resource type="Texture2D" uid="uid://dtiloonsnq2cs" path="res://Images/salon sucio.jpg" id="32_2nbmm"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -120,12 +121,24 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7lo68"]
+
+[sub_resource type="Gradient" id="Gradient_nucqi"]
+offsets = PackedFloat32Array(0.327801, 0.692946, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7d2cb"]
+gradient = SubResource("Gradient_nucqi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
-[node name="SalonSucio" type="Sprite2D" parent="."]
+[node name="SalonSucio2" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
-texture = ExtResource("32_2nbmm")
+texture = ExtResource("2_3u1wu")
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
@@ -182,7 +195,6 @@ parameters/looping = true
 
 [node name="Area2D" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1201, 191)
-cancion = "explotar.mp3"
 
 [node name="Gatete" type="AnimatedSprite2D" parent="."]
 position = Vector2(898, 543)
@@ -195,3 +207,19 @@ frame_progress = 0.0322324
 
 [node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
 position = Vector2(1440, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.588235)
+material = SubResource("CanvasItemMaterial_7lo68")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("34_kqd0y")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2635, 607)
+scale = Vector2(5.9375, 5.9375)
+color = Color(0.955473, 0.306717, 0, 1)
+energy = 1.4
+texture = SubResource("GradientTexture2D_7d2cb")
