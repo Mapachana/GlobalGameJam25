@@ -367,7 +367,7 @@ stream = ExtResource("7_t5vac")
 autoplay = true
 parameters/looping = true
 
-[node name="Area2D" parent="." instance=ExtResource("8_nq87s")]
+[node name="Area2Da" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1201, 191)
 anim = 1
 
