@@ -51,7 +51,22 @@ func begin_game():
 		Vector2(1,1),         # Valor final
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+	tween.connect("finished",Callable(self,"begin_game_1"))
 	
+func begin_game_1():
+	#Animación de cámara para enfocar la sala 1
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(
+		camera,                  # Nodo objetivo
+		"position",             # Propiedad a interpolar
+		Vector2(pj.position.x+300,405),         # Valor final
+		0.5         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
 	tween.connect("finished",Callable(self,"enter_transition1"))
 	
 func next_room():
@@ -64,6 +79,7 @@ func next_room():
 		room4_camera()
 
 func enter_transition1():
+
 	camera_follows = true
 	x_movement = true
 	target_threshold = 1800
@@ -92,7 +108,7 @@ func room2_camera():
 	tween.connect("finished",Callable(self,"room2_camera_1")) #esto es un apaño por el cambio de eje
 	
 func room2_camera_1():
-	await get_tree().create_timer(2).timeout  # Espera 2 segundos
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 	
 	camera_follows = false
 	var tween = get_tree().create_tween()
@@ -120,7 +136,7 @@ func room3_camera():
 	tween.connect("finished",Callable(self,"room3_camera_1")) #esto se haría al acabar la estrofa aqui
 
 func room3_camera_1():
-	await get_tree().create_timer(2).timeout  # Espera 2 segundos
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 	
 	camera_follows = false
 	var tween = get_tree().create_tween()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=10 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
@@ -12,9 +12,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
 radius = 14.3333
 height = 46.6667
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jp81"]
-size = Vector2(100, 758)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
@@ -64,16 +61,10 @@ offset_bottom = 74.0
 position = Vector2(360, 524)
 zoom = Vector2(2, 2)
 
-[node name="Sala2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sala2"]
-position = Vector2(1831, 398)
-shape = SubResource("RectangleShape2D_0jp81")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_t5vac")
 autoplay = true
 parameters/looping = true
 
 [node name="Area2D" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(981, 411)
+position = Vector2(1201, 191)

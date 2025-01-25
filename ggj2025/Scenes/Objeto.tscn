@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_hk622"]
 [ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="4_5xbnr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0s62"]
-size = Vector2(7.66667, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1j233"]
+radius = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6slwi"]
 shader = ExtResource("2_i7tvo")
@@ -32,7 +32,7 @@ script = ExtResource("1_kxa58")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
 scale = Vector2(3, 3)
-shape = SubResource("RectangleShape2D_v0s62")
+shape = SubResource("CircleShape2D_1j233")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6slwi")
