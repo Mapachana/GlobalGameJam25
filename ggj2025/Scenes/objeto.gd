@@ -30,8 +30,10 @@ func _process(delta: float) -> void:
 	# TODO cambiar boton a pulsar
 	if perso_en_area and Input.is_action_just_pressed("ui_down"):
 		# Parar musica y reproducir efectos de sonido
-		$Sprite2D.hide()
+		#$Sprite2D.hide()
 		$CollisionShape2D.queue_free()
+		perso_en_area = false
+		
 		ScriptGlobal.nodo_musica.stop()
 		$AudioStreamPlayer.play()
 		

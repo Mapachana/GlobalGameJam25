@@ -86,23 +86,40 @@ func activar_animacion(numero):
 	match numero:
 		1:
 			animacionE1.play("estrofa")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
+			begin_game_1()
+			print("He hecho play de 1")
 		2:
 			animacionE2.play("estrofa")
+			print("He hecho play de 2")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
+			room2_camera_1()
 		3:
 			animacionE3.play("estrofa")
+			print("He hecho play de 3")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
 		4:
 			animacionE4.play("estrofa")
+			print("He hecho play de 4")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
 		5:
 			animacionE5.play("estrofa")
+			print("He hecho play de 5")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
 		6:
 			animacionE6.play("estrofa")
+			print("He hecho play de 6")
+			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			pj.can_move = true
 			
-	print("He hecho play")
+	#print("He hecho play de")
 	
-	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
-	pj.can_move = true
 
-	begin_game_1()
 
 	#tween.connect("finished",Callable(self,"begin_game_1"))
 	
@@ -166,14 +183,10 @@ func room2_camera():
 	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
-	pj.can_move = false
-	animacionE2.play("estrofa")
-	print("He hecho play")
-	
-	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
-	pj.can_move = true
-	room2_camera_1()
-	
+	#pj.can_move = false
+	#animacionE2.play("estrofa")
+	#print("He hecho play")
+		
 	#tween.connect("finished",Callable(self,"room2_camera_1")) #esto es un apaño por el cambio de eje
 	
 func room2_camera_1():

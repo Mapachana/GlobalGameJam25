@@ -14,8 +14,6 @@ radius = 40.0
 shader = ExtResource("2_i7tvo")
 shader_parameter/aura_width = 2.0
 shader_parameter/aura_color = Color(1, 1, 1, 1)
-shader_parameter/noise_scale = 10.0
-shader_parameter/time = null
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_02yk6"]
 loop = false
