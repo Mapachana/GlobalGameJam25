@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=102 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://fmsc4lvwa4wj" path="res://Images/pj IDLE/idle0009.png" id="14_0b7bx"]
 [ext_resource type="Texture2D" uid="uid://by2priv8rnk1g" path="res://Images/buhardilla sucio color.jpg" id="14_w6hau"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
-[ext_resource type="Texture2D" uid="uid://de5hr5qvdr3gf" path="res://Images/estudio sucio color.jpg" id="15_3moe2"]
 [ext_resource type="Texture2D" uid="uid://cbb6lapa1oqtl" path="res://Images/pj IDLE/idle0010.png" id="15_nm3jw"]
 [ext_resource type="Texture2D" uid="uid://c8hgdbp3q3vb0" path="res://Images/pj IDLE/idle0011.png" id="16_beoxx"]
 [ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
@@ -38,10 +37,13 @@
 [ext_resource type="Texture2D" uid="uid://c5wgf0gpsxgy8" path="res://Images/cocina/escoba.png" id="18_7h1ok"]
 [ext_resource type="Texture2D" uid="uid://qb1gpv61yjug" path="res://Images/pj IDLE/idle0013.png" id="18_efavc"]
 [ext_resource type="Texture2D" uid="uid://bykjbbuehnpeb" path="res://Images/pj IDLE/idle0014.png" id="19_s3kvw"]
+[ext_resource type="Texture2D" uid="uid://8g58sp5loqpy" path="res://Images/estudio/estudio fondo.png" id="21_2hx0l"]
 [ext_resource type="Texture2D" uid="uid://bwanl4k0rnbw3" path="res://Images/animacion gatoandar sucio/gatoandar0001.png" id="23_r7u2r"]
 [ext_resource type="Texture2D" uid="uid://dqkol38m1uj0c" path="res://Images/animacion gatoandar sucio/gatoandar0002.png" id="24_ocu6p"]
+[ext_resource type="Texture2D" uid="uid://dy82m37lk5d3m" path="res://Images/estudio/libros.png" id="24_wfr3v"]
 [ext_resource type="Texture2D" uid="uid://lxqjxveoxedn" path="res://Images/animacion gatoandar sucio/gatoandar0003.png" id="25_nd8dy"]
 [ext_resource type="Texture2D" uid="uid://cp5lgiw7hiqc2" path="res://Images/animacion gatoandar sucio/gatoandar0004.png" id="26_ugy3t"]
+[ext_resource type="Texture2D" uid="uid://bh80yfqkyhkpd" path="res://Images/estudio/pluma y tintero.png" id="26_y2mfo"]
 [ext_resource type="Texture2D" uid="uid://clwbuggo2ex2u" path="res://Images/animacion gatoandar sucio/gatoandar0005.png" id="27_woa5t"]
 [ext_resource type="Texture2D" uid="uid://dw0wccrhbdop0" path="res://Images/animacion gatoandar sucio/gatoandar0006.png" id="28_sllra"]
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
@@ -644,7 +646,7 @@ texture = ExtResource("14_w6hau")
 [node name="Dormitorio" type="Sprite2D" parent="."]
 position = Vector2(2167.5, -405)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("15_3moe2")
+texture = ExtResource("21_2hx0l")
 
 [node name="SalonBorde" type="Sprite2D" parent="Dormitorio"]
 z_index = 1
@@ -694,6 +696,15 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_dxhqh")
 color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
+[node name="Libros" type="Sprite2D" parent="Dormitorio"]
+position = Vector2(-505.745, -49)
+scale = Vector2(0.996542, 1)
+texture = ExtResource("24_wfr3v")
+
+[node name="PlumaYTintero" type="Sprite2D" parent="."]
+position = Vector2(2716, -155)
+texture = ExtResource("26_y2mfo")
+
 [node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1128, 330)
 monitorable = false
@@ -712,8 +723,8 @@ imagen = ExtResource("18_7h1ok")
 anim = 4
 
 [node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2694, -145)
-imagen = ExtResource("5_0lyv4")
+position = Vector2(2716, -145)
+imagen = ExtResource("26_y2mfo")
 anim = 5
 
 [node name="Obj3" parent="." instance=ExtResource("67_dh8yg")]
@@ -722,8 +733,8 @@ imagen = ExtResource("17_0b3ln")
 anim = 3
 
 [node name="Obj6" parent="." instance=ExtResource("67_dh8yg")]
-position = Vector2(1635, -434)
-imagen = ExtResource("5_0lyv4")
+position = Vector2(1660, -454)
+imagen = ExtResource("24_wfr3v")
 anim = 6
 
 [node name="PJ" type="CharacterBody2D" parent="."]
