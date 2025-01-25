@@ -22,6 +22,7 @@ func _ready() -> void:
 	perso_en_area = false
 	$Sprite2D.texture = imagen #lo que haya metido de var
 	
+	
 	pass # Replace with function body.
 
 
@@ -32,10 +33,11 @@ func _process(delta: float) -> void:
 	if perso_en_area and Input.is_action_just_pressed("ui_accept"):
 		# Parar musica y reproducir efectos de sonido
 		#$Sprite2D.hide()
-		$CollisionShape2D.queue_free()
 		perso_en_area = false
 		
 		ScriptGlobal.nodo_musica.stop()
+		ScriptGlobal.nodo_ambiente.stop()
+		ScriptGlobal.nodo_ambiente2.stop()
 		$AudioStreamPlayer.play()
 		
 		var tween = get_tree().create_tween()
@@ -87,13 +89,23 @@ func _on_body_entered(body: Node2D) -> void:
 
 # Una vez ha terminado la cancion y efectos pongo la musica desde el principio
 func _on_audio_stream_player_finished() -> void:
+	# Cambiar el stream de cada uno segun las decisiones
 	ScriptGlobal.nodo_musica.play()
+	ScriptGlobal.nodo_ambiente.play()
+	ScriptGlobal.nodo_ambiente2.play()
 	queue_free()
 	pass # Replace with function body.
 
+func cargar_recurso(rec) -> AudioStream:
+	var recurso = ruta+cancion
+	return load(recurso)
+
+
 func desaparecer():	
 	await get_tree().create_timer(0.6).timeout
-	queue_free()
+	$Sprite2D.hide()
+	$CollisionShape2D.queue_free()
+	#queue_free()
 
 
 func _on_body_exited(body: Node2D) -> void:

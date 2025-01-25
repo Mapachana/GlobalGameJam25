@@ -25,6 +25,10 @@ func activar_animacion(anim):
 	nivel.activar_animacion(anim)
 	pass
 	
+func setupmusica():
+	nodo_musica.stream = load("res://Music/prueba/"+"GGJ2024.ogg")
+	nodo_musica.play()
+	
 func acariciar_gato():
 	print("GLOBAL ACARICIA A GATO")
 	# Hacer animacion de acariciar al gato y bloquear el personaje
