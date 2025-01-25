@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://d18pqfbs864oc"]
+
+[ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_kxa58"]
+[ext_resource type="Texture2D" uid="uid://dy1k8rwor08e8" path="res://Music/prueba/rectanguloverde.png" id="1_mhrys"]
+[ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="2_43r4o"]
+[ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="3_gm0cg"]
+[ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="4_5xbnr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0s62"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_02yk6"]
+loop = false
+stream_count = 3
+stream_0 = ExtResource("2_43r4o")
+stream_1 = ExtResource("3_gm0cg")
+stream_2 = ExtResource("4_5xbnr")
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_kxa58")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(7.25, 7.25)
+shape = SubResource("RectangleShape2D_v0s62")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_mhrys")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_02yk6")
+playback_type = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
