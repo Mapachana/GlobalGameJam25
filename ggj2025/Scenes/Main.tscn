@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
 [ext_resource type="Texture2D" uid="uid://dtiloonsnq2cs" path="res://Images/salon sucio.jpg" id="32_2nbmm"]
-[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{

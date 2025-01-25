@@ -24,15 +24,22 @@ func _process(delta: float) -> void:
 	# Si el personaje esta en el area del objeto y pulsa paro la musica y reproduzco el trozo de cancion y efectos
 	# TODO cambiar boton a pulsar
 	if perso_en_area and Input.is_action_just_pressed("ui_down"):
+		# Parar musica y reproducir efectos de sonido
 		$Sprite2D.hide()
 		$CollisionShape2D.queue_free()
 		ScriptGlobal.nodo_musica.stop()
 		$AudioStreamPlayer.play()
 		
+		# Activar animacion
+		ScriptGlobal.activar_animacion()
+		
+		# Modificar contador de decisiones
 		if tipo == TIPO.QUEDARSE:
 			ScriptGlobal.cont_decision += 1
 		else:
 			ScriptGlobal.cont_decision -= 1
+			
+		
 	
 	# Si pulso el botón cambia que sonido reproduce. Esto luego se cambia a si tomo una decision u otra
 	if Input.is_action_just_pressed("ui_accept") and not $AudioStreamPlayer.playing:		

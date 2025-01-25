@@ -16,6 +16,7 @@ var cont_decision = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
 	ScriptGlobal.cont_decision = cont_decision
 	pass # Replace with function body.
@@ -58,8 +59,8 @@ func begin_game():
 		Vector2(1,1),         # Valor final
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 
+func activar_animacion():
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	pj.can_move = false
 	animacionE1.play("estrofa")
