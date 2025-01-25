@@ -39,11 +39,8 @@ position = Vector2(360, 515)
 scale = Vector2(0.493827, 0.493827)
 texture = ExtResource("3_4ddiu")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(363, 404)
-
 [node name="PJ" type="CharacterBody2D" parent="."]
-position = Vector2(105.84, 119.265)
+position = Vector2(400, 600)
 motion_mode = 1
 script = ExtResource("4_hxefk")
 
@@ -57,3 +54,7 @@ shape = SubResource("CapsuleShape2D_ou4gg")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 420.0
 offset_bottom = 74.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(360, 524)
+zoom = Vector2(2, 2)

@@ -5,7 +5,7 @@ const SPEED = 350
 const ACCELERATION = 800
 const DRAG = 300
 
-const MAX_ANGLE = 15 #cosas tween
+var target_angle = 8 #cosas tween
 const ROTATION_DURATION = 1.0
 
 # Referencia al Tween
@@ -13,21 +13,26 @@ var tween = null
 
 func _ready():
 	tween = get_tree().create_tween()
-
-	rotation = deg_to_rad(-MAX_ANGLE)
-
+	rotation = deg_to_rad(-target_angle)
 	start_rotation()
 
 
 func start_rotation():
+	if tween:  # Si hay un tween activo, detenerlo
+		tween.kill()
+		
+	tween = get_tree().create_tween()
+
 	tween.tween_property(
 		self,                  # Nodo objetivo
 		"rotation",             # Propiedad a interpolar
-		deg_to_rad(MAX_ANGLE),         # Valor final
+		deg_to_rad(target_angle),         # Valor final
 		ROTATION_DURATION         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	target_angle = -target_angle
 
-	tween.connect("finished",Callable(self,"_on_tween_completed"))
+	tween.connect("finished",Callable(self,"start_rotation"))
 
 func _on_tween_completed():
 	# Cambiar la dirección de rotación
@@ -35,17 +40,13 @@ func _on_tween_completed():
 		tween.kill()
 		
 	tween = get_tree().create_tween()
-
-	var target_angle = 0
-	if rotation == deg_to_rad(MAX_ANGLE):
-		target_angle = deg_to_rad(-MAX_ANGLE)
-	else: 
-		deg_to_rad(MAX_ANGLE)
+	
+	target_angle = -target_angle
 		
 	tween.tween_property(
 		self,                  # Nodo objetivo
 		"rotation",             # Propiedad a interpolar
-		deg_to_rad(MAX_ANGLE),         # Valor final
+		deg_to_rad(target_angle),         # Valor final
 		ROTATION_DURATION         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
