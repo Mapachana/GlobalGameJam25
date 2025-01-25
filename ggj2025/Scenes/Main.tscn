@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=100 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
 [ext_resource type="PackedScene" path="res://Scenes/gato.tscn" id="64_64fbg"]
+[ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -704,13 +705,8 @@ anim = 1
 position = Vector2(1136, 628)
 anim = 2
 
-[node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2711, 728)
-imagen = ExtResource("17_0b3ln")
-anim = 3
-
 [node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2618, 289)
+position = Vector2(2629, 299)
 tipo = 1
 imagen = ExtResource("18_7h1ok")
 anim = 4
@@ -720,9 +716,13 @@ position = Vector2(2694, -145)
 imagen = ExtResource("5_0lyv4")
 anim = 5
 
-[node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
+[node name="Obj3" parent="." instance=ExtResource("67_dh8yg")]
+position = Vector2(2711, 728)
+imagen = ExtResource("17_0b3ln")
+anim = 3
+
+[node name="Obj6" parent="." instance=ExtResource("67_dh8yg")]
 position = Vector2(1635, -434)
-tipo = 1
 imagen = ExtResource("5_0lyv4")
 anim = 6
 

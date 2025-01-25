@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://du4yd8papaddt"]
+[gd_scene load_steps=20 format=3 uid="uid://du4yd8papaddt"]
 
 [ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_k1jpy"]
 [ext_resource type="Shader" path="res://Shaders/Objeto.gdshader" id="2_8b060"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="4_hk3r4"]
 [ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="5_2ivxs"]
 [ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="6_nx8dc"]
+[ext_resource type="Shader" path="res://Shaders/ObjetoAnimado.gdshader" id="7_dvkmp"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_w6aie"]
 [ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_omxga"]
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_kk0pp"]
@@ -16,8 +17,8 @@ radius = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6slwi"]
 shader = ExtResource("2_8b060")
-shader_parameter/aura_width = 2.0
-shader_parameter/aura_color = Color(1, 1, 1, 1)
+shader_parameter/aura_width = 2.5
+shader_parameter/aura_color = Color(4.9334e-07, 0.212602, 0.232195, 1)
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_02yk6"]
 loop = false
@@ -31,8 +32,10 @@ offsets = PackedFloat32Array(0, 0.0266667, 1)
 colors = PackedColorArray(0.220588, 0.220588, 0.220588, 1, 0.833439, 0.679624, 0.389241, 1, 1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_im54n"]
-shader = ExtResource("2_8b060")
-shader_parameter/aura_width = 2.0
+shader = ExtResource("7_dvkmp")
+shader_parameter/progress = 1.0
+shader_parameter/time = 1.0
+shader_parameter/aura_width = 2.5
 shader_parameter/aura_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ap2x"]
@@ -54,6 +57,14 @@ animations = [{
 "name": &"default",
 "speed": 9.0
 }]
+
+[sub_resource type="Animation" id="Animation_vqggg"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m03tf"]
+_data = {
+"new_animation": SubResource("Animation_vqggg")
+}
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_k1jpy")
@@ -95,6 +106,11 @@ sprite_frames = SubResource("SpriteFrames_7ap2x")
 autoplay = "default"
 frame = 1
 frame_progress = 0.822752
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m03tf")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
