@@ -2,6 +2,9 @@ extends Area2D
 
 var perso_en_area = null
 
+enum TIPO { QUEDARSE, IRSE }
+@export var tipo: TIPO
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	perso_en_area = false
@@ -17,6 +20,13 @@ func _process(delta: float) -> void:
 		$CollisionShape2D.queue_free()
 		ScriptGlobal.nodo_musica.stop()
 		$AudioStreamPlayer.play()
+		
+		if tipo == TIPO.QUEDARSE:
+			ScriptGlobal.cont_decision += 1
+		else:
+			ScriptGlobal.cont_decision -= 1
+	
+		print(ScriptGlobal.cont_decision)
 	
 	# Si pulso el botón cambia que sonido reproduce. Esto luego se cambia a si tomo una decision u otra
 	if Input.is_action_just_pressed("ui_accept") and not $AudioStreamPlayer.playing:		

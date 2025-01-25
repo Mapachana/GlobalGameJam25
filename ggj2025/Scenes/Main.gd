@@ -8,9 +8,13 @@ var x_movement = true #si el movimiento es horizontal
 var target_threshold = 0
 var room = 0;
 
+# Contador de decisiones
+var cont_decision = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
+	ScriptGlobal.cont_decision = cont_decision
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
