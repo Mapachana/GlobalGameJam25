@@ -1,5 +1,6 @@
 extends Node2D
 @onready var pj = $PJ
+@onready var animacionE1 = $EstrofaAnim/AnimationPlayer
 
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D
@@ -56,7 +57,14 @@ func begin_game():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
-	tween.connect("finished",Callable(self,"begin_game_1"))
+	#Esto lo tendría que llamar el objeto al elegir una de las opciones
+	animacionE1.play("estrofa")
+	print("He hecho play")
+	
+	await get_tree().create_timer(10).timeout  #ESPERAR A ELEGIR OBJETO
+	begin_game_1()
+
+	#tween.connect("finished",Callable(self,"begin_game_1"))
 	
 func begin_game_1():
 	#Animación de cámara para enfocar la sala 1
