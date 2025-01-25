@@ -2,12 +2,20 @@ extends Area2D
 
 var perso_en_area = null
 
+# Tipo de objeto, si es para quedarse o irse
 enum TIPO { QUEDARSE, IRSE }
 @export var tipo: TIPO
+
+# Cancion a reproducir durante el recuerdo, HAY QUE INCLUIR .MP3 AL FINAL
+@export var cancion: String
+# ruta a los efectos
+var ruta = "res://Music/prueba/"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	perso_en_area = false
+	
 	pass # Replace with function body.
 
 
@@ -26,11 +34,10 @@ func _process(delta: float) -> void:
 		else:
 			ScriptGlobal.cont_decision -= 1
 	
-		print(ScriptGlobal.cont_decision)
-	
 	# Si pulso el botón cambia que sonido reproduce. Esto luego se cambia a si tomo una decision u otra
 	if Input.is_action_just_pressed("ui_accept") and not $AudioStreamPlayer.playing:		
-		$AudioStreamPlayer.stream.set_list_stream(1, load("res://Music/prueba/explotar.mp3"))
+		var recurso = ruta+cancion
+		$AudioStreamPlayer.stream.set_list_stream(1, load(recurso))
 	
 	pass
 

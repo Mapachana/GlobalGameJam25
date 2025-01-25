@@ -15,6 +15,7 @@ script = ExtResource("1_poksu")
 
 [node name="Area2D" parent="." instance=ExtResource("2_3bkv4")]
 position = Vector2(429, 12)
+cancion = "explotar.mp3"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_amcv3")
