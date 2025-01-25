@@ -22,3 +22,8 @@ func activar_animacion(anim):
 	print(anim)
 	nivel.activar_animacion(anim)
 	pass
+	
+func acariciar_gato():
+	print("GLOBAL ACARICIA A GATO")
+	# Hacer animacion de acariciar al gato y bloquear el personaje
+	#nivel.PJ.play("acariciar")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2u36kir16up8"]
+[gd_scene load_steps=8 format=3 uid="uid://b2u36kir16up8"]
 
 [ext_resource type="Script" path="res://Scenes/gato.gd" id="1_6b3k0"]
 [ext_resource type="Texture2D" uid="uid://bf6wdmhv5r0xo" path="res://Images/animacion gatoandar sucio/spritesheet.png" id="1_ke38x"]
@@ -39,10 +39,26 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6]
 }
 
+[sub_resource type="Animation" id="Animation_slb8h"]
+resource_name = "quieto"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0wgbh"]
 _data = {
 "RESET": SubResource("Animation_euy41"),
-"andar": SubResource("Animation_qqs7g")
+"andar": SubResource("Animation_qqs7g"),
+"quieto": SubResource("Animation_slb8h")
 }
 
 [node name="Area2D" type="Area2D"]
