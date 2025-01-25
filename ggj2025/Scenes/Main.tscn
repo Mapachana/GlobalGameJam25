@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=67 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -299,6 +299,8 @@ _data = {
 "new": SubResource("Animation_5121j")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvr4g"]
+
 [node name="Main" type="Node2D"]
 =======
 [node name="Main2" type="Node2D"]
@@ -523,3 +525,43 @@ libraries = {
 "": SubResource("AnimationLibrary_tlhbc")
 }
 autoplay = "idle"
+
+[node name="collisions" type="StaticBody2D" parent="."]
+
+[node name="muro2" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2217, 0)
+scale = Vector2(74.1311, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1628, 812)
+scale = Vector2(173.765, 3.62553)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-14, 92)
+rotation = -1.5708
+scale = Vector2(105.091, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2889, 11)
+rotation = -1.5708
+scale = Vector2(105.091, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="muro1" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1442, -29)
+rotation = -1.5708
+scale = Vector2(100, 4)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="collisions"]
+position = Vector2(713, 4)
+scale = Vector2(74.1311, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="muro3" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2217, -809)
+scale = Vector2(74.1311, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")

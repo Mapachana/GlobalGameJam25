@@ -48,7 +48,7 @@ func _input(event):
 
 func intro_animation():
 	animacionIntro.play("new")
-	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
+	await get_tree().create_timer(3).timeout  #espera a que termine la estrofa
 
 	begin_game()
 
@@ -133,19 +133,25 @@ func enter_transition1():
 	camera_follows = true
 	x_movement = true
 	target_threshold = 1800
+	$collisions/muro1.disabled = true
 	
 func enter_transition2():
 	camera_follows = true
 	x_movement = false
 	target_threshold = -200
+	$collisions/muro2.disabled = true
 	
 func enter_transition3():
 	camera_follows = true
 	x_movement = false
 	target_threshold = -900
+	$collisions/muro3.disabled = true
+
 
 func room2_camera():
 	camera_follows = false
+	$collisions/muro1.disabled = false
+
 	var tween = get_tree().create_tween()
 
 	tween.tween_property(
@@ -185,6 +191,7 @@ func room2_camera_1():
 
 func room3_camera():
 	camera_follows = false
+	$collisions/muro2.disabled = false
 	var tween = get_tree().create_tween()
 
 	tween.tween_property(
@@ -227,6 +234,8 @@ func room4_camera():
 func room4_camera_1():
 	await get_tree().create_timer(1).timeout  #ESPERAR A ELEGIR OBJETO
 	
+	$collisions/muro3.disabled = false
+
 	camera_follows = false
 	var tween = get_tree().create_tween()
 
