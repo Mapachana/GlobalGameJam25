@@ -56,14 +56,14 @@ func begin_game():
 	
 func begin_game_1():
 	#Animación de cámara para enfocar la sala 1
+	camera_follows = false
 	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
-
 	var tween = get_tree().create_tween()
 
 	tween.tween_property(
 		camera,                  # Nodo objetivo
 		"position",             # Propiedad a interpolar
-		Vector2(pj.position.x+300,405),         # Valor final
+		Vector2(max(pj.position.x+300,722.5),405),         # Valor final
 		0.5         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
@@ -116,7 +116,7 @@ func room2_camera_1():
 	tween.tween_property(
 		camera,                  # Nodo objetivo
 		"position",             # Propiedad a interpolar
-		Vector2(2167.5,pj.position.y-200),         # Valor final
+		Vector2(2167.5,min(pj.position.y-200,405)),         # Valor final
 		0.5         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
@@ -144,7 +144,7 @@ func room3_camera_1():
 	tween.tween_property(
 		camera,                  # Nodo objetivo
 		"position",             # Propiedad a interpolar
-		Vector2(2167.5,pj.position.y-200),         # Valor final
+		Vector2(2167.5,min(pj.position.y-200,-405)),         # Valor final
 		0.5         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
@@ -159,4 +159,28 @@ func room4_camera():
 		"position",             # Propiedad a interpolar
 		Vector2(2167.5,-1215),         # Valor final
 		1         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	tween.connect("finished",Callable(self,"room4_camera_1"))
+
+func room4_camera_1():
+	await get_tree().create_timer(1).timeout  #ESPERAR A ELEGIR OBJETO
+	
+	camera_follows = false
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(
+		camera,                  # Nodo objetivo
+		"position",             # Propiedad a interpolar
+		Vector2(1859,-1231),         # Valor final
+		0.8         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	var tween1 = get_tree().create_tween()
+
+	tween1.tween_property(
+		camera,                  # Nodo objetivo
+		"zoom",             # Propiedad a interpolar
+		Vector2(1/(0.803),1/(0.803)),         # Valor final
+		0.5         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

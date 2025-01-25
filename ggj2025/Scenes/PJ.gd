@@ -5,8 +5,8 @@ const SPEED = 350
 const ACCELERATION = 800
 const DRAG = 300
 
-var target_angle = 8 #cosas tween
-const ROTATION_DURATION = 1.0
+var target_angle = 6 #cosas tween
+const ROTATION_DURATION = 1.5
 
 # Referencia al Tween
 var tween = null
