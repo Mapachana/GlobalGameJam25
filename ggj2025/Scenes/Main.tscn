@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=60 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -36,6 +36,14 @@
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
 [ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
+[ext_resource type="Texture2D" uid="uid://dy02xfu0cnidq" path="res://Images/detalle luz1.png" id="37_w7hww"]
+[ext_resource type="Texture2D" uid="uid://bo4llvqcvwy3x" path="res://Images/ilum suelo 2.png" id="38_68v08"]
+[ext_resource type="Texture2D" uid="uid://wqvxnakql30v" path="res://Images/ilum2.png" id="38_aecbm"]
+[ext_resource type="Texture2D" uid="uid://bop713ynaeav2" path="res://Images/ilum 3.png" id="40_y3u85"]
+[ext_resource type="Texture2D" uid="uid://c3ewlmdqv23a" path="res://Images/ilum suelo buhardilla.png" id="41_qlss1"]
+[ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
+[ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
+[ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -140,11 +148,11 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_tvg56"]
 offsets = PackedFloat32Array(0, 0.189873, 0.808429, 1)
-colors = PackedColorArray(0, 0.239216, 0.290196, 0, 0.286275, 0.0941176, 0, 0.215686, 0.286275, 0.0941176, 0, 0.215686, 0, 0.239216, 0.290196, 0)
+colors = PackedColorArray(0, 0.239216, 0.290196, 0, 0.286275, 0.0941176, 0, 0.392157, 0.286275, 0.0941176, 0, 0.392157, 0, 0.239216, 0.290196, 0)
 
 [sub_resource type="Gradient" id="Gradient_nucqi"]
-offsets = PackedFloat32Array(0.327801, 0.692946, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0.110204, 0.236735, 0.726531, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.556953, 0.556953, 0.556953, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7d2cb"]
 gradient = SubResource("Gradient_nucqi")
@@ -166,7 +174,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [1.4, 1.0, 1.4]
+"values": [1.6, 1.0, 1.6]
 }
 
 [sub_resource type="Animation" id="Animation_g34fb"]
@@ -292,7 +300,7 @@ texture = ExtResource("34_kqd0y")
 
 [node name="DustParticles" type="CPUParticles2D" parent="."]
 position = Vector2(1440, -405)
-amount = 1000
+amount = 1200
 lifetime = 5.0
 preprocess = 5.0
 explosiveness = 0.16
@@ -303,8 +311,8 @@ emission_rect_extents = Vector2(1440, 2430)
 direction = Vector2(0, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 5.0
-initial_velocity_max = 8.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
 angle_max = 90.0
 scale_amount_min = 0.01
 scale_amount_max = 0.3
@@ -313,8 +321,8 @@ color_ramp = SubResource("Gradient_tvg56")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1139, 614)
-scale = Vector2(5.9375, 5.9375)
-color = Color(0.955473, 0.306717, 0, 1)
+scale = Vector2(10.1561, 10.1561)
+color = Color(1, 0.587164, 0.202332, 1)
 energy = 1.4
 texture = SubResource("GradientTexture2D_7d2cb")
 
@@ -354,3 +362,47 @@ angle_max = 90.0
 scale_amount_min = 5.0
 scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_t6lrr")
+
+[node name="IlumSuelo1" type="PointLight2D" parent="."]
+position = Vector2(64, 664)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.6
+texture = ExtResource("37_w7hww")
+
+[node name="IlumSuelo2" type="PointLight2D" parent="."]
+position = Vector2(2325, 614)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.6
+texture = ExtResource("38_68v08")
+
+[node name="IlumVentana1" type="PointLight2D" parent="."]
+position = Vector2(423, 423)
+energy = 0.5
+texture = ExtResource("38_aecbm")
+
+[node name="IlumVentana2" type="PointLight2D" parent="."]
+position = Vector2(2547, 448)
+energy = 0.5
+texture = ExtResource("40_y3u85")
+
+[node name="IlumSuelo4" type="PointLight2D" parent="."]
+position = Vector2(1822, -880)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.6
+texture = ExtResource("41_qlss1")
+
+[node name="IlumVentana4" type="PointLight2D" parent="."]
+position = Vector2(2061, -1109)
+energy = 0.5
+texture = ExtResource("42_swuu4")
+
+[node name="IlumSuelo5" type="PointLight2D" parent="."]
+position = Vector2(1682, -112)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.6
+texture = ExtResource("43_ey5m7")
+
+[node name="IlumVentana5" type="PointLight2D" parent="."]
+position = Vector2(2000, -357)
+energy = 0.5
+texture = ExtResource("44_whxl0")
