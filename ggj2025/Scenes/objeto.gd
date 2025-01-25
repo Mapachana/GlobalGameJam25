@@ -88,7 +88,7 @@ func _on_body_entered(body: Node2D) -> void:
 			0.3         # Duración
 		).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 		sprite.material.set_shader_parameter("aura_width", 4);
-		sprite.material.set_shader_parameter("aura_color", Color(0.0, 1.0, 1.0, 1.0));
+		sprite.material.set_shader_parameter("aura_color", Color(0.373, 0.808, 0.82, 1.0));
 	
 	pass 
 	
