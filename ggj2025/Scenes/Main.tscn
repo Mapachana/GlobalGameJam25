@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=99 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
+[ext_resource type="Texture2D" uid="uid://cposuctfed6fi" path="res://Images/cosas salon/burbuja.png" id="6_cppaw"]
 [ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
 [ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
@@ -22,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://c70njrpj2p2vw" path="res://Images/pj IDLE/idle0006.png" id="11_w25dd"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dttyofobqp1p3" path="res://Images/pj IDLE/idle0007.png" id="12_y5rp1"]
 [ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
@@ -64,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
-[ext_resource type="PackedScene" uid="uid://b2u36kir16up8" path="res://Scenes/gato.tscn" id="64_64fbg"]
+[ext_resource type="PackedScene" path="res://Scenes/gato.tscn" id="64_64fbg"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -77,6 +78,10 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Curve" id="Curve_dxhqh"]
 _data = [Vector2(0.103704, 0.266768), 0.0, 0.0, 0, 0, Vector2(0.52963, 0.980183), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_lo312"]
+_data = [Vector2(0.422794, 0.342145), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5rmxy"]
@@ -495,6 +500,43 @@ scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_dxhqh")
 color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
+[node name="burbujas" type="CPUParticles2D" parent="Salon"]
+position = Vector2(-485.814, 203)
+amount = 30
+lifetime = 6.0
+explosiveness = 0.16
+randomness = 0.15
+texture = ExtResource("6_cppaw")
+emission_shape = 1
+emission_sphere_radius = 40.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 0.5
+color = Color(1, 1, 1, 0.470588)
+
+[node name="burbujas2" type="CPUParticles2D" parent="Salon"]
+position = Vector2(-485.814, 234)
+amount = 30
+lifetime = 0.5
+explosiveness = 0.16
+randomness = 0.15
+lifetime_randomness = 0.5
+texture = ExtResource("6_cppaw")
+emission_shape = 3
+emission_rect_extents = Vector2(40, 1)
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+scale_amount_curve = SubResource("Curve_lo312")
+color = Color(1, 1, 1, 0.470588)
+
 [node name="SalonBorde" type="Sprite2D" parent="Salon"]
 z_index = 1
 texture = ExtResource("4_dy0fd")
@@ -580,6 +622,14 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_dxhqh")
 color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 
+[node name="Cuencos" type="Sprite2D" parent="."]
+position = Vector2(2711, 728)
+texture = ExtResource("17_0b3ln")
+
+[node name="Escoba" type="Sprite2D" parent="."]
+position = Vector2(2629, 299)
+texture = ExtResource("18_7h1ok")
+
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
 scale = Vector2(1.93069, 1.84475)
@@ -655,7 +705,7 @@ position = Vector2(1136, 628)
 anim = 2
 
 [node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2741, 761)
+position = Vector2(2711, 728)
 imagen = ExtResource("17_0b3ln")
 anim = 3
 
