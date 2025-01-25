@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0m0gj00sbmrc"
+path="res://.godot/imported/Ghost (no-FX).wav-07788997a6a15fa7a4741c1e20a3a85d.sample"
+
+[deps]
+
+source_file="res://Music/fondo_fx/Ghost (no-FX).wav"
+dest_files=["res://.godot/imported/Ghost (no-FX).wav-07788997a6a15fa7a4741c1e20a3a85d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

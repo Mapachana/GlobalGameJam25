@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hweby3n46rgj"
+path="res://.godot/imported/Pizzicato (FX).wav-fe8ae519c9e242c3adb4c2a171c40320.sample"
+
+[deps]
+
+source_file="res://Music/fondo_fx/Pizzicato (FX).wav"
+dest_files=["res://.godot/imported/Pizzicato (FX).wav-fe8ae519c9e242c3adb4c2a171c40320.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

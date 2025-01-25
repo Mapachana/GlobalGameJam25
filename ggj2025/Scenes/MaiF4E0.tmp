@@ -1,0 +1,942 @@
+[gd_scene load_steps=97 format=3 uid="uid://bqak8awkxwt4m"]
+
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
+[ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
+[ext_resource type="Texture2D" uid="uid://4ib718oyo6qc" path="res://Images/placeholder bg planta abajo.png" id="2_ouf3b"]
+[ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
+[ext_resource type="Texture2D" uid="uid://ckwgs27kt2ixq" path="res://Images/cosas salon/salon fondo.png" id="3_c7ul5"]
+[ext_resource type="Texture2D" uid="uid://bpng2sfxuf4nu" path="res://Images/cosas salon/marco.png" id="4_dy0fd"]
+[ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
+[ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
+[ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
+[ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
+[ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
+[ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
+[ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
+[ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
+[ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_opt5y"]
+[ext_resource type="Texture2D" uid="uid://cgwoao6dnl2tj" path="res://Images/pj IDLE/idle0003.png" id="8_w7jbf"]
+[ext_resource type="Texture2D" uid="uid://p1wm85ja15ts" path="res://Images/pj IDLE/idle0004.png" id="9_ssc1a"]
+[ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
+[ext_resource type="Texture2D" uid="uid://naeh6ufyif3p" path="res://Images/pj IDLE/idle0005.png" id="10_3gi8y"]
+[ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
+[ext_resource type="Texture2D" uid="uid://c70njrpj2p2vw" path="res://Images/pj IDLE/idle0006.png" id="11_w25dd"]
+[ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
+[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="Texture2D" uid="uid://dttyofobqp1p3" path="res://Images/pj IDLE/idle0007.png" id="12_y5rp1"]
+[ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
+[ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
+[ext_resource type="Texture2D" uid="uid://fmsc4lvwa4wj" path="res://Images/pj IDLE/idle0009.png" id="14_0b7bx"]
+[ext_resource type="Texture2D" uid="uid://by2priv8rnk1g" path="res://Images/buhardilla sucio color.jpg" id="14_w6hau"]
+[ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
+[ext_resource type="Texture2D" uid="uid://de5hr5qvdr3gf" path="res://Images/estudio sucio color.jpg" id="15_3moe2"]
+[ext_resource type="Texture2D" uid="uid://cbb6lapa1oqtl" path="res://Images/pj IDLE/idle0010.png" id="15_nm3jw"]
+[ext_resource type="Texture2D" uid="uid://c8hgdbp3q3vb0" path="res://Images/pj IDLE/idle0011.png" id="16_beoxx"]
+[ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
+[ext_resource type="Texture2D" uid="uid://rdn3h0htslht" path="res://Images/pj IDLE/idle0012.png" id="17_iwqa8"]
+[ext_resource type="Texture2D" uid="uid://c5wgf0gpsxgy8" path="res://Images/cocina/escoba.png" id="18_7h1ok"]
+[ext_resource type="Texture2D" uid="uid://qb1gpv61yjug" path="res://Images/pj IDLE/idle0013.png" id="18_efavc"]
+[ext_resource type="Texture2D" uid="uid://bykjbbuehnpeb" path="res://Images/pj IDLE/idle0014.png" id="19_s3kvw"]
+[ext_resource type="Texture2D" uid="uid://bwanl4k0rnbw3" path="res://Images/animacion gatoandar sucio/gatoandar0001.png" id="23_r7u2r"]
+[ext_resource type="Texture2D" uid="uid://dqkol38m1uj0c" path="res://Images/animacion gatoandar sucio/gatoandar0002.png" id="24_ocu6p"]
+[ext_resource type="Texture2D" uid="uid://lxqjxveoxedn" path="res://Images/animacion gatoandar sucio/gatoandar0003.png" id="25_nd8dy"]
+[ext_resource type="Texture2D" uid="uid://cp5lgiw7hiqc2" path="res://Images/animacion gatoandar sucio/gatoandar0004.png" id="26_ugy3t"]
+[ext_resource type="Texture2D" uid="uid://clwbuggo2ex2u" path="res://Images/animacion gatoandar sucio/gatoandar0005.png" id="27_woa5t"]
+[ext_resource type="Texture2D" uid="uid://dw0wccrhbdop0" path="res://Images/animacion gatoandar sucio/gatoandar0006.png" id="28_sllra"]
+[ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
+[ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
+[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
+[ext_resource type="Texture2D" uid="uid://dy02xfu0cnidq" path="res://Images/detalle luz1.png" id="37_w7hww"]
+[ext_resource type="Texture2D" uid="uid://bo4llvqcvwy3x" path="res://Images/ilum suelo 2.png" id="38_68v08"]
+[ext_resource type="Texture2D" uid="uid://wqvxnakql30v" path="res://Images/ilum2.png" id="38_aecbm"]
+[ext_resource type="Texture2D" uid="uid://bop713ynaeav2" path="res://Images/ilum 3.png" id="40_y3u85"]
+[ext_resource type="Texture2D" uid="uid://c3ewlmdqv23a" path="res://Images/ilum suelo buhardilla.png" id="41_qlss1"]
+[ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
+[ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
+[ext_resource type="Texture2D" uid="uid://bv2ml5jl1tdb8" path="res://Images/suelo detalle salon 2.png" id="43_pxu3q"]
+[ext_resource type="Texture2D" uid="uid://b35qjo2ntd7tm" path="res://Images/salon luz 2.png" id="44_r4hhc"]
+[ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
+[ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
+[ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
+[ext_resource type="Texture2D" uid="uid://ddbdc28moknao" path="res://Images/cosas salon/sofa y reposapies.png" id="48_d4wyc"]
+[ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
+[ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
+[ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
+[ext_resource type="PackedScene" uid="uid://b2u36kir16up8" path="res://Scenes/gato.tscn" id="64_64fbg"]
+
+[sub_resource type="Gradient" id="Gradient_hwerc"]
+offsets = PackedFloat32Array(0.346154, 0.700855, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_548se"]
+gradient = SubResource("Gradient_hwerc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_dxhqh"]
+_data = [Vector2(0.103704, 0.266768), 0.0, 0.0, 0, 0, Vector2(0.52963, 0.980183), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rmxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hjuh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_opt5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yfbeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tfqec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="Animation" id="Animation_8a7xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nn3at"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0698132, 0.0698132, -0.0698132]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uetyg"]
+_data = {
+"RESET": SubResource("Animation_8a7xt"),
+"new_animation": SubResource("Animation_nn3at")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2dvtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mx3v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w7jbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ssc1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3gi8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w25dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_y5rp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1u73p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0b7bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nm3jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_beoxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_iwqa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_efavc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s3kvw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
+radius = 14.3333
+height = 46.6667
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oap5r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_r7u2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ocu6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_nd8dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ugy3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_woa5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sllra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_5i0xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nkjip")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7lo68"]
+
+[sub_resource type="Gradient" id="Gradient_jembb"]
+offsets = PackedFloat32Array(0.262009, 0.384279, 0.755459)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.724891, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kn7pw"]
+gradient = SubResource("Gradient_jembb")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_rrcx7"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.358491, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_tvg56"]
+offsets = PackedFloat32Array(0, 0.189873, 0.808429, 1)
+colors = PackedColorArray(0, 0.239216, 0.290196, 0, 0.286275, 0.0941176, 0, 0.392157, 0.286275, 0.0941176, 0, 0.392157, 0, 0.239216, 0.290196, 0)
+
+[sub_resource type="Gradient" id="Gradient_nucqi"]
+offsets = PackedFloat32Array(0.110204, 0.236735, 0.726531, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.556953, 0.556953, 0.556953, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7d2cb"]
+gradient = SubResource("Gradient_nucqi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_g34fb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.4]
+}
+
+[sub_resource type="Animation" id="Animation_losjq"]
+resource_name = "flicker"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.6, 1.0, 1.6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bnqmb"]
+_data = {
+"RESET": SubResource("Animation_g34fb"),
+"flicker": SubResource("Animation_losjq")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_su725"]
+blend_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_t6lrr"]
+offsets = PackedFloat32Array(0, 0.340996, 0.517241, 0.708812, 1)
+colors = PackedColorArray(0.0745098, 0.0745098, 0.0745098, 0, 0.172549, 0.682353, 0, 0.0470588, 0.552941, 0.607843, 0, 0.0470588, 0.172549, 0.682353, 0, 0.0470588, 0.556863, 0.85098, 0.262745, 0)
+
+[sub_resource type="Animation" id="Animation_jfvte"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextoInicio:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w2vge"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5121j"]
+resource_name = "new"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextoInicio:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0333334, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tlhbc"]
+_data = {
+"RESET": SubResource("Animation_jfvte"),
+"idle": SubResource("Animation_w2vge"),
+"new": SubResource("Animation_5121j")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvr4g"]
+
+[sub_resource type="Animation" id="Animation_5mp4c"]
+resource_name = "Final1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3l07b"]
+resource_name = "Final2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b4r58"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojhjg"]
+_data = {
+"Final1": SubResource("Animation_5mp4c"),
+"Final2": SubResource("Animation_3l07b"),
+"RESET": SubResource("Animation_b4r58")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_nxvp8")
+
+[node name="Parallax2DSalon2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(3436, 463)
+
+[node name="PlaceholderBgPlantaAbajo" type="Sprite2D" parent="Parallax2DSalon2"]
+position = Vector2(-904, -76)
+texture = ExtResource("2_ouf3b")
+
+[node name="Parallax2DCocina" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(1081, 291)
+
+[node name="PlaceholderBgPlantaAbajo" type="Sprite2D" parent="Parallax2DCocina"]
+position = Vector2(-904, -76)
+texture = ExtResource("2_ouf3b")
+
+[node name="Salon" type="Sprite2D" parent="."]
+position = Vector2(722.5, 405)
+scale = Vector2(1.00347, 1)
+texture = ExtResource("3_c7ul5")
+
+[node name="SofaYReposapies" type="Sprite2D" parent="Salon"]
+position = Vector2(222.727, 210)
+scale = Vector2(0.996542, 1)
+texture = ExtResource("48_d4wyc")
+
+[node name="Caldero" type="Sprite2D" parent="Salon"]
+position = Vector2(-487.807, 281)
+scale = Vector2(0.996542, 1)
+texture = ExtResource("5_0lyv4")
+
+[node name="humo" type="CPUParticles2D" parent="Salon"]
+position = Vector2(410.077, 222)
+amount = 40
+lifetime = 10.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="SalonBorde" type="Sprite2D" parent="Salon"]
+z_index = 1
+texture = ExtResource("4_dy0fd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Salon"]
+visible = false
+position = Vector2(412.07, 223)
+sprite_frames = SubResource("SpriteFrames_5rmxy")
+autoplay = "default"
+frame_progress = 0.307297
+
+[node name="Cuadro" type="Sprite2D" parent="Salon"]
+position = Vector2(404.098, -75)
+scale = Vector2(0.996542, 1)
+texture = ExtResource("6_p13jp")
+
+[node name="Cocina" type="Sprite2D" parent="."]
+position = Vector2(2167.5, 405)
+texture = ExtResource("12_63q05")
+
+[node name="Encimera" type="Sprite2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-33.5, 277)
+texture = ExtResource("14_wi0mp")
+
+[node name="Node2D" type="Node2D" parent="Cocina"]
+position = Vector2(-350.5, -395)
+
+[node name="PlantaColgante" type="Sprite2D" parent="Cocina/Node2D"]
+z_index = 1
+position = Vector2(0, 157)
+texture = ExtResource("59_fb0l2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cocina/Node2D/PlantaColgante"]
+libraries = {
+"": SubResource("AnimationLibrary_uetyg")
+}
+autoplay = "new_animation"
+
+[node name="SalonBorde" type="Sprite2D" parent="Cocina"]
+z_index = 1
+texture = ExtResource("13_i8347")
+
+[node name="humo" type="CPUParticles2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-46.5, 186)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="humo2" type="CPUParticles2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-124.5, 186)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="CieloPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(1985, -1417)
+scale = Vector2(1.93069, 1.84475)
+texture = ExtResource("2_2fuvx")
+
+[node name="Atico" type="Sprite2D" parent="."]
+position = Vector2(2167.49, -1215)
+scale = Vector2(1.00347, 1)
+texture = ExtResource("14_w6hau")
+
+[node name="Dormitorio" type="Sprite2D" parent="."]
+position = Vector2(2167.5, -405)
+scale = Vector2(1.00347, 1)
+texture = ExtResource("15_3moe2")
+
+[node name="SalonBorde" type="Sprite2D" parent="Dormitorio"]
+z_index = 1
+texture = ExtResource("4_dy0fd")
+
+[node name="humo3" type="CPUParticles2D" parent="Dormitorio"]
+z_index = 1
+position = Vector2(28.4015, 18)
+scale = Vector2(0.996542, 1)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="humo4" type="CPUParticles2D" parent="Dormitorio"]
+z_index = 1
+position = Vector2(577.496, 134)
+scale = Vector2(0.996542, 1)
+amount = 7
+lifetime = 11.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_548se")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_dxhqh")
+color = Color(0.309804, 0.309804, 0.309804, 0.168627)
+
+[node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1128, 330)
+monitorable = false
+imagen = ExtResource("6_p13jp")
+cancion = "explotar.mp3"
+anim = 1
+
+[node name="Obj2" parent="." instance=ExtResource("12_rexyk")]
+position = Vector2(1136, 628)
+anim = 2
+
+[node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2741, 761)
+imagen = ExtResource("17_0b3ln")
+anim = 3
+
+[node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2618, 289)
+tipo = 1
+imagen = ExtResource("18_7h1ok")
+anim = 4
+
+[node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2694, -145)
+imagen = ExtResource("5_0lyv4")
+anim = 5
+
+[node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1635, -434)
+tipo = 1
+imagen = ExtResource("5_0lyv4")
+anim = 6
+
+[node name="PJ" type="CharacterBody2D" parent="."]
+position = Vector2(227, 615)
+motion_mode = 1
+script = ExtResource("4_hxefk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PJ"]
+position = Vector2(6.775, -32.985)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_dgg74")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PJ"]
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_ou4gg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(363, 604)
+zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_t5vac")
+autoplay = true
+parameters/looping = true
+
+[node name="Gatete" type="AnimatedSprite2D" parent="."]
+position = Vector2(600, 700)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_oap5r")
+autoplay = "default"
+frame_progress = 0.0322324
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.588235)
+material = SubResource("CanvasItemMaterial_7lo68")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("34_kqd0y")
+
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+position = Vector2(1440, -405)
+amount = 1200
+lifetime = 5.0
+preprocess = 5.0
+explosiveness = 0.16
+randomness = 0.15
+texture = SubResource("GradientTexture2D_kn7pw")
+emission_shape = 3
+emission_rect_extents = Vector2(1440, 2430)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+angle_max = 90.0
+scale_amount_min = 0.01
+scale_amount_max = 0.3
+scale_amount_curve = SubResource("Curve_rrcx7")
+color_ramp = SubResource("Gradient_tvg56")
+
+[node name="LuzFuego" type="PointLight2D" parent="."]
+position = Vector2(1149, 608)
+scale = Vector2(10.1561, 10.1561)
+color = Color(1, 0.587164, 0.202332, 1)
+energy = 1.4
+texture = SubResource("GradientTexture2D_7d2cb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LuzFuego"]
+libraries = {
+"": SubResource("AnimationLibrary_bnqmb")
+}
+autoplay = "flicker"
+
+[node name="Inicio" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(363, 604)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_4ddiu")
+
+[node name="DustParticles2" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_su725")
+position = Vector2(1440, -405)
+amount = 450
+lifetime = 3.0
+preprocess = 5.0
+explosiveness = 0.16
+randomness = 0.15
+lifetime_randomness = 0.5
+texture = SubResource("GradientTexture2D_kn7pw")
+emission_shape = 3
+emission_rect_extents = Vector2(1440, 2430)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 7.0
+initial_velocity_max = 12.0
+angle_max = 90.0
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+color_ramp = SubResource("Gradient_t6lrr")
+
+[node name="IlumSuelo1" type="PointLight2D" parent="."]
+position = Vector2(64, 664)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("37_w7hww")
+
+[node name="IlumSuelo2" type="PointLight2D" parent="."]
+position = Vector2(2325, 614)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("38_68v08")
+
+[node name="IlumVentana1" type="PointLight2D" parent="."]
+position = Vector2(423, 423)
+energy = 0.6
+texture = ExtResource("38_aecbm")
+
+[node name="IlumSuelo3" type="PointLight2D" parent="."]
+position = Vector2(394, 699)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("43_pxu3q")
+
+[node name="IlumVentana3" type="PointLight2D" parent="."]
+position = Vector2(532, 538)
+energy = 0.6
+texture = ExtResource("44_r4hhc")
+
+[node name="IlumVentana2" type="PointLight2D" parent="."]
+position = Vector2(2547, 448)
+energy = 0.6
+texture = ExtResource("40_y3u85")
+
+[node name="IlumSuelo4" type="PointLight2D" parent="."]
+position = Vector2(1822, -880)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("41_qlss1")
+
+[node name="IlumVentana4" type="PointLight2D" parent="."]
+position = Vector2(2061, -1109)
+energy = 0.6
+texture = ExtResource("42_swuu4")
+
+[node name="IlumSuelo5" type="PointLight2D" parent="."]
+position = Vector2(1682, -112)
+color = Color(0.928286, 0.84175, 0.737125, 1)
+energy = 0.9
+texture = ExtResource("43_ey5m7")
+
+[node name="IlumVentana5" type="PointLight2D" parent="."]
+position = Vector2(2000, -357)
+energy = 0.6
+texture = ExtResource("44_whxl0")
+
+[node name="TextoInicio" type="RichTextLabel" parent="."]
+offset_left = 390.0
+offset_top = 590.0
+offset_right = 970.0
+offset_bottom = 2707.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("46_wc5us")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[wave amp=15 freq=4]Pulsa E para hacer una poción[/wave]"
+fit_content = true
+scroll_active = false
+
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(519, 493)
+texture = ExtResource("45_g40rn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Titulo"]
+libraries = {
+"": SubResource("AnimationLibrary_tlhbc")
+}
+autoplay = "idle"
+
+[node name="collisions" type="StaticBody2D" parent="."]
+
+[node name="muro2" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2217, 0)
+scale = Vector2(74.1311, 1.34537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1628, 812)
+scale = Vector2(173.765, 3.62553)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-14, 92)
+rotation = -1.5708
+scale = Vector2(105.091, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2889, 11)
+rotation = -1.5708
+scale = Vector2(105.091, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="muro1" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1442, -29)
+rotation = -1.5708
+scale = Vector2(100, 4)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="collisions"]
+position = Vector2(713, 4)
+scale = Vector2(74.1311, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="muro3" type="CollisionShape2D" parent="collisions"]
+position = Vector2(2217, -809)
+scale = Vector2(74.1311, 3.02537)
+shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
+z_index = 2
+
+[node name="EstrofaAnim1" parent="." instance=ExtResource("31_7lenv")]
+z_index = 2
+
+[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
+position = Vector2(1440, 0)
+
+[node name="EstrofaAnim3" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
+position = Vector2(1440, 0)
+
+[node name="EstrofaAnim4" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
+position = Vector2(1440, -810)
+
+[node name="EstrofaAnim5" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
+position = Vector2(1440, -810)
+
+[node name="Finales" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ojhjg")
+}
+
+[node name="PlaceholderFinal1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2164, -1210)
+texture = ExtResource("60_undnq")
+
+[node name="PlaceholderFinal2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2164, -1210)
+texture = ExtResource("61_v8jou")
+
+[node name="gato" parent="." instance=ExtResource("64_64fbg")]
+position = Vector2(932, 552)
+
+[node name="audioambiente" type="AudioStreamPlayer" parent="."]
+
+[node name="audioambiente2" type="AudioStreamPlayer" parent="."]

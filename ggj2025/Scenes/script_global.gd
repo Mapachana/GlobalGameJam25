@@ -25,9 +25,18 @@ func activar_animacion(anim):
 	nivel.activar_animacion(anim)
 	pass
 	
-func setupmusica():
-	nodo_musica.stream = load("res://Music/prueba/"+"GGJ2024.ogg")
+func setupmusica(base, melodia1, melodia2, hay_melodia2):
+	var ruta = "res://Music/fondo_fx/"
+	
+	nodo_musica.stream = load(ruta+base)
 	nodo_musica.play()
+	
+	nodo_ambiente.stream = load(ruta+melodia1)
+	nodo_ambiente.play()
+	
+	if hay_melodia2:
+		nodo_ambiente2.stream = load(ruta+melodia2)
+		nodo_ambiente2.play()
 	
 func acariciar_gato():
 	print("GLOBAL ACARICIA A GATO")

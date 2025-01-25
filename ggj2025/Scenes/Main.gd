@@ -30,7 +30,7 @@ func _ready():
 	ScriptGlobal.nodo_ambiente = $audioambiente
 	ScriptGlobal.nodo_ambiente2 = $audioambiente2
 	ScriptGlobal.cont_decision = cont_decision
-	ScriptGlobal.setupmusica()
+	ScriptGlobal.setupmusica("Ambiente 1 (no-FX).wav", "Ghost (no-FX).wav", "", false)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
