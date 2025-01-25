@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=80 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -12,12 +12,16 @@
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
 [ext_resource type="Texture2D" uid="uid://bid536u4ornod" path="res://Images/estudio sucio.jpg" id="5_2dtpk"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
+[ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
 [ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
+[ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_opt5y"]
 [ext_resource type="Texture2D" uid="uid://cgwoao6dnl2tj" path="res://Images/pj IDLE/idle0003.png" id="8_w7jbf"]
 [ext_resource type="Texture2D" uid="uid://p1wm85ja15ts" path="res://Images/pj IDLE/idle0004.png" id="9_ssc1a"]
+[ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
 [ext_resource type="Texture2D" uid="uid://naeh6ufyif3p" path="res://Images/pj IDLE/idle0005.png" id="10_3gi8y"]
+[ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://c70njrpj2p2vw" path="res://Images/pj IDLE/idle0006.png" id="11_w25dd"]
 [ext_resource type="Texture2D" uid="uid://dttyofobqp1p3" path="res://Images/pj IDLE/idle0007.png" id="12_y5rp1"]
 [ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
@@ -64,6 +68,26 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="Curve" id="Curve_dxhqh"]
 _data = [Vector2(0.103704, 0.266768), 0.0, 0.0, 0, 0, Vector2(0.52963, 0.980183), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rmxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hjuh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_opt5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yfbeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tfqec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -374,6 +398,9 @@ color = Color(0.309804, 0.309804, 0.309804, 0.168627)
 [node name="SalonBorde" type="Sprite2D" parent="Salon"]
 z_index = 1
 texture = ExtResource("4_dy0fd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Salon"]
+sprite_frames = SubResource("SpriteFrames_5rmxy")
 
 [node name="Cocina" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
