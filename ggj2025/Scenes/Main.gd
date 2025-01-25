@@ -90,6 +90,7 @@ func activar_animacion(numero):
 			animacionE1.play("estrofa")
 			$Obj1.desaparecer()
 			$Obj2.desaparecer()
+			$Salon/humo.queue_free()
 			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
 			begin_game_1()
@@ -98,6 +99,7 @@ func activar_animacion(numero):
 			animacionE2.play("estrofa")
 			$Obj1.desaparecer()
 			$Obj2.desaparecer()
+			$Salon/humo.queue_free()
 			print("He hecho play de 2")
 			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true

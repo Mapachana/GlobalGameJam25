@@ -1,0 +1,101 @@
+[gd_scene load_steps=17 format=3 uid="uid://du4yd8papaddt"]
+
+[ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_k1jpy"]
+[ext_resource type="Shader" path="res://Shaders/Objeto.gdshader" id="2_8b060"]
+[ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="3_gy465"]
+[ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="4_hk3r4"]
+[ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="5_2ivxs"]
+[ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="6_nx8dc"]
+[ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_w6aie"]
+[ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_omxga"]
+[ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_kk0pp"]
+[ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_p60ri"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1j233"]
+radius = 40.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6slwi"]
+shader = ExtResource("2_8b060")
+shader_parameter/aura_width = 2.0
+shader_parameter/aura_color = Color(1, 1, 1, 1)
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_02yk6"]
+loop = false
+stream_count = 3
+stream_0 = ExtResource("4_hk3r4")
+stream_1 = ExtResource("5_2ivxs")
+stream_2 = ExtResource("6_nx8dc")
+
+[sub_resource type="Gradient" id="Gradient_78mab"]
+offsets = PackedFloat32Array(0, 0.0266667, 1)
+colors = PackedColorArray(0.220588, 0.220588, 0.220588, 1, 0.833439, 0.679624, 0.389241, 1, 1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_im54n"]
+shader = ExtResource("2_8b060")
+shader_parameter/aura_width = 2.0
+shader_parameter/aura_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ap2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w6aie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_omxga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kk0pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p60ri")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_k1jpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_1j233")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_6slwi")
+texture = ExtResource("3_gy465")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_02yk6")
+playback_type = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 5
+lifetime = 2.0
+explosiveness = 0.16
+randomness = 0.15
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 8.0
+angle_max = 90.0
+scale_amount_min = 0.5
+color = Color(1, 1, 0.705882, 1)
+color_ramp = SubResource("Gradient_78mab")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_im54n")
+sprite_frames = SubResource("SpriteFrames_7ap2x")
+autoplay = "default"
+frame = 1
+frame_progress = 0.822752
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
