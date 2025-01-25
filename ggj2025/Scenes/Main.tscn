@@ -1,14 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=8 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://cj87dpptiyawx" path="res://Images/fondo atico.png" id="2_p0o4a"]
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
 [ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="5_ktr3t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
+radius = 14.3333
+height = 46.6667
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_nxvp8")
 
 [node name="FondoAtico" type="Sprite2D" parent="."]
 position = Vector2(2167.49, -1215)
@@ -35,12 +39,21 @@ position = Vector2(360, 515)
 scale = Vector2(0.493827, 0.493827)
 texture = ExtResource("3_4ddiu")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(363, 404)
+
 [node name="PJ" type="CharacterBody2D" parent="."]
+position = Vector2(105.84, 119.265)
+motion_mode = 1
 script = ExtResource("4_hxefk")
 
+[node name="Sprite2D" type="Sprite2D" parent="PJ"]
+texture = ExtResource("5_ktr3t")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PJ"]
+scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_ou4gg")
 
-[node name="Sprite2D" type="Sprite2D" parent="PJ"]
-position = Vector2(332, 521)
-texture = ExtResource("5_ktr3t")
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 420.0
+offset_bottom = 74.0
