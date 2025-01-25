@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 350
 const ACCELERATION = 800
 const DRAG = 300
+var can_move = true
 
 var target_angle = 6 #cosas tween
 const ROTATION_DURATION = 1.5
@@ -57,13 +58,13 @@ func _physics_process(delta):
 
 
 	# Movimiento horizontal con aceleración
-	if direction_R != 0:
+	if direction_R != 0 && can_move:
 		velocity.x = move_toward(velocity.x, direction_R * SPEED, ACCELERATION * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, DRAG * delta)
 
 	# Movimiento vertical con aceleración
-	if direction_U != 0:
+	if direction_U != 0 && can_move:
 		velocity.y = move_toward(velocity.y, direction_U * SPEED, ACCELERATION * delta)
 	else:
 		velocity.y = move_toward(velocity.y, 0, DRAG * delta)

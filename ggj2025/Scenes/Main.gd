@@ -1,6 +1,8 @@
 extends Node2D
 @onready var pj = $PJ
 @onready var animacionE1 = $EstrofaAnim/AnimationPlayer
+@onready var animacionE2 = $EstrofaAnim2/AnimationPlayer
+
 
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D
@@ -56,12 +58,16 @@ func begin_game():
 		Vector2(1,1),         # Valor final
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
+	pj.can_move = false
 	animacionE1.play("estrofa")
 	print("He hecho play")
 	
-	await get_tree().create_timer(10).timeout  #ESPERAR A ELEGIR OBJETO
+	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
+	pj.can_move = true
+
 	begin_game_1()
 
 	#tween.connect("finished",Callable(self,"begin_game_1"))
@@ -69,7 +75,7 @@ func begin_game():
 func begin_game_1():
 	#Animación de cámara para enfocar la sala 1
 	camera_follows = false
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 	var tween = get_tree().create_tween()
 
 	tween.tween_property(
@@ -117,7 +123,18 @@ func room2_camera():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	tween.connect("finished",Callable(self,"room2_camera_1")) #esto es un apaño por el cambio de eje
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+
+	#Esto lo tendría que llamar el objeto al elegir una de las opciones
+	pj.can_move = false
+	animacionE2.play("estrofa")
+	print("He hecho play")
+	
+	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
+	pj.can_move = true
+	room2_camera_1()
+	
+	#tween.connect("finished",Callable(self,"room2_camera_1")) #esto es un apaño por el cambio de eje
 	
 func room2_camera_1():
 	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO

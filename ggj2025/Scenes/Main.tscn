@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=37 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
+[ext_resource type="Texture2D" uid="uid://dtiloonsnq2cs" path="res://Images/salon sucio.jpg" id="32_2nbmm"]
+[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -121,6 +123,10 @@ animations = [{
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
+[node name="SalonSucio" type="Sprite2D" parent="."]
+position = Vector2(2167.5, 405)
+texture = ExtResource("32_2nbmm")
+
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
 scale = Vector2(1.93069, 1.84475)
@@ -133,11 +139,6 @@ texture = ExtResource("2_p0o4a")
 
 [node name="FondoHabitacion3" type="Sprite2D" parent="."]
 position = Vector2(2167.5, -405)
-scale = Vector2(1.00347, 1)
-texture = ExtResource("1_klajk")
-
-[node name="FondoHabitacion2" type="Sprite2D" parent="."]
-position = Vector2(2167.5, 405)
 scale = Vector2(1.00347, 1)
 texture = ExtResource("1_klajk")
 
@@ -190,3 +191,6 @@ autoplay = "default"
 frame_progress = 0.0322324
 
 [node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
+
+[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
