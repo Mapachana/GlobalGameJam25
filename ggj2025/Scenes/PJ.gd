@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 350
 const ACCELERATION = 800
 const DRAG = 300
-var can_move = true
+var can_move = false
 
 var target_angle = 6 #cosas tween
 const ROTATION_DURATION = 1.5

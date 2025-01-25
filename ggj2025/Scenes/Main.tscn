@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=66 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -44,6 +44,8 @@
 [ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
 [ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
 [ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
+[ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
+[ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
 animations = [{
@@ -205,6 +207,97 @@ blend_mode = 2
 offsets = PackedFloat32Array(0, 0.340996, 0.517241, 0.708812, 1)
 colors = PackedColorArray(0.0745098, 0.0745098, 0.0745098, 0, 0.172549, 0.682353, 0, 0.0470588, 0.552941, 0.607843, 0, 0.0470588, 0.172549, 0.682353, 0, 0.0470588, 0.556863, 0.85098, 0.262745, 0)
 
+[sub_resource type="Animation" id="Animation_w2vge"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jfvte"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextoInicio:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5121j"]
+resource_name = "new"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextoInicio:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0333334, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tlhbc"]
+_data = {
+"RESET": SubResource("Animation_jfvte"),
+"idle": SubResource("Animation_w2vge"),
+"new": SubResource("Animation_5121j")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
@@ -262,10 +355,6 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PJ"]
 scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_ou4gg")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 420.0
-offset_bottom = 74.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(363, 604)
@@ -406,3 +495,27 @@ texture = ExtResource("43_ey5m7")
 position = Vector2(2000, -357)
 energy = 0.5
 texture = ExtResource("44_whxl0")
+
+[node name="TextoInicio" type="RichTextLabel" parent="."]
+offset_left = 390.0
+offset_top = 590.0
+offset_right = 970.0
+offset_bottom = 2707.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("46_wc5us")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[wave amp=15 freq=4]Pulsa E para hacer una poción[/wave]"
+fit_content = true
+scroll_active = false
+
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(519, 493)
+texture = ExtResource("45_g40rn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Titulo"]
+libraries = {
+"": SubResource("AnimationLibrary_tlhbc")
+}
+autoplay = "idle"

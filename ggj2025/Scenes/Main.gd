@@ -1,5 +1,7 @@
 extends Node2D
 @onready var pj = $PJ
+@onready var animacionIntro = $Titulo/AnimationPlayer
+
 @onready var animacionE1 = $EstrofaAnim/AnimationPlayer
 @onready var animacionE2 = $EstrofaAnim2/AnimationPlayer
 @onready var animacionE3 = $EstrofaAnim3/AnimationPlayer
@@ -28,7 +30,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		begin_game()
+		intro_animation()
 	
 	if camera_follows:
 		if x_movement:
@@ -43,8 +45,16 @@ func _process(delta):
 				next_room()
 func _input(event):
 	pass
-		
+
+func intro_animation():
+	animacionIntro.play("new")
+	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa
+
+	begin_game()
+
+	
 func begin_game():
+	pj.can_move=true
 	#Animación de cámara para enfocar la sala 1
 	var tween = get_tree().create_tween()
 
