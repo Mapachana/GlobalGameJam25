@@ -3,11 +3,13 @@ extends Node2D
 @onready var animacionIntro = $Titulo/AnimationPlayer
 
 @onready var animacionE1 = $EstrofaAnim/AnimationPlayer
-@onready var animacionE2 = $EstrofaAnim2/AnimationPlayer
-@onready var animacionE3 = $EstrofaAnim3/AnimationPlayer
-@onready var animacionE4 = $EstrofaAnim4/AnimationPlayer
-@onready var animacionE5 = $EstrofaAnim5/AnimationPlayer
-@onready var animacionE6 = $EstrofaAnim6/AnimationPlayer
+@onready var animacionE2 = $EstrofaAnim1/AnimationPlayer
+@onready var animacionE3 = $EstrofaAnim2/AnimationPlayer
+@onready var animacionE4 = $EstrofaAnim3/AnimationPlayer
+@onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
+@onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
+
+const DURACION_ESTROFA = 1.5
 
 
 #variables de cosas del control de cámara
@@ -86,36 +88,52 @@ func activar_animacion(numero):
 	match numero:
 		1:
 			animacionE1.play("estrofa")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			$Obj1.desaparecer()
+			$Obj2.desaparecer()
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
 			begin_game_1()
 			print("He hecho play de 1")
 		2:
 			animacionE2.play("estrofa")
+			$Obj1.desaparecer()
+			$Obj2.desaparecer()
 			print("He hecho play de 2")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
-			room2_camera_1()
+			begin_game_1()
 		3:
+			$Obj3.desaparecer()
+			$Obj4.desaparecer()
 			animacionE3.play("estrofa")
 			print("He hecho play de 3")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
+			room2_camera_1()
 		4:
+			$Obj3.desaparecer()
+			$Obj4.desaparecer()
 			animacionE4.play("estrofa")
 			print("He hecho play de 4")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
-		5:
+			room2_camera_1()
+		5:			
+			$Obj5.desaparecer()
+			$Obj6.desaparecer()
 			animacionE5.play("estrofa")
 			print("He hecho play de 5")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
+			room3_camera_1()
 		6:
+			$Obj5.desaparecer()
+			$Obj6.desaparecer()
 			animacionE6.play("estrofa")
 			print("He hecho play de 6")
-			await get_tree().create_timer(1.5).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
+			room3_camera_1()
 			
 	#print("He hecho play de")
 	
@@ -148,19 +166,21 @@ func next_room():
 		room4_camera()
 
 func enter_transition1():
-
 	camera_follows = true
 	x_movement = true
 	target_threshold = 1800
 	$collisions/muro1.disabled = true
 	
 func enter_transition2():
+	print("entre en transicion2")
+
 	camera_follows = true
 	x_movement = false
 	target_threshold = -200
 	$collisions/muro2.disabled = true
 	
 func enter_transition3():
+	print("entre en transicion3")
 	camera_follows = true
 	x_movement = false
 	target_threshold = -900
@@ -180,7 +200,7 @@ func room2_camera():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	#pj.can_move = false
@@ -190,7 +210,7 @@ func room2_camera():
 	#tween.connect("finished",Callable(self,"room2_camera_1")) #esto es un apaño por el cambio de eje
 	
 func room2_camera_1():
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 	
 	camera_follows = false
 	var tween = get_tree().create_tween()
@@ -205,6 +225,7 @@ func room2_camera_1():
 	tween.connect("finished",Callable(self,"enter_transition2")) #esto se haría al acabar la estrofa aqui
 
 func room3_camera():
+	print("room3_camera")
 	camera_follows = false
 	$collisions/muro2.disabled = false
 	var tween = get_tree().create_tween()
@@ -216,11 +237,11 @@ func room3_camera():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	tween.connect("finished",Callable(self,"room3_camera_1")) #esto se haría al acabar la estrofa aqui
+	#tween.connect("finished",Callable(self,"room3_camera_1")) #esto se haría al acabar la estrofa aqui
 
 func room3_camera_1():
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
-	
+	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+	print("room3_camera_1")
 	camera_follows = false
 	var tween = get_tree().create_tween()
 
@@ -244,10 +265,17 @@ func room4_camera():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	tween.connect("finished",Callable(self,"room4_camera_1"))
+	tween.connect("finished",Callable(self,"decision_final"))
+	#METER ANIM DEL FINAL DEL JUEGO
+func decision_final():
+	if cont_decision:
+		$Finales.play("Final1")
+	else:
+		$Finales.play("Final2")
+	#tween.connect("finished",Callable(self,"room4_camera_1"))
 
 func room4_camera_1():
-	await get_tree().create_timer(1).timeout  #ESPERAR A ELEGIR OBJETO
+	#await get_tree().create_timer(1).timeout  #ESPERAR A ELEGIR OBJETO
 	
 	$collisions/muro3.disabled = false
 

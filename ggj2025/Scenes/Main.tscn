@@ -1,16 +1,13 @@
-[gd_scene load_steps=81 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=92 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
 [ext_resource type="Texture2D" uid="uid://4ib718oyo6qc" path="res://Images/placeholder bg planta abajo.png" id="2_ouf3b"]
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
-[ext_resource type="Texture2D" uid="uid://3wtuod6jsgtu" path="res://Images/cocina sucio.png" id="3_40vug"]
 [ext_resource type="Texture2D" uid="uid://ckwgs27kt2ixq" path="res://Images/cosas salon/salon fondo.png" id="3_c7ul5"]
 [ext_resource type="Texture2D" uid="uid://bpng2sfxuf4nu" path="res://Images/cosas salon/marco.png" id="4_dy0fd"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
-[ext_resource type="Texture2D" uid="uid://3gu7w3jw5kpv" path="res://Images/buhardilla sucio.jpg" id="4_ufxyl"]
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
-[ext_resource type="Texture2D" uid="uid://bid536u4ornod" path="res://Images/estudio sucio.jpg" id="5_2dtpk"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
 [ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
@@ -24,12 +21,19 @@
 [ext_resource type="Texture2D" uid="uid://naeh6ufyif3p" path="res://Images/pj IDLE/idle0005.png" id="10_3gi8y"]
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://c70njrpj2p2vw" path="res://Images/pj IDLE/idle0006.png" id="11_w25dd"]
+[ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
 [ext_resource type="Texture2D" uid="uid://dttyofobqp1p3" path="res://Images/pj IDLE/idle0007.png" id="12_y5rp1"]
 [ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
+[ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://fmsc4lvwa4wj" path="res://Images/pj IDLE/idle0009.png" id="14_0b7bx"]
+[ext_resource type="Texture2D" uid="uid://by2priv8rnk1g" path="res://Images/buhardilla sucio color.jpg" id="14_w6hau"]
+[ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
+[ext_resource type="Texture2D" uid="uid://de5hr5qvdr3gf" path="res://Images/estudio sucio color.jpg" id="15_3moe2"]
 [ext_resource type="Texture2D" uid="uid://cbb6lapa1oqtl" path="res://Images/pj IDLE/idle0010.png" id="15_nm3jw"]
 [ext_resource type="Texture2D" uid="uid://c8hgdbp3q3vb0" path="res://Images/pj IDLE/idle0011.png" id="16_beoxx"]
+[ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
 [ext_resource type="Texture2D" uid="uid://rdn3h0htslht" path="res://Images/pj IDLE/idle0012.png" id="17_iwqa8"]
+[ext_resource type="Texture2D" uid="uid://c5wgf0gpsxgy8" path="res://Images/cocina/escoba.png" id="18_7h1ok"]
 [ext_resource type="Texture2D" uid="uid://qb1gpv61yjug" path="res://Images/pj IDLE/idle0013.png" id="18_efavc"]
 [ext_resource type="Texture2D" uid="uid://bykjbbuehnpeb" path="res://Images/pj IDLE/idle0014.png" id="19_s3kvw"]
 [ext_resource type="Texture2D" uid="uid://bwanl4k0rnbw3" path="res://Images/animacion gatoandar sucio/gatoandar0001.png" id="23_r7u2r"]
@@ -56,6 +60,9 @@
 [ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
 [ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
 [ext_resource type="Texture2D" uid="uid://ddbdc28moknao" path="res://Images/cosas salon/sofa y reposapies.png" id="48_d4wyc"]
+[ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
+[ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
+[ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -343,6 +350,58 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvr4g"]
 
+[sub_resource type="Animation" id="Animation_5mp4c"]
+resource_name = "Final1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3l07b"]
+resource_name = "Final2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b4r58"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaceholderFinal1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojhjg"]
+_data = {
+"Final1": SubResource("Animation_5mp4c"),
+"Final2": SubResource("Animation_3l07b"),
+"RESET": SubResource("Animation_b4r58")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
@@ -406,13 +465,28 @@ sprite_frames = SubResource("SpriteFrames_5rmxy")
 autoplay = "default"
 frame_progress = 0.307297
 
+[node name="Cuadro" type="Sprite2D" parent="Salon"]
+position = Vector2(404.098, -75)
+scale = Vector2(0.996542, 1)
+texture = ExtResource("6_p13jp")
+
 [node name="Cocina" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
-texture = ExtResource("3_40vug")
+texture = ExtResource("12_63q05")
+
+[node name="Encimera" type="Sprite2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-33.5, 277)
+texture = ExtResource("14_wi0mp")
+
+[node name="PlantaColgante" type="Sprite2D" parent="Cocina"]
+z_index = 1
+position = Vector2(-350.5, -236)
+texture = ExtResource("59_fb0l2")
 
 [node name="SalonBorde" type="Sprite2D" parent="Cocina"]
 z_index = 1
-texture = ExtResource("4_dy0fd")
+texture = ExtResource("13_i8347")
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
@@ -422,12 +496,12 @@ texture = ExtResource("2_2fuvx")
 [node name="Atico" type="Sprite2D" parent="."]
 position = Vector2(2167.49, -1215)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("4_ufxyl")
+texture = ExtResource("14_w6hau")
 
 [node name="Dormitorio" type="Sprite2D" parent="."]
 position = Vector2(2167.5, -405)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("5_2dtpk")
+texture = ExtResource("15_3moe2")
 
 [node name="SalonBorde" type="Sprite2D" parent="Dormitorio"]
 z_index = 1
@@ -441,28 +515,31 @@ cancion = "explotar.mp3"
 anim = 1
 
 [node name="Obj2" parent="." instance=ExtResource("8_nq87s")]
-visible = false
 position = Vector2(1134, 610)
 tipo = 1
-anim = 1
+imagen = ExtResource("6_p13jp")
+anim = 2
 
 [node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2728, 740)
-imagen = ExtResource("48_d4wyc")
+position = Vector2(2741, 761)
+imagen = ExtResource("17_0b3ln")
 anim = 3
 
 [node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2586, 286)
+position = Vector2(2618, 289)
 tipo = 1
+imagen = ExtResource("18_7h1ok")
 anim = 4
 
 [node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(2694, -145)
+imagen = ExtResource("5_0lyv4")
 anim = 5
 
 [node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1635, -434)
 tipo = 1
+imagen = ExtResource("5_0lyv4")
 anim = 6
 
 [node name="PJ" type="CharacterBody2D" parent="."]
@@ -495,8 +572,6 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_oap5r")
 autoplay = "default"
 frame_progress = 0.0322324
-
-[node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -540,9 +615,6 @@ libraries = {
 "": SubResource("AnimationLibrary_bnqmb")
 }
 autoplay = "flicker"
-
-[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
-position = Vector2(1440, 0)
 
 [node name="Inicio" type="Sprite2D" parent="."]
 visible = false
@@ -691,14 +763,39 @@ position = Vector2(2217, -809)
 scale = Vector2(74.1311, 3.02537)
 shape = SubResource("RectangleShape2D_wvr4g")
 
+[node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
+z_index = 2
+
+[node name="EstrofaAnim1" parent="." instance=ExtResource("31_7lenv")]
+z_index = 2
+
+[node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
+position = Vector2(1440, 0)
+
 [node name="EstrofaAnim3" parent="." instance=ExtResource("33_n074a")]
+z_index = 2
 position = Vector2(1440, 0)
 
 [node name="EstrofaAnim4" parent="." instance=ExtResource("33_n074a")]
-position = Vector2(1440, 0)
+z_index = 2
+position = Vector2(1440, -810)
 
 [node name="EstrofaAnim5" parent="." instance=ExtResource("33_n074a")]
-position = Vector2(1440, 0)
+z_index = 2
+position = Vector2(1440, -810)
 
-[node name="EstrofaAnim6" parent="." instance=ExtResource("33_n074a")]
-position = Vector2(1440, 0)
+[node name="Finales" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ojhjg")
+}
+
+[node name="PlaceholderFinal1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2164, -1210)
+texture = ExtResource("60_undnq")
+
+[node name="PlaceholderFinal2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2164, -1210)
+texture = ExtResource("61_v8jou")

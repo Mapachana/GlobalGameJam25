@@ -6,6 +6,7 @@ var perso_en_area = null
 enum TIPO { QUEDARSE, IRSE }
 @export var tipo: TIPO
 @export var imagen: Texture2D
+@export var otro: Node2D
 
 # Cancion a reproducir durante el recuerdo, HAY QUE INCLUIR .MP3 AL FINAL
 @export var cancion: String
@@ -36,6 +37,14 @@ func _process(delta: float) -> void:
 		
 		ScriptGlobal.nodo_musica.stop()
 		$AudioStreamPlayer.play()
+		
+		var tween = get_tree().create_tween()
+		tween.tween_property(
+			self,                  # Nodo objetivo
+			"scale",             # Propiedad a interpolar
+			Vector2(1.1,1.1),         # Valor final
+			0.3         # Duración
+		).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 		
 		# Activar animacion
 		ScriptGlobal.activar_animacion(anim)
@@ -82,7 +91,9 @@ func _on_audio_stream_player_finished() -> void:
 	queue_free()
 	pass # Replace with function body.
 
-
+func desaparecer():	
+	await get_tree().create_timer(0.6).timeout
+	queue_free()
 
 
 func _on_body_exited(body: Node2D) -> void:
