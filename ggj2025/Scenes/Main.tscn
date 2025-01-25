@@ -1,13 +1,14 @@
-[gd_scene load_steps=45 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=46 format=3 uid="uid://bqak8awkxwt4m"]
 
-[ext_resource type="Texture2D" uid="uid://bymmj7u1mme82" path="res://Images/Fondo habitacion 1.png" id="1_klajk"]
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
-[ext_resource type="Texture2D" uid="uid://w64ko26aboab" path="res://Images/salon sucio.png" id="2_3u1wu"]
-[ext_resource type="Texture2D" uid="uid://cj87dpptiyawx" path="res://Images/fondo atico.png" id="2_p0o4a"]
+[ext_resource type="Texture2D" uid="uid://defiw3hscvymo" path="res://Images/cocina sucio.jpg" id="2_31sva"]
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
+[ext_resource type="Texture2D" uid="uid://3gu7w3jw5kpv" path="res://Images/buhardilla sucio.jpg" id="4_ufxyl"]
+[ext_resource type="Texture2D" uid="uid://bid536u4ornod" path="res://Images/estudio sucio.jpg" id="5_2dtpk"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
+[ext_resource type="Texture2D" uid="uid://cv2iob8iqkicp" path="res://Images/salon sucio color.jpg" id="6_ajp7e"]
 [ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
@@ -123,16 +124,6 @@ animations = [{
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7lo68"]
 
-[sub_resource type="Gradient" id="Gradient_nucqi"]
-offsets = PackedFloat32Array(0.327801, 0.692946, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_7d2cb"]
-gradient = SubResource("Gradient_nucqi")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 1)
-
 [sub_resource type="Gradient" id="Gradient_jembb"]
 offsets = PackedFloat32Array(0.262009, 0.384279, 0.755459)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.724891, 1, 1, 1, 0)
@@ -150,40 +141,45 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.189873, 0.852321, 1)
 colors = PackedColorArray(0, 0.239216, 0.290196, 0, 7.21961e-08, 0.132888, 0.165445, 0.184314, 0.203922, 0.592157, 0.615686, 0.368627, 0, 0.239216, 0.290196, 0)
 
+[sub_resource type="Gradient" id="Gradient_nucqi"]
+offsets = PackedFloat32Array(0.327801, 0.692946, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.0679011, 0.0679011, 0.0679011, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7d2cb"]
+gradient = SubResource("Gradient_nucqi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
-[node name="SalonSucio2" type="Sprite2D" parent="."]
+[node name="Cocina" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
-texture = ExtResource("2_3u1wu")
+texture = ExtResource("2_31sva")
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
 position = Vector2(1985, -1417)
 scale = Vector2(1.93069, 1.84475)
 texture = ExtResource("2_2fuvx")
 
-[node name="FondoAtico" type="Sprite2D" parent="."]
+[node name="Atico" type="Sprite2D" parent="."]
 position = Vector2(2167.49, -1215)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("2_p0o4a")
+texture = ExtResource("4_ufxyl")
 
-[node name="FondoHabitacion3" type="Sprite2D" parent="."]
+[node name="Dormitorio" type="Sprite2D" parent="."]
 position = Vector2(2167.5, -405)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("1_klajk")
+texture = ExtResource("5_2dtpk")
 
-[node name="FondoHabitacion1" type="Sprite2D" parent="."]
+[node name="Salon" type="Sprite2D" parent="."]
 position = Vector2(722.5, 405)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("1_klajk")
-
-[node name="Inicio" type="Sprite2D" parent="."]
-position = Vector2(360, 515)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_4ddiu")
+texture = ExtResource("6_ajp7e")
 
 [node name="PJ" type="CharacterBody2D" parent="."]
-position = Vector2(400, 600)
+position = Vector2(220, 600)
 motion_mode = 1
 script = ExtResource("4_hxefk")
 
@@ -202,7 +198,7 @@ offset_right = 420.0
 offset_bottom = 74.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(360, 524)
+position = Vector2(363, 604)
 zoom = Vector2(2, 2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -215,7 +211,7 @@ position = Vector2(1201, 191)
 anim = 1
 
 [node name="Gatete" type="AnimatedSprite2D" parent="."]
-position = Vector2(898, 543)
+position = Vector2(600, 700)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_oap5r")
 autoplay = "default"
@@ -231,13 +227,6 @@ material = SubResource("CanvasItemMaterial_7lo68")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("34_kqd0y")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(2629, 607)
-scale = Vector2(5.9375, 5.9375)
-color = Color(0.955473, 0.306717, 0, 1)
-energy = 1.4
-texture = SubResource("GradientTexture2D_7d2cb")
 
 [node name="DustParticles" type="CPUParticles2D" parent="."]
 position = Vector2(1440, -405)
@@ -260,5 +249,18 @@ scale_amount_max = 0.3
 scale_amount_curve = SubResource("Curve_rrcx7")
 color_ramp = SubResource("Gradient_tvg56")
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1150, 607)
+scale = Vector2(5.9375, 5.9375)
+color = Color(0.955473, 0.306717, 0, 1)
+energy = 1.4
+texture = SubResource("GradientTexture2D_7d2cb")
+
 [node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
 position = Vector2(1440, 0)
+
+[node name="Inicio" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(363, 604)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_4ddiu")
