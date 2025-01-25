@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=81 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
 [ext_resource type="Texture2D" uid="uid://bid536u4ornod" path="res://Images/estudio sucio.jpg" id="5_2dtpk"]
 [ext_resource type="Texture2D" uid="uid://bgrjt4dgkhlwf" path="res://Images/pj IDLE/idle0001.png" id="6_2dvtn"]
+[ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
 [ext_resource type="Texture2D" uid="uid://22fqkovei0yb" path="res://Images/pj IDLE/idle0002.png" id="7_mx3v3"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
@@ -86,7 +87,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 12.0
+"speed": 9.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
@@ -400,7 +401,10 @@ z_index = 1
 texture = ExtResource("4_dy0fd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Salon"]
+position = Vector2(412.07, 223)
 sprite_frames = SubResource("SpriteFrames_5rmxy")
+autoplay = "default"
+frame_progress = 0.307297
 
 [node name="Cocina" type="Sprite2D" parent="."]
 position = Vector2(2167.5, 405)
@@ -431,16 +435,20 @@ texture = ExtResource("4_dy0fd")
 
 [node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1128, 330)
+monitorable = false
+imagen = ExtResource("6_p13jp")
 cancion = "explotar.mp3"
 anim = 1
 
 [node name="Obj2" parent="." instance=ExtResource("8_nq87s")]
+visible = false
 position = Vector2(1134, 610)
 tipo = 1
 anim = 1
 
 [node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(2728, 740)
+imagen = ExtResource("48_d4wyc")
 anim = 3
 
 [node name="Obj4" parent="." instance=ExtResource("8_nq87s")]

@@ -5,6 +5,7 @@ var perso_en_area = null
 # Tipo de objeto, si es para quedarse o irse
 enum TIPO { QUEDARSE, IRSE }
 @export var tipo: TIPO
+@export var imagen: Texture2D
 
 # Cancion a reproducir durante el recuerdo, HAY QUE INCLUIR .MP3 AL FINAL
 @export var cancion: String
@@ -18,6 +19,7 @@ var ruta = "res://Music/prueba/"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	perso_en_area = false
+	$Sprite2D.texture = imagen #lo que haya metido de var
 	
 	pass # Replace with function body.
 
@@ -58,6 +60,15 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("pj"):
 		perso_en_area = true
 
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(
+			self,                  # Nodo objetivo
+			"scale",             # Propiedad a interpolar
+			Vector2(1.1,1.1),         # Valor final
+			0.3         # Duración
+		).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
+	
 	pass 
 	
 
@@ -74,4 +85,12 @@ func _on_audio_stream_player_finished() -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	perso_en_area = false
-	pass # Replace with function body.
+
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(
+		self,                  # Nodo objetivo
+		"scale",             # Propiedad a interpolar
+		Vector2(1,1),         # Valor final
+		0.3        # Duración
+	).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
