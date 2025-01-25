@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
-[ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
+[ext_resource type="PackedScene" uid="uid://d2fyi7i84tc4h" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
 [ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgg74"]
@@ -195,6 +195,7 @@ parameters/looping = true
 
 [node name="Area2D" parent="." instance=ExtResource("8_nq87s")]
 position = Vector2(1201, 191)
+anim = 1
 
 [node name="Gatete" type="AnimatedSprite2D" parent="."]
 position = Vector2(898, 543)

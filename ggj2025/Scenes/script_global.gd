@@ -19,5 +19,6 @@ func _process(delta: float) -> void:
 	pass
 
 func activar_animacion(anim):
+	print(anim)
 	nivel.activar_animacion(anim)
 	pass

@@ -64,6 +64,8 @@ func activar_animacion(numero):
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	pj.can_move = false
 	
+	print(numero)
+	
 	# TODO ampliar a todas las estrofas
 	match numero:
 		1:

@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
 		else:
 			ScriptGlobal.cont_decision -= 1
 			
+		print(anim)
 		
 	
 	# Si pulso el botón cambia que sonido reproduce. Esto luego se cambia a si tomo una decision u otra
