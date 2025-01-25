@@ -60,10 +60,17 @@ func begin_game():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
-func activar_animacion():
+func activar_animacion(numero):
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	pj.can_move = false
-	animacionE1.play("estrofa")
+	
+	# TODO ampliar a todas las estrofas
+	match numero:
+		1:
+			animacionE1.play("estrofa")
+		2:
+			animacionE2.play("estrofa")
+			
 	print("He hecho play")
 	
 	await get_tree().create_timer(10).timeout  #espera a que termine la estrofa

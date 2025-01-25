@@ -11,6 +11,9 @@ enum TIPO { QUEDARSE, IRSE }
 # ruta a los efectos
 var ruta = "res://Music/prueba/"
 
+# Animacion que va a reproducir durante el recuerpo, va de 1 a 6
+@export var anim: int
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,7 +34,7 @@ func _process(delta: float) -> void:
 		$AudioStreamPlayer.play()
 		
 		# Activar animacion
-		ScriptGlobal.activar_animacion()
+		ScriptGlobal.activar_animacion(anim)
 		
 		# Modificar contador de decisiones
 		if tipo == TIPO.QUEDARSE:
