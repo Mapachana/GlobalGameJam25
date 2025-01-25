@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://do1twlpqybkgf"]
+[gd_scene load_steps=47 format=3 uid="uid://cep4p040035fl"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -154,7 +154,7 @@ fill_to = Vector2(1, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8ttm"]
 size = Vector2(622, 301.5)
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
 [node name="Cocina" type="Sprite2D" parent="."]

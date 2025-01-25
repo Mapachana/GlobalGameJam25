@@ -415,10 +415,6 @@ stream = ExtResource("7_t5vac")
 autoplay = true
 parameters/looping = true
 
-[node name="Area2Da" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(1201, 191)
-anim = 1
-
 [node name="Gatete" type="AnimatedSprite2D" parent="."]
 position = Vector2(600, 700)
 scale = Vector2(0.5, 0.5)
@@ -609,3 +605,43 @@ shape = SubResource("RectangleShape2D_wvr4g")
 position = Vector2(2217, -809)
 scale = Vector2(74.1311, 3.02537)
 shape = SubResource("RectangleShape2D_wvr4g")
+
+[node name="EstrofaAnim3" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
+
+[node name="EstrofaAnim4" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
+
+[node name="EstrofaAnim5" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
+
+[node name="EstrofaAnim6" parent="." instance=ExtResource("33_n074a")]
+position = Vector2(1440, 0)
+
+[node name="Obj1" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1124, 322)
+cancion = "explotar.mp3"
+anim = 1
+
+[node name="Obj2" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1134, 610)
+tipo = 1
+anim = 2
+
+[node name="Obj3" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2728, 740)
+anim = 3
+
+[node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2586, 286)
+tipo = 1
+anim = 4
+
+[node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(2694, -145)
+anim = 5
+
+[node name="Obj6" parent="." instance=ExtResource("8_nq87s")]
+position = Vector2(1635, -434)
+tipo = 1
+anim = 6
