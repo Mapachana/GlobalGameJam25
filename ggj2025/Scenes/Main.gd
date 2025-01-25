@@ -143,6 +143,3 @@ func room4_camera():
 		Vector2(2167.5,-1215),         # Valor final
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-
-
-
