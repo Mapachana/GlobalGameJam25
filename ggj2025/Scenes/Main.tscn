@@ -969,9 +969,6 @@ scale = Vector2(74.1311, 3.02537)
 shape = SubResource("RectangleShape2D_wvr4g")
 
 [node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
-light_mask = 0
-visibility_layer = 0
-z_index = 2
 
 [node name="EstrofaAnim1" parent="." instance=ExtResource("31_7lenv")]
 z_index = 2
