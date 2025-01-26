@@ -47,8 +47,6 @@ func _process(delta: float) -> void:
 		perso_en_area = false
 		
 		ScriptGlobal.nodo_musica.stop()
-		ScriptGlobal.nodo_ambiente.stop()
-		ScriptGlobal.nodo_ambiente2.stop()
 		$AudioStreamPlayer.play()
 		
 		var tween = get_tree().create_tween()
