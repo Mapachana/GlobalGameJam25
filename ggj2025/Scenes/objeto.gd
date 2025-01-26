@@ -97,7 +97,7 @@ func _on_body_entered(body: Node2D) -> void:
 # Una vez ha terminado la cancion y efectos pongo la musica desde el principio
 func _on_audio_stream_player_finished() -> void:
 	# Cambiar el stream de cada uno segun las decisiones
-	ScriptGlobal.setupmusica("Ambiente 1 (no-FX).wav", "Ghost (no-FX).wav", "", false)
+	ScriptGlobal.setupmusica()
 	queue_free()
 	pass # Replace with function body.
 

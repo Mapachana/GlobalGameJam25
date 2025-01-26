@@ -11,7 +11,6 @@ extends Node2D
 
 const DURACION_ESTROFA = 1.5
 
-
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D
 var camera_follows = false #si la cámara está siguiendo al jugador
@@ -30,7 +29,7 @@ func _ready():
 	ScriptGlobal.nodo_ambiente = $audioambiente
 	ScriptGlobal.nodo_ambiente2 = $audioambiente2
 	ScriptGlobal.cont_decision = cont_decision
-	ScriptGlobal.setupmusica("Ambiente 1 (no-FX).wav", "Ghost (no-FX).wav", "", false)
+	ScriptGlobal.setupmusica()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -84,6 +83,8 @@ func begin_game():
 func activar_animacion(numero):
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	pj.can_move = false
+	
+	ScriptGlobal.ultima_decision += 1
 	
 	print(numero)
 	
