@@ -244,6 +244,13 @@ func room2_camera():
 
 	var tween = get_tree().create_tween()
 	
+	tween.tween_property(
+		camera,                  # Nodo objetivo
+		"position",             # Propiedad a interpolar
+		Vector2(2167.5,405),         # Valor final
+		1         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
 		
 	
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
