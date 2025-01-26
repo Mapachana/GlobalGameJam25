@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwv7jx3fquuic"
+path="res://.godot/imported/Final A quedarse.mp3-479bb33bcbcb3992eaf92d3e12599cdc.mp3str"
+
+[deps]
+
+source_file="res://Music/desesperacion/Final A quedarse.mp3"
+dest_files=["res://.godot/imported/Final A quedarse.mp3-479bb33bcbcb3992eaf92d3e12599cdc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

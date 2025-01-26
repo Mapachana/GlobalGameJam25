@@ -33,7 +33,7 @@ func activar_animacion(anim):
 func setupmusica(eleccion):
 	var ruta = "res://Music/desesperacion/"
 	var fichero_quedarse = "A definitivo.mp3"
-	var fichero_irse = "B prueba.wav"
+	var fichero_irse = "B definitivo.mp3"
 	var pos = 0
 	
 	if eleccion == "C":
@@ -55,7 +55,7 @@ func setupmusica(eleccion):
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
-				pos = 53
+				pos = 0
 				nodo_musica.stream = load(ruta+fichero_irse)
 
 		2:
@@ -64,7 +64,7 @@ func setupmusica(eleccion):
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
-				pos = 53
+				pos = 100
 				nodo_musica.stream = load(ruta+fichero_irse)
 		3:
 			if eleccion == "A":
@@ -72,7 +72,7 @@ func setupmusica(eleccion):
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
-				pos = 53
+				pos = 200
 				nodo_musica.stream = load(ruta+fichero_irse)
 			
 	
@@ -89,12 +89,14 @@ func setupmusica(eleccion):
 
 func musica_final():
 	var ruta = "res://Music/desesperacion/"
-	var fichero_quedarse = "A definitivo.mp3"
-	var fichero_irse = "B prueba.wav"
+	var fichero_quedarse = "Final A quedarse.mp3"
+	var fichero_irse = "Final B irse.mp3"
 	if cont_decision > 0:
 		nodo_musica.stream = load(ruta+fichero_quedarse)
 	else:
 		nodo_musica.stream = load(ruta+fichero_irse)
+	
+	nodo_musica.play()
 
 	
 func acariciar_gato():
