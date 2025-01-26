@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 44
+const DURACION_ESTROFA = 4
 
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D
@@ -303,3 +303,9 @@ func room4_camera_1():
 		Vector2(1/(0.803),1/(0.803)),         # Valor final
 		0.5         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+
+func _on_finales_animation_finished(anim_name: StringName) -> void:
+	await get_tree().create_timer(3).timeout  #espera a que termine la estrofa
+	ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
+	pass # Replace with function body.
