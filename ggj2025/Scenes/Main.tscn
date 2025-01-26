@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=99 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
 [ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
@@ -26,19 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://8g58sp5loqpy" path="res://Images/estudio/estudio fondo.png" id="21_2hx0l"]
 [ext_resource type="Texture2D" uid="uid://bh0htp6n650ba" path="res://Images/buhardilla/marco techo fondo.png" id="21_pui5m"]
 [ext_resource type="Texture2D" uid="uid://ch3sy71ip4nbv" path="res://Images/buhardilla/marco techo delante.png" id="22_1vg3j"]
-[ext_resource type="Texture2D" uid="uid://bwanl4k0rnbw3" path="res://Images/animacion gatoandar sucio/gatoandar0001.png" id="23_r7u2r"]
-[ext_resource type="Texture2D" uid="uid://dqkol38m1uj0c" path="res://Images/animacion gatoandar sucio/gatoandar0002.png" id="24_ocu6p"]
 [ext_resource type="Texture2D" uid="uid://dy82m37lk5d3m" path="res://Images/estudio/libros.png" id="24_wfr3v"]
-[ext_resource type="Texture2D" uid="uid://lxqjxveoxedn" path="res://Images/animacion gatoandar sucio/gatoandar0003.png" id="25_nd8dy"]
-[ext_resource type="Texture2D" uid="uid://cp5lgiw7hiqc2" path="res://Images/animacion gatoandar sucio/gatoandar0004.png" id="26_ugy3t"]
 [ext_resource type="Texture2D" uid="uid://bh80yfqkyhkpd" path="res://Images/estudio/pluma y tintero.png" id="26_y2mfo"]
-[ext_resource type="Texture2D" uid="uid://clwbuggo2ex2u" path="res://Images/animacion gatoandar sucio/gatoandar0005.png" id="27_woa5t"]
-[ext_resource type="Texture2D" uid="uid://dw0wccrhbdop0" path="res://Images/animacion gatoandar sucio/gatoandar0006.png" id="28_sllra"]
-[ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
 [ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
 [ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
-[ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
@@ -65,8 +57,16 @@
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="Texture2D" uid="uid://beo6u5iq2ln05" path="res://Images/placeholder final1.png" id="60_undnq"]
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
-[ext_resource type="PackedScene" uid="uid://b2u36kir16up8" path="res://Scenes/gato.tscn" id="64_64fbg"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
+[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
+[ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
+[ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
+[ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
+[ext_resource type="Texture2D" uid="uid://dw7q3bhi2g50u" path="res://Images/comic del principio/comic4.png" id="72_168uq"]
+[ext_resource type="Texture2D" uid="uid://cobbrwl77ws3n" path="res://Images/comic del principio/comic5.png" id="73_jb3id"]
+[ext_resource type="Texture2D" uid="uid://tdlj1pxuxk18" path="res://Images/comic del principio/comic6.png" id="74_sdavg"]
+[ext_resource type="Texture2D" uid="uid://sih6kut2kuqn" path="res://Images/comic del principio/comic7.png" id="75_7b52c"]
+[ext_resource type="Texture2D" uid="uid://ttwck73oiyj0" path="res://Images/comic del principio/comic8.png" id="76_6sf4n"]
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -175,38 +175,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
 radius = 14.3333
 height = 46.6667
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_oap5r"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_r7u2r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_ocu6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_nd8dy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_ugy3t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_woa5t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_sllra")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_5i0xg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_nkjip")
-}],
-"loop": true,
-"name": &"default",
-"speed": 12.0
-}]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7lo68"]
 
@@ -438,12 +406,20 @@ scroll_offset = Vector2(3436, 463)
 position = Vector2(-904, -76)
 texture = ExtResource("2_ouf3b")
 
+[node name="Parallax2DSalon3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(3051, -142)
+
+[node name="PlaceholderBgPlantaAbajo" type="Sprite2D" parent="Parallax2DSalon3"]
+position = Vector2(-904, -76)
+texture = ExtResource("2_ouf3b")
+
 [node name="Parallax2DCocina" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.8, 0.8)
 scroll_offset = Vector2(1081, 291)
 
 [node name="PlaceholderBgPlantaAbajo" type="Sprite2D" parent="Parallax2DCocina"]
-position = Vector2(-904, -76)
+position = Vector2(-534, 139)
 texture = ExtResource("2_ouf3b")
 
 [node name="Salon" type="Sprite2D" parent="."]
@@ -729,6 +705,7 @@ imagen = ExtResource("24_wfr3v")
 cancion = "Estrofa 3B.wav"
 
 [node name="PJ" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(227, 615)
 motion_mode = 1
 script = ExtResource("4_hxefk")
@@ -752,13 +729,6 @@ zoom = Vector2(2, 2)
 stream = ExtResource("7_t5vac")
 autoplay = true
 parameters/looping = true
-
-[node name="Gatete" type="AnimatedSprite2D" parent="."]
-position = Vector2(600, 700)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_oap5r")
-autoplay = "default"
-frame_progress = 0.0322324
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -987,11 +957,84 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(2164, -1210)
 texture = ExtResource("61_v8jou")
 
-[node name="gato" parent="." instance=ExtResource("64_64fbg")]
-position = Vector2(932, 552)
-
 [node name="audioambiente" type="AudioStreamPlayer" parent="."]
 
 [node name="audioambiente2" type="AudioStreamPlayer" parent="."]
+
+[node name="Comic" type="Node2D" parent="."]
+light_mask = 2
+z_index = 2
+
+[node name="FondoNegro" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+z_index = 1
+position = Vector2(707, 399)
+scale = Vector2(1.13933, 1.13933)
+texture = ExtResource("68_56saj")
+
+[node name="Comic1" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(177, 236)
+texture = ExtResource("69_a2kew")
+
+[node name="Comic2" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(625, 246)
+texture = ExtResource("70_x5lkr")
+
+[node name="Comic3" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(1158, 124.5)
+texture = ExtResource("71_xtf5y")
+
+[node name="Comic4" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(1159, 333.5)
+texture = ExtResource("72_168uq")
+
+[node name="Comic5" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(280, 614)
+texture = ExtResource("73_jb3id")
+
+[node name="Comic6" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(674, 616)
+texture = ExtResource("74_sdavg")
+
+[node name="Comic7" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(965, 616)
+texture = ExtResource("75_7b52c")
+
+[node name="Comic8" type="Sprite2D" parent="Comic"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(1247, 605)
+texture = ExtResource("76_6sf4n")
 
 [connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]

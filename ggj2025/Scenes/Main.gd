@@ -55,13 +55,14 @@ func _input(event):
 
 func intro_animation():
 	animacionIntro.play("new")
-	await get_tree().create_timer(3).timeout  #espera a que termine la estrofa
+	await get_tree().create_timer(0.5).timeout  #espera a que termine la estrofa
 
 	begin_game()
 
 	
 func begin_game():
-	pj.can_move=true
+	pj.can_move = false
+	
 	#Animación de cámara para enfocar la sala 1
 	var tween = get_tree().create_tween()
 
@@ -80,6 +81,43 @@ func begin_game():
 		Vector2(1,1),         # Valor final
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	tween.connect("finished",Callable(self,"comic_anim"))
+
+func comic_anim():
+	await get_tree().create_timer(0.7).timeout  # Espera a que termine la estrofa
+
+	var tween1 = get_tree().create_tween()
+	tween1.tween_property(
+		$Comic/FondoNegro,                  # Nodo objetivo
+		"modulate:a",             # Propiedad a interpolar
+		1,         # Valor final
+		0.3         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	var comics = [$Comic/Comic1,$Comic/Comic2,$Comic/Comic2,$Comic/Comic3,$Comic/Comic4,$Comic/Comic5,$Comic/Comic6,$Comic/Comic7,$Comic/Comic8]
+	for comic in comics:  # Itera desde 1 hasta 8
+		await get_tree().create_timer(0.7).timeout  # Espera a que termine la estrofa
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(
+			comic,       # Nodo objetivo dinámico
+			"modulate:a",            # Propiedad a interpolar
+			1,                       # Valor final
+			0.4                      # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	pj.visible=true
+	pj.can_move = true
+	
+	await get_tree().create_timer(3).timeout  #espera a que termine la estrofa
+	var tween3 = get_tree().create_tween()
+	tween3.tween_property(
+		$Comic,                  # Nodo objetivo
+		"modulate:a",             # Propiedad a interpolar
+		0,         # Valor final
+		0.4         # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
 
 func activar_animacion(numero):
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
