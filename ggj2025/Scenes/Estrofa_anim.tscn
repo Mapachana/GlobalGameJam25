@@ -412,6 +412,7 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_ostem")
 }
+autoplay = "estrofa"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1292, 406)
@@ -482,5 +483,6 @@ scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_tke5g")
 
 [node name="Estrofa1a" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-482, -271)
+position = Vector2(-1535, 573)
 stream = ExtResource("5_otp6n")
+autoplay = true
