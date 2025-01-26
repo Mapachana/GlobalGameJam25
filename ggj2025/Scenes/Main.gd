@@ -320,15 +320,19 @@ func room4_camera():
 	#METER ANIM DEL FINAL DEL JUEGO
 func decision_final():
 	ScriptGlobal.musica_final()
-	if cont_decision>0:
+	if cont_decision<0:
 		print("final a")
 		#$Finales.play("FinalA")
 		$EstrofaAnim6/AnimationPlayer.play("estrofa")
+		await get_tree().create_timer(39).timeout  #espera a que termine la estrofa
+		ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
 		
 	else:
 		print("final b")
 		#$Finales.play("FinalB")
 		$EstrofaAnim7/AnimationPlayer.play("estrofa")
+		await get_tree().create_timer(39).timeout  #espera a que termine la estrofa
+		ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
 	#tween.connect("finished",Callable(self,"room4_camera_1"))
 
 func room4_camera_1():
