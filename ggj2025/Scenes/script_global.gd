@@ -30,40 +30,43 @@ func activar_animacion(anim):
 	nivel.activar_animacion(anim)
 	pass
 	
-func setupmusica():
-	var ruta = "res://Music/fondo_fx/"
-	var base = ""
-	var melodia1 = ""
-	var melodia2 = ""
-	var hay_melodia1 = false
-	var hay_melodia2 = false
+func setupmusica(eleccion):
+	var ruta = "res://Music/desesperacion/"
+	var fichero_quedarse = "A prueba .wav"
+	var fichero_irse = "B prueba.wav"
+	var pos = 0
+	
+	if eleccion == "C":
+		print("WTF")
 	
 	match ultima_decision:
 		0:
-			base = "Ambiente 1 (no-FX).wav"
-			melodia1 = "Ghost (no-FX).wav"
-			hay_melodia1 = true
+			if eleccion == "A":
+				pos = 0
+			else:
+				pos = 0
+			nodo_musica.stream = load(ruta+fichero_quedarse)
+
 		1:
-			base = "Ambiente 2 (no-FX).wav"
-			melodia1 = "Ghost (no-FX).wav"
-			melodia2 = "Pizzicato (no-FX).wav"
-			hay_melodia1 = true
-			hay_melodia2 = true
+			pos = 54.87
+			nodo_musica.stream = load(ruta+fichero_irse)
+
 		2:
-			base = "Ambiente 3 (no-FX).wav"
-			melodia1 = "Ghost (no-FX).wav"
-			melodia2 = "Music Box (no-FX).wav"
-			hay_melodia1 = true
-			hay_melodia2 = true
+			pos = 0
 		3:
-			base = "Ambiente 3 (no-FX).wav"
+			pos = 0
 			
 	
 	print("DECISION")
 	print(ultima_decision)
 	
-	nodo_musica.stream = load(ruta+base)
-	nodo_musica.play()
+	nodo_musica.play(pos)
+	#nodo_musica.seek(5.0)
+	
+	ultima_decision += 1
+	print("dec")
+	print("ultima_decision")
+
 	
 	
 func acariciar_gato():

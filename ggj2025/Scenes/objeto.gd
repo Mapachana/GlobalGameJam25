@@ -46,8 +46,15 @@ func _process(delta: float) -> void:
 		#$Sprite2D.hide()
 		perso_en_area = false
 		
-		ScriptGlobal.nodo_musica.stop()
-		$AudioStreamPlayer.play()
+		#ScriptGlobal.nodo_musica.stop()
+		#$AudioStreamPlayer.play()
+		print(tipo)
+		var variable = ""
+		if tipo == TIPO.QUEDARSE:
+			variable = "A"
+		else:
+			variable = "B"
+		ScriptGlobal.setupmusica(variable)
 		
 		var tween = get_tree().create_tween()
 		tween.tween_property(
@@ -101,7 +108,7 @@ func _on_body_entered(body: Node2D) -> void:
 # Una vez ha terminado la cancion y efectos pongo la musica desde el principio
 func _on_audio_stream_player_finished() -> void:
 	# Cambiar el stream de cada uno segun las decisiones
-	ScriptGlobal.setupmusica()
+	ScriptGlobal.setupmusica("C")
 	queue_free()
 	pass # Replace with function body.
 

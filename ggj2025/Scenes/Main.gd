@@ -28,7 +28,7 @@ func _ready():
 	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
 	ScriptGlobal.cont_decision = cont_decision
-	ScriptGlobal.setupmusica()
+	ScriptGlobal.setupmusica("A")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -120,9 +120,7 @@ func comic_anim():
 func activar_animacion(numero):
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	pj.can_move = false
-	
-	ScriptGlobal.ultima_decision += 1
-	
+		
 	print(numero)
 	
 	# TODO ampliar a todas las estrofas

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://v6d3qh3tl77o"
+path="res://.godot/imported/B prueba.wav-92db448eae7d18be5038348d67b0f3dc.sample"
+
+[deps]
+
+source_file="res://Music/desesperacion/B prueba.wav"
+dest_files=["res://.godot/imported/B prueba.wav-92db448eae7d18be5038348d67b0f3dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
