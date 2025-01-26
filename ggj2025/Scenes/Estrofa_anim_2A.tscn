@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpjjtnjjaeku"]
+[gd_scene load_steps=13 format=3 uid="uid://cjd7wemj6xopr"]
 
-[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_5rc6e"]
-[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_fndja"]
-[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_hw2a6"]
+[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_uoodd"]
+[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_hjyfc"]
+[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_uv8hr"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
@@ -45,7 +45,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("FantasmaA:modulate")
+tracks/3/path = NodePath("gato:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -57,7 +57,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("FantasmaB:modulate")
+tracks/4/path = NodePath("mandragoras:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -105,74 +105,62 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("FantasmaA:scale")
+tracks/8/path = NodePath("DustParticles2:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.57962, 1.57962)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("FantasmaB:scale")
+tracks/9/path = NodePath("DustParticles3:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.27961, 1.27961)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("DustParticles2:modulate")
+tracks/10/path = NodePath("RichTextLabel5:visible_ratio")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [0.0]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("DustParticles3:modulate")
+tracks/11/path = NodePath("RichTextLabel6:visible_ratio")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [0.0]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("RichTextLabel5:visible_ratio")
+tracks/12/path = NodePath("sobrino:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("RichTextLabel6:visible_ratio")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_f8im0"]
@@ -197,7 +185,7 @@ tracks/1/path = NodePath("RichTextLabel2:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6, 11.2333, 13.2667),
+"times": PackedFloat32Array(0, 5.63333, 11.2333, 13.2667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
@@ -209,7 +197,7 @@ tracks/2/path = NodePath("RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(8, 13.9, 15.3333, 16.4999),
+"times": PackedFloat32Array(8, 12.7667, 15.3333, 16.4999),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
@@ -233,7 +221,7 @@ tracks/4/path = NodePath("RichTextLabel3:visible_ratio")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(14, 20, 26.9333, 28.7333),
+"times": PackedFloat32Array(14, 19.6, 26.9333, 28.7333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
@@ -253,11 +241,11 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("FantasmaA:modulate")
+tracks/6/path = NodePath("gato:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(2.03333, 4.63333, 11.3667, 13.4667),
+"times": PackedFloat32Array(2.03333, 4.63333, 25.0667, 27.1667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -265,11 +253,11 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("FantasmaB:modulate")
+tracks/7/path = NodePath("mandragoras:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(15.9333, 18.7, 24.4333, 26.8),
+"times": PackedFloat32Array(9.43333, 11.5667, 24.9667, 27.2333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -277,74 +265,62 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("FantasmaA:scale")
+tracks/8/path = NodePath("DustParticles2:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(1.56667, 13.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.5, 1.5), Vector2(1.8, 1.8)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("FantasmaB:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(15.4, 40.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.11, 1.11), Vector2(1.5, 1.5)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("DustParticles2:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
 "times": PackedFloat32Array(0.333333, 0.933333, 42.5333, 43.6667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("DustParticles3:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DustParticles3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
 "times": PackedFloat32Array(0.366667, 1.03333, 42.4667, 43.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("RichTextLabel5:visible_ratio")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(27.8333, 33.8667, 34.6333, 36),
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("RichTextLabel5:visible_ratio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(28.1667, 33.8667, 34.6333, 35.9667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
 }
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("RichTextLabel6:visible_ratio")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(34.8333, 42.0667, 43.7667),
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RichTextLabel6:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(35.5667, 42.0667, 43.7667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("sobrino:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(22.0333, 23.5, 24.9667, 26.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ostem"]
@@ -384,7 +360,7 @@ light_mask = 2
 z_index = 2
 position = Vector2(721, 410)
 scale = Vector2(1.26957, 1.26957)
-texture = ExtResource("1_5rc6e")
+texture = ExtResource("1_uoodd")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 light_mask = 2
@@ -393,11 +369,12 @@ offset_left = 61.0
 offset_top = 64.0
 offset_right = 1134.0
 offset_bottom = 271.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "Qué pasó, no es real,
-el calor no siento ya."
+text = "Quién cuidará de ti, 
+Burbujita tan sutil.
+"
 visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
@@ -409,11 +386,12 @@ offset_left = 954.0
 offset_top = 639.0
 offset_right = 2027.0
 offset_bottom = 846.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "No puedo ni gritar,
-un llanto sin llorar."
+text = "Mandrágoras en el jardín, 
+todo sigue aún sin mí.
+"
 fit_content = true
 visible_characters = 0
 visible_ratio = 0.0
@@ -426,11 +404,11 @@ offset_left = 56.0
 offset_top = 63.0
 offset_right = 1129.0
 offset_bottom = 270.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "No puedo ni rozar,
-¿qué es ésta realidad?"
+text = "La lluvia os riegará, 
+otros te alimentarán. "
 fit_content = true
 visible_characters = 0
 visible_ratio = 0.0
@@ -443,11 +421,11 @@ offset_left = 837.0
 offset_top = 632.0
 offset_right = 1910.0
 offset_bottom = 839.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "Solo queda soledad, 
-abandonar lo corporal."
+text = "Quiero veros crecer, 
+aunque para vosotros no esté. "
 fit_content = true
 visible_characters = 0
 visible_ratio = 0.0
@@ -460,11 +438,11 @@ offset_left = 157.0
 offset_top = 335.0
 offset_right = 1230.0
 offset_bottom = 542.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "[center]Mi reflejo no veo ya.
-No puedo interactuar.  [/center] "
+text = "[center]No hay forma de que falle, 
+mi destino es innegable.  [/center] "
 fit_content = true
 visible_characters = 0
 visible_ratio = 0.0
@@ -477,11 +455,11 @@ offset_left = 157.0
 offset_top = 335.0
 offset_right = 1230.0
 offset_bottom = 542.0
-theme_override_fonts/normal_font = ExtResource("2_fndja")
+theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "[center] Que ironía en verdad, 
-vida en muerta he de aceptar.  [/center] "
+text = "[center] Todo me une aquí, 
+¿por qué me querría ir?  [/center] "
 fit_content = true
 visible_characters = 0
 visible_ratio = 0.0
@@ -493,25 +471,33 @@ libraries = {
 }
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1292, 406)
-scale = Vector2(4.67188, 13.7188)
+position = Vector2(689, 114)
+rotation = -1.5708
+scale = Vector2(3.47188, 27.1234)
 color = Color(0, 0.961389, 0.554486, 1)
 energy = 0.0
 texture = SubResource("GradientTexture2D_bk5yl")
 
-[node name="FantasmaA" type="Sprite2D" parent="."]
+[node name="gato" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
 position = Vector2(672, 420)
-scale = Vector2(1.57962, 1.57962)
-texture = ExtResource("3_hw2a6")
+scale = Vector2(1.61595, 1.61595)
+texture = ExtResource("3_uv8hr")
 
-[node name="FantasmaB" type="Sprite2D" parent="."]
+[node name="mandragoras" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(662, 389)
-scale = Vector2(1.27961, 1.27961)
-texture = ExtResource("3_hw2a6")
+position = Vector2(494, 354)
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("3_uv8hr")
+
+[node name="sobrino" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+position = Vector2(856, 329)
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("3_uv8hr")
 
 [node name="DustParticles2" type="CPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0)
