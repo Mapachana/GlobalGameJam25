@@ -10,7 +10,7 @@ enum TIPO { QUEDARSE, IRSE }
 # Cancion a reproducir durante el recuerdo, HAY QUE INCLUIR .MP3 AL FINAL
 @export var cancion: String
 # ruta a los efectos
-var ruta = "res://Music/prueba/"
+var ruta = "res://Music/estrofas/"
 
 # Animacion que va a reproducir durante el recuerpo, va de 1 a 6
 @export var anim: int
@@ -18,9 +18,15 @@ var ruta = "res://Music/prueba/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var recurso = ruta+cancion
+	$AudioStreamPlayer.stream.set_list_stream(1, load(recurso))
+	print("OBJ")
+	print(recurso)
+	
 	perso_en_area = false
 	$Sprite2D.texture = imagen #lo que haya metido de var
-	if $AnimatedSprite2D:
+	
+	if $AnimatedSprite2D.visible: #check if its on
 		sprite = $AnimatedSprite2D
 	else:
 		sprite = $Sprite2D

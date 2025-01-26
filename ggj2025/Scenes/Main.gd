@@ -9,7 +9,8 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 4
+const DURACION_ESTROFA = 44
+const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D
@@ -91,6 +92,7 @@ func activar_animacion(numero):
 	# TODO ampliar a todas las estrofas
 	match numero:
 		1:
+			await get_tree().create_timer(DURACION_MINITRANS).timeout
 			animacionE1.play("estrofa")
 			$Obj1.desaparecer()
 			$Obj2.desaparecer()

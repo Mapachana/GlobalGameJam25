@@ -62,10 +62,10 @@ func _physics_process(delta):
 	if direction_R != 0 && can_move:
 		velocity.x = move_toward(velocity.x, direction_R * SPEED, ACCELERATION * delta)
 		
-		if direction_R < 0:
-			$AnimatedSprite2D.flip_h = true 
-		else:
-			$AnimatedSprite2D.flip_h = false 
+		#if direction_R < 0:
+		#	$AnimatedSprite2D.flip_h = true 
+		#else:
+		#	$AnimatedSprite2D.flip_h = false 
 			
 	else:
 		velocity.x = move_toward(velocity.x, 0, DRAG * delta)

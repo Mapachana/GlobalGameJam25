@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bt2pusam2jl08"]
+[gd_scene load_steps=20 format=3 uid="uid://bt2pusam2jl08"]
 
 [ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_822al"]
 [ext_resource type="Shader" path="res://Shaders/ObjetoAnimado.gdshader" id="2_om3h6"]
@@ -6,6 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="4_d2kda"]
 [ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="5_omcfp"]
 [ext_resource type="AudioStream" uid="uid://pn17tml2vq4x" path="res://Music/prueba/risa2.mp3" id="6_tn2xh"]
+[ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_tm2ei"]
+[ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_yliqy"]
+[ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_j8hft"]
+[ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_voopn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1j233"]
 radius = 40.0
@@ -90,6 +94,33 @@ _data = {
 "ToLoop2": SubResource("Animation_a5w41")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s2yb7"]
+shader = ExtResource("2_om3h6")
+shader_parameter/progress = 1.0
+shader_parameter/time = 1.0
+shader_parameter/aura_width = 2.5
+shader_parameter/aura_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plwaj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tm2ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yliqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j8hft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_voopn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_822al")
 
@@ -128,6 +159,12 @@ libraries = {
 "": SubResource("AnimationLibrary_c1pkd")
 }
 autoplay = "ToLoop2"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_s2yb7")
+sprite_frames = SubResource("SpriteFrames_plwaj")
+autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
