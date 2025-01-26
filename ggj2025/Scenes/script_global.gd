@@ -39,6 +39,8 @@ func setupmusica(eleccion):
 	if eleccion == "C":
 		print("WTF")
 	
+	print("SETUPMUSICA")
+	
 	match ultima_decision:
 		0:
 			if eleccion == "A":
@@ -48,8 +50,13 @@ func setupmusica(eleccion):
 			nodo_musica.stream = load(ruta+fichero_quedarse)
 
 		1:
-			pos = 54.87
-			nodo_musica.stream = load(ruta+fichero_irse)
+			if eleccion == "A":
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_quedarse)
+
+			else:
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_irse)
 
 		2:
 			pos = 0
@@ -65,7 +72,7 @@ func setupmusica(eleccion):
 	
 	ultima_decision += 1
 	print("dec")
-	print("ultima_decision")
+	print(ultima_decision)
 
 	
 	
