@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=100 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -59,6 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
+[ext_resource type="PackedScene" uid="uid://cpjjtnjjaeku" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
 [ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
@@ -922,10 +923,6 @@ shape = SubResource("RectangleShape2D_wvr4g")
 
 [node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
 
-[node name="EstrofaAnim1" parent="." instance=ExtResource("31_7lenv")]
-z_index = 2
-position = Vector2(-53, -2)
-
 [node name="EstrofaAnim2" parent="." instance=ExtResource("33_n074a")]
 z_index = 2
 position = Vector2(1440, 0)
@@ -1032,5 +1029,7 @@ visibility_layer = 2
 z_index = 2
 position = Vector2(1247, 605)
 texture = ExtResource("76_6sf4n")
+
+[node name="EstrofaAnim1" parent="." instance=ExtResource("68_fl2l4")]
 
 [connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]
