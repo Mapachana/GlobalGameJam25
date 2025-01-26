@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 1.5
+const DURACION_ESTROFA = 42
 
 #variables de cosas del control de cámara
 @onready var camera = $Camera2D

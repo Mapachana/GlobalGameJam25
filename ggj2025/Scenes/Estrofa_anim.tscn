@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0k865fill0bf"]
+[gd_scene load_steps=10 format=3 uid="uid://d0k865fill0bf"]
 
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_q726b"]
 [ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_twfi6"]
+[ext_resource type="Texture2D" uid="uid://qgtnrnjj8at8" path="res://Images/recuerdos/bruja chikita haciendo algo.png" id="3_yg2to"]
+[ext_resource type="Texture2D" uid="uid://de6vtu788nx82" path="res://Images/recuerdos/gradu.png" id="4_1q4qc"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
@@ -41,9 +43,57 @@ tracks/2/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BrujaChikitaHaciendoAlgo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Gradu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RichTextLabel2:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("RichTextLabel:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
 
 [sub_resource type="Animation" id="Animation_f8im0"]
-length = 42.0
+length = 44.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -51,7 +101,7 @@ tracks/0/path = NodePath("Sprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.333333, 40.8667, 42),
+"times": PackedFloat32Array(0, 1.6, 42.8, 43.9333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -63,10 +113,10 @@ tracks/1/path = NodePath("RichTextLabel2:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6, 11.2333, 13.2667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -75,10 +125,10 @@ tracks/2/path = NodePath("RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(8, 12),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(8, 12, 13.0667, 14.2333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -87,7 +137,7 @@ tracks/3/path = NodePath("PointLight2D:energy")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(40.7, 41.7333),
+"times": PackedFloat32Array(40.7333, 43.8667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -99,10 +149,10 @@ tracks/4/path = NodePath("RichTextLabel3:visible_ratio")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(14, 20),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(14, 20, 40.4667, 42.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -111,10 +161,34 @@ tracks/5/path = NodePath("RichTextLabel4:visible_ratio")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(21.9667, 40.0667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(21.9667, 40.0667, 41.7333, 43.3333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BrujaChikitaHaciendoAlgo:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.03333, 4.63333, 11.3667, 13.4667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Gradu:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(15.9333, 18.7, 37.7, 40.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ostem"]
@@ -134,40 +208,40 @@ gradient = SubResource("Gradient_32tam")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+light_mask = 2
 position = Vector2(721, 410)
 scale = Vector2(1.26957, 1.26957)
 texture = ExtResource("1_q726b")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 26.0
-offset_top = 39.0
-offset_right = 1099.0
-offset_bottom = 246.0
+light_mask = 2
+offset_left = 61.0
+offset_top = 64.0
+offset_right = 1134.0
+offset_bottom = 271.0
 theme_override_fonts/normal_font = ExtResource("2_twfi6")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Vivir, descubrir,
 aprender que está bien."
-visible_characters = 0
-visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 962.0
-offset_top = 148.0
-offset_right = 2035.0
-offset_bottom = 355.0
+light_mask = 2
+offset_left = 954.0
+offset_top = 639.0
+offset_right = 2027.0
+offset_bottom = 846.0
 theme_override_fonts/normal_font = ExtResource("2_twfi6")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Crear y conocer, 
 acompañar al crecer. "
 fit_content = true
-visible_characters = 0
-visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
+light_mask = 2
 offset_left = 19.0
 offset_top = 420.0
 offset_right = 1092.0
@@ -183,6 +257,7 @@ visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
+light_mask = 2
 offset_left = 856.0
 offset_top = 647.0
 offset_right = 1929.0
@@ -209,3 +284,15 @@ scale = Vector2(4.67188, 13.7188)
 color = Color(0, 0.961389, 0.554486, 1)
 energy = 0.0
 texture = SubResource("GradientTexture2D_bk5yl")
+
+[node name="BrujaChikitaHaciendoAlgo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(672, 420)
+scale = Vector2(1.57962, 1.57962)
+texture = ExtResource("3_yg2to")
+
+[node name="Gradu" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(708, 430)
+scale = Vector2(1.27961, 1.27961)
+texture = ExtResource("4_1q4qc")
