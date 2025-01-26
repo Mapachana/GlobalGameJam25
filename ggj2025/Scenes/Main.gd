@@ -346,6 +346,6 @@ func room4_camera_1():
 
 
 func _on_finales_animation_finished(anim_name: StringName) -> void:
-	await get_tree().create_timer(110).timeout  #espera a que termine la estrofa
+	await get_tree().create_timer(39).timeout  #espera a que termine la estrofa
 	ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
 	pass # Replace with function body.
