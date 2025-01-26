@@ -7,7 +7,6 @@ enum TIPO { QUEDARSE, IRSE }
 @export var tipo: TIPO
 @export var imagen: Texture2D
 @export var otro: Node2D
-
 # Cancion a reproducir durante el recuerdo, HAY QUE INCLUIR .MP3 AL FINAL
 @export var cancion: String
 # ruta a los efectos

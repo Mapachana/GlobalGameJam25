@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=104 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -28,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://cxr2ra5au8o6g" path="res://Images/pj IDLE/idle0008.png" id="13_1u73p"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://fmsc4lvwa4wj" path="res://Images/pj IDLE/idle0009.png" id="14_0b7bx"]
-[ext_resource type="Texture2D" uid="uid://by2priv8rnk1g" path="res://Images/buhardilla sucio color.jpg" id="14_w6hau"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
 [ext_resource type="Texture2D" uid="uid://cbb6lapa1oqtl" path="res://Images/pj IDLE/idle0010.png" id="15_nm3jw"]
 [ext_resource type="Texture2D" uid="uid://c8hgdbp3q3vb0" path="res://Images/pj IDLE/idle0011.png" id="16_beoxx"]
@@ -37,7 +36,10 @@
 [ext_resource type="Texture2D" uid="uid://c5wgf0gpsxgy8" path="res://Images/cocina/escoba.png" id="18_7h1ok"]
 [ext_resource type="Texture2D" uid="uid://qb1gpv61yjug" path="res://Images/pj IDLE/idle0013.png" id="18_efavc"]
 [ext_resource type="Texture2D" uid="uid://bykjbbuehnpeb" path="res://Images/pj IDLE/idle0014.png" id="19_s3kvw"]
+[ext_resource type="Texture2D" uid="uid://ba6i0cqi2rkm7" path="res://Images/buhardilla/fondo buhardilla.png" id="20_66ive"]
 [ext_resource type="Texture2D" uid="uid://8g58sp5loqpy" path="res://Images/estudio/estudio fondo.png" id="21_2hx0l"]
+[ext_resource type="Texture2D" uid="uid://bh0htp6n650ba" path="res://Images/buhardilla/marco techo fondo.png" id="21_pui5m"]
+[ext_resource type="Texture2D" uid="uid://ch3sy71ip4nbv" path="res://Images/buhardilla/marco techo delante.png" id="22_1vg3j"]
 [ext_resource type="Texture2D" uid="uid://bwanl4k0rnbw3" path="res://Images/animacion gatoandar sucio/gatoandar0001.png" id="23_r7u2r"]
 [ext_resource type="Texture2D" uid="uid://dqkol38m1uj0c" path="res://Images/animacion gatoandar sucio/gatoandar0002.png" id="24_ocu6p"]
 [ext_resource type="Texture2D" uid="uid://dy82m37lk5d3m" path="res://Images/estudio/libros.png" id="24_wfr3v"]
@@ -641,7 +643,14 @@ texture = ExtResource("2_2fuvx")
 [node name="Atico" type="Sprite2D" parent="."]
 position = Vector2(2167.49, -1215)
 scale = Vector2(1.00347, 1)
-texture = ExtResource("14_w6hau")
+texture = ExtResource("20_66ive")
+
+[node name="SalonBorde" type="Sprite2D" parent="Atico"]
+texture = ExtResource("21_pui5m")
+
+[node name="SalonBorde2" type="Sprite2D" parent="Atico"]
+z_index = 2
+texture = ExtResource("22_1vg3j")
 
 [node name="Dormitorio" type="Sprite2D" parent="."]
 position = Vector2(2167.5, -405)
@@ -723,7 +732,7 @@ imagen = ExtResource("18_7h1ok")
 anim = 4
 
 [node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2716, -145)
+position = Vector2(2716, -155)
 imagen = ExtResource("26_y2mfo")
 anim = 5
 
