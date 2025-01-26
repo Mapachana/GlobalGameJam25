@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://diu7wk3fe6r8a"]
+
+[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_4tvx1"]
+[ext_resource type="Script" path="res://Scenes/mainmenu.gd" id="1_5nf1j"]
+[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="3_uufvj"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5nf1j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4tvx1")
+
+[node name="backgroundtext" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="columns" type="HBoxContainer" parent="backgroundtext"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="filler_left" type="Control" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="center" type="VBoxContainer" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uufvj")
+theme_override_font_sizes/font_size = 30
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="credits_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_uufvj")
+theme_override_fonts/bold_font = ExtResource("3_uufvj")
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 21
+bbcode_enabled = true
+text = "[center][b]3DGoblinDev[/b]
+Programmer and Technical Artist
+
+[b]Mapachana[/b]
+Programmer and Git Master
+
+[b]Alex[/b]
+Artist, animator and illustrator
+
+[b]Lucía Ruiz[/b]
+Songwriter and singer
+
+[b]Silen[/b]
+Arrangements, recording and music production[/center]
+
+[center]@3dgoblindev @mapachana @tortortola  @luciaruizta @SilenTheKid
+[/center]"
+fit_content = true
+
+[node name="start" type="Button" parent="backgroundtext/columns/center"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uufvj")
+theme_override_font_sizes/font_size = 30
+text = "Restart game"
+
+[node name="filler_right" type="Control" parent="backgroundtext/columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="backgroundtext/columns/center/start" to="." method="_on_start_pressed"]
