@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://d18pqfbs864oc"]
+[gd_scene load_steps=19 format=3 uid="uid://d18pqfbs864oc"]
 
 [ext_resource type="Script" path="res://Scenes/objeto.gd" id="1_kxa58"]
-[ext_resource type="AudioStream" uid="uid://c1d20tty70573" path="res://Music/prueba/explotar.mp3" id="2_43r4o"]
 [ext_resource type="Shader" path="res://Shaders/ObjetoAnimado.gdshader" id="2_sp6tw"]
 [ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="3_1s1fv"]
 [ext_resource type="AudioStream" uid="uid://de8rrltkgelqd" path="res://Music/prueba/risa1.mp3" id="3_gm0cg"]
@@ -23,8 +22,9 @@ shader_parameter/aura_color = Color(1, 1, 1, 1)
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_02yk6"]
 loop = false
+fade_time = 1.0
 stream_count = 3
-stream_0 = ExtResource("2_43r4o")
+stream_0 = ExtResource("4_5xbnr")
 stream_1 = ExtResource("3_gm0cg")
 stream_2 = ExtResource("4_5xbnr")
 
