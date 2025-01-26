@@ -28,7 +28,7 @@ func _ready():
 	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
 	ScriptGlobal.cont_decision = cont_decision
-	ScriptGlobal.setupmusica("A")
+	#ScriptGlobal.setupmusica("A")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,6 +36,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") && not has_started:
 		has_started = true
 		intro_animation()
+		ScriptGlobal.setupmusica("A")
 	
 	if camera_follows:
 		if x_movement:
