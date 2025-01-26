@@ -86,7 +86,16 @@ func setupmusica(eleccion):
 	print("dec")
 	print(ultima_decision)
 
-	
+
+func musica_final():
+	var ruta = "res://Music/desesperacion/"
+	var fichero_quedarse = "A definitivo.mp3"
+	var fichero_irse = "B prueba.wav"
+	if cont_decision > 0:
+		nodo_musica.stream = load(ruta+fichero_quedarse)
+	else:
+		nodo_musica.stream = load(ruta+fichero_irse)
+
 	
 func acariciar_gato():
 	print("GLOBAL ACARICIA A GATO")
