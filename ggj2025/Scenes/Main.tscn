@@ -1,19 +1,15 @@
-[gd_scene load_steps=109 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=103 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
 [ext_resource type="Texture2D" uid="uid://4ib718oyo6qc" path="res://Images/placeholder bg planta abajo.png" id="2_ouf3b"]
 [ext_resource type="Texture2D" uid="uid://cy1pc2hdjmnkm" path="res://Images/inicio.png" id="3_4ddiu"]
 [ext_resource type="Texture2D" uid="uid://ckwgs27kt2ixq" path="res://Images/cosas salon/salon fondo.png" id="3_c7ul5"]
-[ext_resource type="Shader" path="res://Scenes/Main.gdshader" id="3_nfp3t"]
 [ext_resource type="Texture2D" uid="uid://bpng2sfxuf4nu" path="res://Images/cosas salon/marco.png" id="4_dy0fd"]
 [ext_resource type="Script" path="res://Scenes/PJ.gd" id="4_hxefk"]
-[ext_resource type="Texture2D" uid="uid://cgshbe6o4fs8m" path="res://Images/buhardilla/nube 1.png" id="4_u7bpo"]
 [ext_resource type="Texture2D" uid="uid://ch5mkjvvi1dmw" path="res://Images/cosas salon/caldero.png" id="5_0lyv4"]
-[ext_resource type="Texture2D" uid="uid://wejwj6xx3y2x" path="res://Images/buhardilla/nube 2.png" id="5_gdafl"]
 [ext_resource type="Texture2D" uid="uid://cposuctfed6fi" path="res://Images/cosas salon/burbuja.png" id="6_cppaw"]
 [ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
-[ext_resource type="Texture2D" uid="uid://dm6d21d2a31iu" path="res://Images/buhardilla/nube 3.png" id="6_uw50t"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
 [ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
@@ -21,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
 [ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
@@ -35,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
 [ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
-[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
 [ext_resource type="Texture2D" uid="uid://cekr7hsa6fjd7" path="res://Images/idle final/idlefinal0003.png" id="32_2d3qg"]
@@ -62,23 +58,19 @@
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
-[ext_resource type="PackedScene" uid="uid://cpjjtnjjaeku" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
 [ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
-[ext_resource type="PackedScene" uid="uid://b00whpv2mbiyi" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
-[ext_resource type="PackedScene" uid="uid://cjd7wemj6xopr" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
-[ext_resource type="PackedScene" uid="uid://d3hooksholg8d" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
-[ext_resource type="PackedScene" uid="uid://doxn3jpg80uu" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_i5x32"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_i5x32"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
 [ext_resource type="Texture2D" uid="uid://dw7q3bhi2g50u" path="res://Images/comic del principio/comic4.png" id="72_168uq"]
 [ext_resource type="Texture2D" uid="uid://cobbrwl77ws3n" path="res://Images/comic del principio/comic5.png" id="73_jb3id"]
 [ext_resource type="Texture2D" uid="uid://tdlj1pxuxk18" path="res://Images/comic del principio/comic6.png" id="74_sdavg"]
 [ext_resource type="Texture2D" uid="uid://sih6kut2kuqn" path="res://Images/comic del principio/comic7.png" id="75_7b52c"]
 [ext_resource type="Texture2D" uid="uid://ttwck73oiyj0" path="res://Images/comic del principio/comic8.png" id="76_6sf4n"]
-[ext_resource type="PackedScene" uid="uid://d01k3lj37o4ew" path="res://Scenes/cat.tscn" id="76_dhhc0"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdo1l"]
-shader = ExtResource("3_nfp3t")
 
 [sub_resource type="Gradient" id="Gradient_hwerc"]
 offsets = PackedFloat32Array(0.346154, 0.700855, 1)
@@ -434,51 +426,6 @@ scroll_offset = Vector2(1081, 291)
 position = Vector2(-534, 139)
 texture = ExtResource("2_ouf3b")
 
-[node name="CieloPlaceholder" type="Sprite2D" parent="."]
-position = Vector2(1985, -1417)
-scale = Vector2(1.93069, 1.84475)
-texture = ExtResource("2_2fuvx")
-
-[node name="Parallax2D" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(47, 19)
-
-[node name="Nube1" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2731, -1270)
-texture = ExtResource("4_u7bpo")
-
-[node name="Nube5" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(1074, -1785)
-texture = ExtResource("4_u7bpo")
-
-[node name="Nube2" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2141, -1484)
-texture = ExtResource("5_gdafl")
-
-[node name="Nube4" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(829, -975)
-texture = ExtResource("5_gdafl")
-
-[node name="Nube3" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(1550, -1232)
-texture = ExtResource("6_uw50t")
-
-[node name="Nube6" type="Sprite2D" parent="Parallax2D"]
-modulate = Color(1, 1, 1, 0.588235)
-material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2749, -1741)
-texture = ExtResource("6_uw50t")
-
 [node name="Salon" type="Sprite2D" parent="."]
 position = Vector2(722.5, 405)
 scale = Vector2(1.00347, 1)
@@ -646,6 +593,11 @@ texture = ExtResource("17_0b3ln")
 position = Vector2(2629, 299)
 texture = ExtResource("18_7h1ok")
 
+[node name="CieloPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(1985, -1417)
+scale = Vector2(1.93069, 1.84475)
+texture = ExtResource("2_2fuvx")
+
 [node name="Atico" type="Sprite2D" parent="."]
 position = Vector2(2167.49, -1215)
 scale = Vector2(1.00347, 1)
@@ -768,6 +720,7 @@ script = ExtResource("4_hxefk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PJ"]
 modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(105, -13)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_dgg74")
 autoplay = "default"
 
@@ -1080,11 +1033,5 @@ position = Vector2(1440, -810)
 
 [node name="EstrofaAnim5" parent="." instance=ExtResource("71_i5x32")]
 position = Vector2(1440, -810)
-
-[node name="Cat" parent="." instance=ExtResource("76_dhhc0")]
-position = Vector2(1760, 710)
-
-[node name="Cat2" parent="." instance=ExtResource("76_dhhc0")]
-position = Vector2(1878, -922)
 
 [connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]

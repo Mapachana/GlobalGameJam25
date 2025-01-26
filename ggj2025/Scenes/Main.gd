@@ -313,6 +313,7 @@ func room4_camera():
 	tween.connect("finished",Callable(self,"decision_final"))
 	#METER ANIM DEL FINAL DEL JUEGO
 func decision_final():
+	ScriptGlobal.musicafinal()
 	if cont_decision:
 		$Finales.play("Final1")
 	else:
