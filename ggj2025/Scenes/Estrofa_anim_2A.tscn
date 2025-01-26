@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjd7wemj6xopr"]
+[gd_scene load_steps=15 format=3 uid="uid://cjd7wemj6xopr"]
 
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_uoodd"]
 [ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_hjyfc"]
-[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_uv8hr"]
+[ext_resource type="Texture2D" uid="uid://dxc1baj32nx1r" path="res://Images/ilustraciones cancion/comedero1.png" id="3_fu610"]
+[ext_resource type="Texture2D" uid="uid://c71doipbbcd5t" path="res://Images/ilustraciones cancion/comedero2.png" id="4_idxut"]
+[ext_resource type="Texture2D" uid="uid://bvoidxsmxvk0h" path="res://Images/ilustraciones cancion/comedero3.png" id="5_oyxvn"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
@@ -233,7 +235,7 @@ tracks/5/path = NodePath("RichTextLabel4:visible_ratio")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(21.9667, 27.1, 28.2333, 29.9667),
+"times": PackedFloat32Array(21.9667, 27.1, 27.6, 28.5333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
@@ -417,10 +419,10 @@ metadata/_edit_use_anchors_ = true
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
 light_mask = 2
 z_index = 3
-offset_left = 837.0
-offset_top = 632.0
-offset_right = 1910.0
-offset_bottom = 839.0
+offset_left = 729.0
+offset_top = 394.0
+offset_right = 1802.0
+offset_bottom = 601.0
 theme_override_fonts/normal_font = ExtResource("2_hjyfc")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
@@ -481,23 +483,23 @@ texture = SubResource("GradientTexture2D_bk5yl")
 [node name="gato" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(672, 420)
-scale = Vector2(1.61595, 1.61595)
-texture = ExtResource("3_uv8hr")
+position = Vector2(228, 668)
+scale = Vector2(0.346, 0.346)
+texture = ExtResource("3_fu610")
 
 [node name="mandragoras" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(494, 354)
-scale = Vector2(1.11, 1.11)
-texture = ExtResource("3_uv8hr")
+position = Vector2(694, 195)
+scale = Vector2(0.445, 0.445)
+texture = ExtResource("4_idxut")
 
 [node name="sobrino" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(856, 329)
-scale = Vector2(1.11, 1.11)
-texture = ExtResource("3_uv8hr")
+position = Vector2(1252, 695)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("5_oyxvn")
 
 [node name="DustParticles2" type="CPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0)

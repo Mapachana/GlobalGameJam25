@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b00whpv2mbiyi"]
+[gd_scene load_steps=15 format=3 uid="uid://b00whpv2mbiyi"]
 
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_uoodd"]
 [ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_hjyfc"]
+[ext_resource type="Texture2D" uid="uid://dnxqxo3l2lu4b" path="res://Images/ilustraciones cancion/escoba1.png" id="3_sudql"]
 [ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_uv8hr"]
+[ext_resource type="Texture2D" uid="uid://byk4joii5deuv" path="res://Images/ilustraciones cancion/escoba2.png" id="4_vaoan"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
@@ -356,7 +358,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(3.46667, 13.9333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.61595, 1.61595), Vector2(2, 2)]
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -528,16 +530,16 @@ texture = SubResource("GradientTexture2D_bk5yl")
 [node name="mama" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(669, 445)
+position = Vector2(1162, 471)
 scale = Vector2(1.61595, 1.61595)
-texture = ExtResource("3_uv8hr")
+texture = ExtResource("3_sudql")
 
 [node name="abuelos" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(675, 446)
+position = Vector2(269, 573)
 scale = Vector2(1.11, 1.11)
-texture = ExtResource("3_uv8hr")
+texture = ExtResource("4_vaoan")
 
 [node name="sobrino" type="Sprite2D" parent="."]
 visible = false

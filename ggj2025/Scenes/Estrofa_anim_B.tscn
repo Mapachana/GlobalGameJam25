@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpjjtnjjaeku"]
+[gd_scene load_steps=14 format=3 uid="uid://cpjjtnjjaeku"]
 
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_5rc6e"]
 [ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_fndja"]
-[ext_resource type="Texture2D" uid="uid://luqfbrv3dabi" path="res://Images/pj proto.png" id="3_hw2a6"]
+[ext_resource type="Texture2D" uid="uid://b81q1rndlmbwc" path="res://Images/ilustraciones cancion/chimenea1.png" id="3_2luek"]
+[ext_resource type="Texture2D" uid="uid://ep1k6xwmtdql" path="res://Images/ilustraciones cancion/chimenea2.png" id="4_xobra"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
@@ -284,7 +285,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(1.56667, 13.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.5, 1.5), Vector2(1.8, 1.8)]
+"values": [Vector2(0.2, 0.2), Vector2(0.7, 0.7)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -293,10 +294,10 @@ tracks/9/path = NodePath("FantasmaB:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(15.4, 40.5),
+"times": PackedFloat32Array(15.4, 27.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.11, 1.11), Vector2(1.5, 1.5)]
+"values": [Vector2(0.3, 0.3), Vector2(0.7, 0.7)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -504,14 +505,14 @@ modulate = Color(1, 1, 1, 0)
 z_index = 2
 position = Vector2(672, 420)
 scale = Vector2(1.57962, 1.57962)
-texture = ExtResource("3_hw2a6")
+texture = ExtResource("3_2luek")
 
 [node name="FantasmaB" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
 position = Vector2(662, 389)
 scale = Vector2(1.27961, 1.27961)
-texture = ExtResource("3_hw2a6")
+texture = ExtResource("4_xobra")
 
 [node name="DustParticles2" type="CPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0)
