@@ -59,7 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://dq2u5cl82s6bw" path="res://Images/placeholder final2.png" id="61_v8jou"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
-[ext_resource type="PackedScene" uid="uid://cpjjtnjjaeku" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
+[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
 [ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
