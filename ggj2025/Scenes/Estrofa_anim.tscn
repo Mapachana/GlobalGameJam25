@@ -434,6 +434,7 @@ scale = Vector2(1.27961, 1.27961)
 texture = ExtResource("4_1q4qc")
 
 [node name="DustParticles2" type="CPUParticles2D" parent="."]
+light_mask = 2
 z_index = 2
 material = SubResource("CanvasItemMaterial_br04n")
 position = Vector2(1372, 71)
@@ -457,6 +458,7 @@ scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_tke5g")
 
 [node name="DustParticles3" type="CPUParticles2D" parent="."]
+light_mask = 2
 z_index = 2
 material = SubResource("CanvasItemMaterial_br04n")
 position = Vector2(60, 763)

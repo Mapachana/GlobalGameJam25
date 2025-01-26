@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=100 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -35,9 +35,12 @@
 [ext_resource type="Texture2D" uid="uid://clwbuggo2ex2u" path="res://Images/animacion gatoandar sucio/gatoandar0005.png" id="27_woa5t"]
 [ext_resource type="Texture2D" uid="uid://dw0wccrhbdop0" path="res://Images/animacion gatoandar sucio/gatoandar0006.png" id="28_sllra"]
 [ext_resource type="Texture2D" uid="uid://c27gglu5ge6x0" path="res://Images/animacion gatoandar sucio/gatoandar0007.png" id="29_5i0xg"]
+[ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
+[ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
 [ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
 [ext_resource type="Texture2D" uid="uid://cekr7hsa6fjd7" path="res://Images/idle final/idlefinal0003.png" id="32_2d3qg"]
 [ext_resource type="PackedScene" uid="uid://co1y2smwhfuv7" path="res://Scenes/Estrofa2_anim.tscn" id="33_n074a"]
@@ -702,30 +705,28 @@ tipo = 1
 cancion = "Estrofa 1B.wav"
 anim = 2
 
-[node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2629, 299)
-tipo = 1
-imagen = ExtResource("18_7h1ok")
-cancion = "Estrofa 1B.wav"
-anim = 4
-
-[node name="Obj5" parent="." instance=ExtResource("8_nq87s")]
-position = Vector2(2716, -155)
-imagen = ExtResource("26_y2mfo")
-cancion = "Estrofa 1B.wav"
-anim = 5
-
 [node name="Obj3" parent="." instance=ExtResource("67_dh8yg")]
 position = Vector2(2711, 728)
 imagen = ExtResource("17_0b3ln")
-cancion = "Estrofa 1B.wav"
+cancion = "Estrofa 2A.wav"
 anim = 3
 
-[node name="Obj6" parent="." instance=ExtResource("67_dh8yg")]
+[node name="Obj4" parent="." instance=ExtResource("29_si3sq")]
+position = Vector2(2629, 299)
+tipo = 1
+imagen = ExtResource("18_7h1ok")
+cancion = "Estrofa 2B.wav"
+
+[node name="Obj5" parent="." instance=ExtResource("30_drx7s")]
+position = Vector2(2716, -155)
+imagen = ExtResource("26_y2mfo")
+cancion = "Estrofa 3A.wav"
+
+[node name="Obj6" parent="." instance=ExtResource("31_rnbpu")]
 position = Vector2(1660, -454)
+tipo = 1
 imagen = ExtResource("24_wfr3v")
-cancion = "Estrofa 1B.wav"
-anim = 6
+cancion = "Estrofa 3B.wav"
 
 [node name="PJ" type="CharacterBody2D" parent="."]
 position = Vector2(227, 615)
