@@ -64,7 +64,7 @@
 [ext_resource type="PackedScene" uid="uid://cjd7wemj6xopr" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
 [ext_resource type="PackedScene" uid="uid://d3hooksholg8d" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
-[ext_resource type="PackedScene" uid="uid://tnancalygyvc" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_vheih"]
+[ext_resource type="PackedScene" uid="uid://doxn3jpg80uu" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_i5x32"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
 [ext_resource type="Texture2D" uid="uid://dw7q3bhi2g50u" path="res://Images/comic del principio/comic4.png" id="72_168uq"]
 [ext_resource type="Texture2D" uid="uid://cobbrwl77ws3n" path="res://Images/comic del principio/comic5.png" id="73_jb3id"]
@@ -696,17 +696,20 @@ position = Vector2(2629, 299)
 tipo = 1
 imagen = ExtResource("18_7h1ok")
 cancion = "Estrofa 2B.wav"
+anim = 4
 
 [node name="Obj5" parent="." instance=ExtResource("30_drx7s")]
 position = Vector2(2716, -155)
 imagen = ExtResource("26_y2mfo")
 cancion = "Estrofa 3A.wav"
+anim = 5
 
 [node name="Obj6" parent="." instance=ExtResource("31_rnbpu")]
 position = Vector2(1660, -454)
 tipo = 1
 imagen = ExtResource("24_wfr3v")
 cancion = "Estrofa 3B.wav"
+anim = 6
 
 [node name="PJ" type="CharacterBody2D" parent="."]
 visible = false
@@ -1028,7 +1031,7 @@ position = Vector2(1440, 0)
 [node name="EstrofaAnim4" parent="." instance=ExtResource("70_wrsnf")]
 position = Vector2(1440, -810)
 
-[node name="EstrofaAnim5" parent="." instance=ExtResource("71_vheih")]
+[node name="EstrofaAnim5" parent="." instance=ExtResource("71_i5x32")]
 position = Vector2(1440, -810)
 
 [connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]

@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 44
+const DURACION_ESTROFA = 1 #CAMBIAR ANTES DEL FINAL
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
@@ -80,7 +80,10 @@ func begin_game():
 		0.8         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	tween.connect("finished",Callable(self,"comic_anim"))
+	#CAMBIAR ANTES DEL FINAL
+	#tween.connect("finished",Callable(self,"comic_anim"))
+	pj.visible=true
+	pj.can_move = true
 
 func comic_anim():
 	await get_tree().create_timer(0.6).timeout  # Espera a que termine la estrofa

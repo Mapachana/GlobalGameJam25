@@ -45,7 +45,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("gato:modulate")
+tracks/3/path = NodePath("jardincito:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -57,7 +57,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("mandragoras:modulate")
+tracks/4/path = NodePath("libro ardiendo:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -153,7 +153,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("sobrino:modulate")
+tracks/12/path = NodePath("libro bien:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -161,6 +161,30 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("jardincito:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.61595, 1.61595)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("libro ardiendo:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.11, 1.11)]
 }
 
 [sub_resource type="Animation" id="Animation_f8im0"]
@@ -173,10 +197,10 @@ tracks/0/path = NodePath("Sprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6, 42.8, 43.9333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.6, 12.4, 13.5333, 42.8, 43.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -241,11 +265,11 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("gato:modulate")
+tracks/6/path = NodePath("jardincito:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(2.03333, 4.63333, 25.0667, 27.1667),
+"times": PackedFloat32Array(12.4333, 13.7333, 27.3333, 29.3333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -253,11 +277,11 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("mandragoras:modulate")
+tracks/7/path = NodePath("libro ardiendo:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(9.43333, 11.5667, 24.9667, 27.2333),
+"times": PackedFloat32Array(28.6667, 30.8, 41.5, 43.7666),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -313,7 +337,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("sobrino:modulate")
+tracks/12/path = NodePath("libro bien:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -321,6 +345,30 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("jardincito:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(13.1333, 28.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.61595, 1.61595), Vector2(2, 2)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("libro ardiendo:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(29.3667, 42.6667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.11, 1.11), Vector2(2, 2)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ostem"]
@@ -481,24 +529,24 @@ color = Color(0, 0.961389, 0.554486, 1)
 energy = 0.0
 texture = SubResource("GradientTexture2D_bk5yl")
 
-[node name="gato" type="Sprite2D" parent="."]
+[node name="jardincito" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(672, 420)
+position = Vector2(720, 389)
 scale = Vector2(1.61595, 1.61595)
 texture = ExtResource("3_i263y")
 
-[node name="mandragoras" type="Sprite2D" parent="."]
+[node name="libro ardiendo" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(494, 354)
+position = Vector2(686, 188)
 scale = Vector2(1.11, 1.11)
 texture = ExtResource("3_i263y")
 
-[node name="sobrino" type="Sprite2D" parent="."]
+[node name="libro bien" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 2
-position = Vector2(856, 329)
+position = Vector2(686, 400)
 scale = Vector2(1.11, 1.11)
 texture = ExtResource("3_i263y")
 
