@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 1 #CAMBIAR ANTES DEL FINAL
+const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
