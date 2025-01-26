@@ -28,6 +28,8 @@ func _ready():
 	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
 	ScriptGlobal.cont_decision = cont_decision
+	
+
 	#ScriptGlobal.setupmusica("A")
 	pass # Replace with function body.
 
@@ -37,6 +39,8 @@ func _process(delta):
 		has_started = true
 		intro_animation()
 		ScriptGlobal.setupmusica("A")
+		
+		
 	
 	if camera_follows:
 		if x_movement:
@@ -239,32 +243,9 @@ func room2_camera():
 	$collisions/muro1.disabled = false
 
 	var tween = get_tree().create_tween()
-
-	tween.tween_property(
-		camera,                  # Nodo objetivo
-		"position",             # Propiedad a interpolar
-		Vector2(2167.5,405),         # Valor final
-		1         # Duración
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 		
-	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
-	ScriptGlobal.setupmusica("A")
 	
-	print("AGOTO TIEMPO")
-	
-	var tween2 = get_tree().create_tween()
-	tween2.tween_property(
-		self,                  # Nodo objetivo
-		"scale",             # Propiedad a interpolar
-		Vector2(1.15,1.15),         # Valor final
-		0.3         # Duración
-	).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
-		
-		# Activar animacion
-	ScriptGlobal.activar_animacion(3)
-	ScriptGlobal.cont_decision += 1
-
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	#pj.can_move = false
 	#animacionE2.play("estrofa")
