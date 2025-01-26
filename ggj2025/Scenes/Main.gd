@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL
+const DURACION_ESTROFA = 1 #CAMBIAR ANTES DEL FINAL
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
@@ -81,9 +81,9 @@ func begin_game():
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	#CAMBIAR ANTES DEL FINAL
-	tween.connect("finished",Callable(self,"comic_anim"))
-	#pj.visible=true
-	#pj.can_move = true
+	#tween.connect("finished",Callable(self,"comic_anim"))
+	pj.visible=true
+	pj.can_move = true
 
 func comic_anim():
 	await get_tree().create_timer(0.6).timeout  # Espera a que termine la estrofa
@@ -209,6 +209,7 @@ func next_room():
 		room3_camera()
 	elif  room == 3:
 		room4_camera()
+		
 
 func enter_transition1():
 	camera_follows = true
@@ -245,7 +246,23 @@ func room2_camera():
 		1         # Duración
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+		
+	await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
+	ScriptGlobal.setupmusica("A")
+	
+	print("AGOTO TIEMPO")
+	
+	var tween2 = get_tree().create_tween()
+	tween2.tween_property(
+		self,                  # Nodo objetivo
+		"scale",             # Propiedad a interpolar
+		Vector2(1.15,1.15),         # Valor final
+		0.3         # Duración
+	).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
+		
+		# Activar animacion
+	ScriptGlobal.activar_animacion(1)
+	ScriptGlobal.cont_decision += 1
 
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
 	#pj.can_move = false
