@@ -723,6 +723,7 @@ anim = 1
 
 [node name="Obj2" parent="." instance=ExtResource("12_rexyk")]
 position = Vector2(1136, 628)
+tipo = 1
 anim = 2
 
 [node name="Obj4" parent="." instance=ExtResource("8_nq87s")]
