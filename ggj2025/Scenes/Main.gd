@@ -134,7 +134,7 @@ func activar_animacion(numero):
 			animacionE1.play("estrofa")
 			$Obj1.desaparecer()
 			$Obj2.desaparecer()
-			$Salon/humo.queue_free()
+			#$Salon/humo.queue_free()
 			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
 			pj.can_move = true
 			begin_game_1()
@@ -262,7 +262,7 @@ func room2_camera():
 	).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 		
 		# Activar animacion
-	ScriptGlobal.activar_animacion(1)
+	ScriptGlobal.activar_animacion(3)
 	ScriptGlobal.cont_decision += 1
 
 	#Esto lo tendría que llamar el objeto al elegir una de las opciones
