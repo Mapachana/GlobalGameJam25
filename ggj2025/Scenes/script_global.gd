@@ -59,9 +59,21 @@ func setupmusica(eleccion):
 				nodo_musica.stream = load(ruta+fichero_irse)
 
 		2:
-			pos = 0
+			if eleccion == "A":
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_quedarse)
+
+			else:
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_irse)
 		3:
-			pos = 0
+			if eleccion == "A":
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_quedarse)
+
+			else:
+				pos = 53
+				nodo_musica.stream = load(ruta+fichero_irse)
 			
 	
 	print("DECISION")
