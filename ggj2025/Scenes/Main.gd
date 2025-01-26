@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 1 #CAMBIAR ANTES DEL FINAL
+const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
@@ -86,9 +86,9 @@ func begin_game():
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	#CAMBIAR ANTES DEL FINAL
-	#tween.connect("finished",Callable(self,"comic_anim"))
-	pj.visible=true
-	pj.can_move = true
+	tween.connect("finished",Callable(self,"comic_anim"))
+	#pj.visible=true
+	#pj.can_move = true
 
 func comic_anim():
 	await get_tree().create_timer(0.6).timeout  # Espera a que termine la estrofa
@@ -322,10 +322,13 @@ func decision_final():
 	ScriptGlobal.musica_final()
 	if cont_decision>0:
 		print("final a")
-		$Finales.play("FinalA")
+		#$Finales.play("FinalA")
+		$EstrofaAnim6/AnimationPlayer.play("estrofa")
+		
 	else:
 		print("final b")
-		$Finales.play("FinalB")
+		#$Finales.play("FinalB")
+		$EstrofaAnim7/AnimationPlayer.play("estrofa")
 	#tween.connect("finished",Callable(self,"room4_camera_1"))
 
 func room4_camera_1():

@@ -1,14 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpxk6i0v0e85o"]
+[gd_scene load_steps=10 format=3 uid="uid://dphbgkys8t8ow"]
 
-[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_mpbgx"]
-[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_keypb"]
+[ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="1_45bf2"]
+[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="2_7jpcr"]
 
 [sub_resource type="Animation" id="Animation_cs8a4"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/path = NodePath("RichTextLabel3:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -20,7 +20,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("RichTextLabel3:visible_ratio")
+tracks/1/path = NodePath("RichTextLabel2:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -32,7 +32,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("RichTextLabel2:visible_ratio")
+tracks/2/path = NodePath("RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -44,19 +44,19 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("RichTextLabel:visible_ratio")
+tracks/3/path = NodePath("Sprite2D:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:modulate")
+tracks/4/path = NodePath("DustParticles2:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -68,7 +68,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("DustParticles2:modulate")
+tracks/5/path = NodePath("DustParticles3:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -80,14 +80,14 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("DustParticles3:modulate")
+tracks/6/path = NodePath("RichTextLabel4:visible_ratio")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_f8im0"]
@@ -100,7 +100,7 @@ tracks/0/path = NodePath("Sprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6, 10.1, 45.2333),
+"times": PackedFloat32Array(0, 1.6, 10.1, 45.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.415686), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
@@ -112,7 +112,7 @@ tracks/1/path = NodePath("RichTextLabel2:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6, 11.2333, 13.2667),
+"times": PackedFloat32Array(0, 9.66667, 20.7, 22.7334),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
@@ -124,43 +124,43 @@ tracks/2/path = NodePath("RichTextLabel:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(8, 12, 13.0667, 14.2333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(11.4333, 20.5333, 22.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
+"values": [0.0, 1.0, 0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("PointLight2D:energy")
+tracks/3/path = NodePath("RichTextLabel3:visible_ratio")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(40.7333, 43.8667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("RichTextLabel3:visible_ratio")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(14, 20, 40.4667, 42.1333),
+"times": PackedFloat32Array(21.1333, 25.9333, 33, 34.6666),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DustParticles2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.333333, 0.933333, 42.5333, 43.6667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("DustParticles2:modulate")
+tracks/5/path = NodePath("DustParticles3:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.333333, 0.933333, 42.5333, 43.6667),
+"times": PackedFloat32Array(0.366667, 1.03333, 42.4667, 43.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -168,14 +168,14 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("DustParticles3:modulate")
+tracks/6/path = NodePath("RichTextLabel4:visible_ratio")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.366667, 1.03333, 42.4667, 43.7),
+"times": PackedFloat32Array(33.5333, 39.7333, 41.4333, 43.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [0.0, 1.0, 1.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ostem"]
@@ -183,13 +183,6 @@ _data = {
 "RESET": SubResource("Animation_cs8a4"),
 "estrofa": SubResource("Animation_f8im0")
 }
-
-[sub_resource type="Gradient" id="Gradient_32tam"]
-offsets = PackedFloat32Array(0.547718, 0.962656, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.666667, 0.666667, 0.666667, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_bk5yl"]
-gradient = SubResource("Gradient_32tam")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_br04n"]
 blend_mode = 1
@@ -215,7 +208,7 @@ light_mask = 2
 z_index = 2
 position = Vector2(721, 410)
 scale = Vector2(1.26957, 1.26957)
-texture = ExtResource("1_mpbgx")
+texture = ExtResource("1_45bf2")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 light_mask = 2
@@ -224,13 +217,13 @@ offset_left = 176.0
 offset_top = 194.0
 offset_right = 1249.0
 offset_bottom = 401.0
-theme_override_fonts/normal_font = ExtResource("2_keypb")
+theme_override_fonts/normal_font = ExtResource("2_7jpcr")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "[center]Renuncio al nuevo mundo, 
-pertenezco aquí.
-No puedo partir, 
-ésta vida me hace feliz. [/center]
+text = "[center]Y me voy, 
+quizás hacia la nada, 
+quizás no digas nada.
+ [/center]
 "
 visible_characters = 0
 visible_ratio = 0.0
@@ -243,13 +236,13 @@ offset_left = 177.0
 offset_top = 420.0
 offset_right = 1250.0
 offset_bottom = 627.0
-theme_override_fonts/normal_font = ExtResource("2_keypb")
+theme_override_fonts/normal_font = ExtResource("2_7jpcr")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
-text = "[center]Me conformo con veros, 
-aún sin yo existir. 
-Se que no os olvidaré, 
-os veré cada día crecer. [/center]
+text = "[center]Puede ser 
+que solo descubra oscuridad, 
+pero he de conocer que hay más allá. 
+ [/center]
 "
 fit_content = true
 visible_characters = 0
@@ -263,10 +256,29 @@ offset_left = 166.0
 offset_top = 329.0
 offset_right = 1239.0
 offset_bottom = 554.0
-theme_override_fonts/normal_font = ExtResource("2_keypb")
+theme_override_fonts/normal_font = ExtResource("2_7jpcr")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[center]Todo lo dejo aquí, 
+yo ya me despedí.
+[/center]
+"
+fit_content = true
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+light_mask = 2
+z_index = 3
+offset_left = 166.0
+offset_top = 329.0
+offset_right = 1239.0
+offset_bottom = 554.0
+theme_override_fonts/normal_font = ExtResource("2_7jpcr")
 theme_override_font_sizes/normal_font_size = 55
 bbcode_enabled = true
-text = "[center]Y siendo sinceros 
+text = "[center]Espero algún día veros, 
 os echaré de menos.
 [/center]
 "
@@ -279,13 +291,6 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_ostem")
 }
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1292, 406)
-scale = Vector2(4.67188, 13.7188)
-color = Color(0, 0.961389, 0.554486, 1)
-energy = 0.0
-texture = SubResource("GradientTexture2D_bk5yl")
 
 [node name="DustParticles2" type="CPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=109 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
 [ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
 [ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
 [ext_resource type="Texture2D" uid="uid://cekr7hsa6fjd7" path="res://Images/idle final/idlefinal0003.png" id="32_2d3qg"]
@@ -58,14 +58,13 @@
 [ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
 [ext_resource type="Texture2D" uid="uid://ddbdc28moknao" path="res://Images/cosas salon/sofa y reposapies.png" id="48_d4wyc"]
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
-[ext_resource type="FontFile" uid="uid://dc1cgtmfhl5lq" path="res://fuentes/Lugrasimo-Regular.ttf" id="60_b701d"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
+[ext_resource type="PackedScene" uid="uid://cpjjtnjjaeku" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
 [ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
+[ext_resource type="PackedScene" uid="uid://b00whpv2mbiyi" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
+[ext_resource type="PackedScene" uid="uid://cjd7wemj6xopr" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
+[ext_resource type="PackedScene" uid="uid://d3hooksholg8d" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
 [ext_resource type="PackedScene" uid="uid://doxn3jpg80uu" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_i5x32"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
@@ -74,7 +73,9 @@
 [ext_resource type="Texture2D" uid="uid://tdlj1pxuxk18" path="res://Images/comic del principio/comic6.png" id="74_sdavg"]
 [ext_resource type="Texture2D" uid="uid://sih6kut2kuqn" path="res://Images/comic del principio/comic7.png" id="75_7b52c"]
 [ext_resource type="Texture2D" uid="uid://ttwck73oiyj0" path="res://Images/comic del principio/comic8.png" id="76_6sf4n"]
-[ext_resource type="PackedScene" path="res://Scenes/cat.tscn" id="76_dhhc0"]
+[ext_resource type="PackedScene" uid="uid://d01k3lj37o4ew" path="res://Scenes/cat.tscn" id="76_dhhc0"]
+[ext_resource type="PackedScene" uid="uid://dpxk6i0v0e85o" path="res://Scenes/Estrofa_anim_FinalA.tscn" id="76_yj7jp"]
+[ext_resource type="PackedScene" uid="uid://dphbgkys8t8ow" path="res://Scenes/Estrofa_anim_FinalB.tscn" id="77_b487o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pdo1l"]
 shader = ExtResource("3_nfp3t")
@@ -360,94 +361,46 @@ length = 39.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Final1/parte1:visible_ratio")
+tracks/0/path = NodePath("Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.966667, 5.76667, 11.5667, 12.3333, 14.7333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.5, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Final1/parte2:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(12.3667, 22.0667, 22.9333, 25),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(18.6667, 23.4667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(363, 604), Vector2(1887, -1085)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera2D:position_smoothing_enabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position_smoothing_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:zoom")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 18.7667, 21.8667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.5, 1.5)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Final1/parte3:visible_ratio")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(23.9667, 31.4333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Final1/parte4:visible_ratio")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(30.6, 37.8667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("PJ/AnimatedSprite2D:animation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PJ/AnimatedSprite2D:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(),
 "transitions": PackedFloat32Array(),
 "update": 1,
@@ -463,86 +416,38 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Final1/parte1:visible_ratio")
+tracks/0/path = NodePath("Camera2D:position_smoothing_enabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Final1/parte2:visible_ratio")
+tracks/1/path = NodePath("Camera2D:zoom")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.0]
+"values": [Vector2(2, 2)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Camera2D:position_smoothing_enabled")
+tracks/2/path = NodePath("Camera2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera2D:zoom")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, 2)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(363, 604)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Final1/parte3:visible_ratio")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Final1/parte4:visible_ratio")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojhjg"]
@@ -1126,85 +1031,6 @@ libraries = {
 "": SubResource("AnimationLibrary_ojhjg")
 }
 
-[node name="Final1" type="Node2D" parent="."]
-position = Vector2(2164, -1210)
-
-[node name="parte1" type="RichTextLabel" parent="Final1"]
-light_mask = 2
-z_index = 3
-offset_left = -708.0
-offset_top = -239.0
-offset_right = 365.0
-offset_bottom = -32.0
-theme_override_fonts/normal_font = ExtResource("60_b701d")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "Renuncio al nuevo mundo, 
-pertenezco aquí.
-No puedo partir, 
-ésta vida me hace feliz. 
-"
-fit_content = true
-metadata/_edit_use_anchors_ = true
-
-[node name="parte2" type="RichTextLabel" parent="Final1"]
-light_mask = 2
-z_index = 3
-offset_left = 296.0
-offset_top = -239.0
-offset_right = 1369.0
-offset_bottom = 6.0
-theme_override_fonts/normal_font = ExtResource("60_b701d")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "Me conformo con veros, 
-aún sin yo existir. 
-Se que no os olvidaré, 
-os veré cada día crecer. 
-
-"
-fit_content = true
-metadata/_edit_use_anchors_ = true
-
-[node name="parte3" type="RichTextLabel" parent="Final1"]
-light_mask = 2
-z_index = 3
-offset_left = -1056.0
-offset_top = -130.0
-offset_right = 17.0
-offset_bottom = 115.0
-theme_override_fonts/normal_font = ExtResource("60_b701d")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "[center]Sentiré las hojas caer, 
-el frío imaginaré. [/center]
-
-
-"
-fit_content = true
-metadata/_edit_use_anchors_ = true
-
-[node name="parte4" type="RichTextLabel" parent="Final1"]
-light_mask = 2
-z_index = 3
-offset_left = -1056.0
-offset_top = -11.0
-offset_right = 17.0
-offset_bottom = 234.0
-theme_override_fonts/normal_font = ExtResource("60_b701d")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "[center]Y siendo sinceros 
-os echaré de menos.
-[/center]
-
-
-"
-fit_content = true
-visible_characters = 0
-visible_ratio = 0.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Comic" type="Node2D" parent="."]
 light_mask = 2
 z_index = 2
@@ -1300,5 +1126,11 @@ position = Vector2(1760, 710)
 
 [node name="Cat2" parent="." instance=ExtResource("76_dhhc0")]
 position = Vector2(1878, -922)
+
+[node name="EstrofaAnim6" parent="." instance=ExtResource("76_yj7jp")]
+position = Vector2(1440, -1620)
+
+[node name="EstrofaAnim7" parent="." instance=ExtResource("77_b487o")]
+position = Vector2(1440, -1620)
 
 [connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]
