@@ -207,7 +207,7 @@ fill_from = Vector2(0.5, 0.5)
 offsets = PackedFloat32Array(0, 0.340996, 0.530201, 0.708812, 1)
 colors = PackedColorArray(0.0745098, 0.0745098, 0.0745098, 0, 0.792157, 0.32549, 0.556863, 0.0784314, 0.792358, 0.136712, 0.489267, 0.156863, 0.729412, 0.572549, 0.933333, 0.0784314, 0.556863, 0.85098, 0.262745, 0)
 
-[node name="EstrofaAnim" type="Node2D"]
+[node name="EstrofaAnim2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
