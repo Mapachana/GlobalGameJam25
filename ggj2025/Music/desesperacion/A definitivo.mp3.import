@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj1d1c6pfg3eh"
+path="res://.godot/imported/A definitivo.mp3-d5520fd5f2d0958ba0c363fcb6128940.mp3str"
+
+[deps]
+
+source_file="res://Music/desesperacion/A definitivo.mp3"
+dest_files=["res://.godot/imported/A definitivo.mp3-d5520fd5f2d0958ba0c363fcb6128940.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

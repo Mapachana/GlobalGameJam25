@@ -32,7 +32,7 @@ func activar_animacion(anim):
 	
 func setupmusica(eleccion):
 	var ruta = "res://Music/desesperacion/"
-	var fichero_quedarse = "A prueba .wav"
+	var fichero_quedarse = "A definitivo.mp3"
 	var fichero_irse = "B prueba.wav"
 	var pos = 0
 	
@@ -51,7 +51,7 @@ func setupmusica(eleccion):
 
 		1:
 			if eleccion == "A":
-				pos = 53
+				pos = 56
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
@@ -60,7 +60,7 @@ func setupmusica(eleccion):
 
 		2:
 			if eleccion == "A":
-				pos = 53
+				pos = 156
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
@@ -68,7 +68,7 @@ func setupmusica(eleccion):
 				nodo_musica.stream = load(ruta+fichero_irse)
 		3:
 			if eleccion == "A":
-				pos = 53
+				pos = 256
 				nodo_musica.stream = load(ruta+fichero_quedarse)
 
 			else:
