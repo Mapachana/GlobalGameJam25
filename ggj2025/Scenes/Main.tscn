@@ -235,12 +235,12 @@ animations = [{
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7lo68"]
 
-[sub_resource type="Gradient" id="Gradient_jembb"]
+[sub_resource type="Gradient" id="Gradient_lt2mf"]
 offsets = PackedFloat32Array(0.262009, 0.384279, 0.755459)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.724891, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kn7pw"]
-gradient = SubResource("Gradient_jembb")
+gradient = SubResource("Gradient_lt2mf")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
