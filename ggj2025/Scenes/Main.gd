@@ -313,15 +313,17 @@ func room4_camera():
 	#METER ANIM DEL FINAL DEL JUEGO
 func decision_final():
 	ScriptGlobal.musica_final()
-	if cont_decision:
-		$Finales.play("Final1")
+	if cont_decision>0:
+		print("final a")
+		$Finales.play("FinalA")
 	else:
-		$Finales.play("Final2")
+		print("final b")
+		$Finales.play("FinalB")
 	#tween.connect("finished",Callable(self,"room4_camera_1"))
 
 func room4_camera_1():
 	#await get_tree().create_timer(1).timeout  #ESPERAR A ELEGIR OBJETO
-	
+	print("room camera 4")
 	$collisions/muro3.disabled = false
 
 	camera_follows = false
