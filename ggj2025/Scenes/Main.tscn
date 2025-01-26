@@ -39,7 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
 [ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
 [ext_resource type="Texture2D" uid="uid://dtfy14n7icvdn" path="res://Images/animacion gatoandar sucio/gatoandar0008.png" id="30_nkjip"]
-[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
 [ext_resource type="Texture2D" uid="uid://cekr7hsa6fjd7" path="res://Images/idle final/idlefinal0003.png" id="32_2d3qg"]
