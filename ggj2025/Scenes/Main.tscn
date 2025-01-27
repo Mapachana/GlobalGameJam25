@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://ctg3m3wjs3nwm" path="res://Images/cosas salon/cuadro.png" id="6_p13jp"]
 [ext_resource type="Texture2D" uid="uid://dm6d21d2a31iu" path="res://Images/buhardilla/nube 3.png" id="6_uw50t"]
 [ext_resource type="Texture2D" uid="uid://dspvcvriqgq6r" path="res://Images/cosas salon/fuego animacion/fuego 1.png" id="7_hjuh5"]
-[ext_resource type="AudioStream" uid="uid://77latoqsh4re" path="res://Music/prueba/GGJ2024.ogg" id="7_t5vac"]
 [ext_resource type="PackedScene" uid="uid://d18pqfbs864oc" path="res://Scenes/Objeto.tscn" id="8_nq87s"]
 [ext_resource type="Texture2D" uid="uid://c16pexaqg3j8a" path="res://Images/cosas salon/fuego animacion/fuego 2.png" id="8_opt5y"]
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
@@ -52,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
 [ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
 [ext_resource type="Texture2D" uid="uid://bv2ml5jl1tdb8" path="res://Images/suelo detalle salon 2.png" id="43_pxu3q"]
+[ext_resource type="AudioStream" uid="uid://dj1d1c6pfg3eh" path="res://Music/desesperacion/A definitivo.mp3" id="44_g6eko"]
 [ext_resource type="Texture2D" uid="uid://b35qjo2ntd7tm" path="res://Images/salon luz 2.png" id="44_r4hhc"]
 [ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
 [ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
@@ -830,7 +830,7 @@ position = Vector2(363, 604)
 zoom = Vector2(2, 2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_t5vac")
+stream = ExtResource("44_g6eko")
 parameters/looping = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
