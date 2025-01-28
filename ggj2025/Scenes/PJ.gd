@@ -78,3 +78,9 @@ func _physics_process(delta):
 
 	# Aplica el movimiento utilizando la propiedad velocity
 	move_and_slide()
+	
+func acariciar():
+	$AnimatedSprite2D.play("acariciar_1")
+	await get_tree().create_timer(0.4285714286).timeout
+	$AnimatedSprite2D.play("acariciar_2")
+	
