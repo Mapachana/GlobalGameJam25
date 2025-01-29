@@ -770,6 +770,7 @@ position = Vector2(1883, -922)
 position = Vector2(1735, 690)
 
 [node name="PJ" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(234, 601)
 motion_mode = 1
 script = ExtResource("4_hxefk")
