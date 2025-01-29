@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 1 #CAMBIAR ANTES DEL FINAL
+const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
@@ -86,9 +86,9 @@ func begin_game():
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	#CAMBIAR ANTES DEL FINAL
-	#tween.connect("finished",Callable(self,"comic_anim"))
-	pj.visible=true
-	pj.can_move = true
+	tween.connect("finished",Callable(self,"comic_anim"))
+	#pj.visible=true
+	#pj.can_move = true
 
 func comic_anim():
 	await get_tree().create_timer(0.6).timeout  # Espera a que termine la estrofa
@@ -321,31 +321,71 @@ func room4_camera():
 func decision_final():
 	ScriptGlobal.musica_final()
 	if ScriptGlobal.cont_decision<0:
-		print("final a")
-		#$Finales.play("FinalA")
+		print("final b")
+		#$Finales.play("FinalA") #estan mal etiquetados en este animation player perdonnnnnn
 		$EstrofaAnim7/AnimationPlayer.play("estrofa")
-
-		await get_tree().create_timer(38).timeout  #espera a que termine la estrofa
+		pj.can_move = false
+		$DustParticles.queue_free()
+		var tweene = get_tree().create_tween()
+		tweene.tween_property(
+			$EstrofaAnim7,                  # Nodo objetivo
+			"position",             # Propiedad a interpolar
+			Vector2(1238,-1796)-Vector2(720,405),     # Valor final
+			15          # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		var tween0 = get_tree().create_tween()
+		tween0.tween_property(
+			pj,                  # Nodo objetivo
+			"position",             # Propiedad a interpolar
+			Vector2(1238,-1796),     # Valor final
+			15          # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		var tweenc = get_tree().create_tween()
+		tweenc.tween_property(
+			camera,                  # Nodo objetivo
+			"position",             # Propiedad a interpolar
+			Vector2(1238,-1796),     # Valor final
+			15          # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		await get_tree().create_timer(15).timeout  #espera a que termine la estrofa
+		var tween1 = get_tree().create_tween()
+		tween1.tween_property(
+			pj,                  # Nodo objetivo
+			"modulate:a",             # Propiedad a interpolar
+			0,     # Valor final
+			5          # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		await get_tree().create_timer(25).timeout  #espera a que termine la estrofa
 		ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
 		
 	else:
-		print("final b")
+		print("final a")
 		#$Finales.play("FinalB")
 		$EstrofaAnim6/AnimationPlayer.play("estrofa")
 		pj.can_move = false
+		$PJ/AnimatedSprite2D.flip_h = true
+		var tween0 = get_tree().create_tween()
+		tween0.tween_property(
+			pj,                  # Nodo objetivo
+			"position",             # Propiedad a interpolar
+			$Cat2.position-Vector2(-100,300),     # Valor final
+			3         # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		await get_tree().create_timer(3).timeout
 		var tween = get_tree().create_tween()
-
 		tween.tween_property(
 			pj,                  # Nodo objetivo
 			"position",             # Propiedad a interpolar
-			$Cat2.position  ,     # Valor final
-			1         # Duración
+			$Cat2.position-Vector2(-184,85),     # Valor final
+			3         # Duración
 		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		await get_tree().create_timer(3).timeout
+		pj.finishloop=true
+		$PJ/AnimatedSprite2D.flip_h = false
 		$PJ/AnimatedSprite2D.play("acariciar_1")
-		await get_tree().create_timer(0.4285714286).timeout
+		await get_tree().create_timer(0.5714285714).timeout
 		$PJ/AnimatedSprite2D.play("acariciar_2")
-		$Cat2.position += Vector2(64,-107)
-		$Cat2/AnimatedSprite2D.play("acariciar")
+		$Cat2/AnimatedSprite2D.play("pet")
 		await get_tree().create_timer(38).timeout  #espera a que termine la estrofa
 		ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
 	#tween.connect("finished",Callable(self,"room4_camera_1"))

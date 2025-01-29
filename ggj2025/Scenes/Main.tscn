@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=116 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -33,45 +33,41 @@
 [ext_resource type="Texture2D" uid="uid://bh80yfqkyhkpd" path="res://Images/estudio/pluma y tintero.png" id="26_y2mfo"]
 [ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
-[ext_resource type="Texture2D" uid="uid://c2xa3le6dt5tx" path="res://Images/idle final/idlefinal0001.png" id="30_jmnmp"]
 [ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
-[ext_resource type="Texture2D" uid="uid://d3kvnkxq1h60b" path="res://Images/idle final/idlefinal0002.png" id="31_vwjjs"]
-[ext_resource type="Texture2D" uid="uid://cekr7hsa6fjd7" path="res://Images/idle final/idlefinal0003.png" id="32_2d3qg"]
-[ext_resource type="Texture2D" uid="uid://bna6xg0ipig8h" path="res://Images/idle final/idlefinal0004.png" id="33_ostsi"]
 [ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
-[ext_resource type="Texture2D" uid="uid://cmw6gmimht32k" path="res://Images/idle final/idlefinal0005.png" id="34_si0f2"]
-[ext_resource type="Texture2D" uid="uid://btsnjjul8lppl" path="res://Images/idle final/idlefinal0006.png" id="35_4pbga"]
-[ext_resource type="Texture2D" uid="uid://dungug4llywn1" path="res://Images/idle final/idlefinal0007.png" id="36_f212t"]
 [ext_resource type="Texture2D" uid="uid://dy02xfu0cnidq" path="res://Images/detalle luz1.png" id="37_w7hww"]
-[ext_resource type="Texture2D" uid="uid://brnlytrjn2cla" path="res://Images/acariciar/acariciar0001.png" id="37_wvq4a"]
-[ext_resource type="Texture2D" uid="uid://bqtx4i32mah5u" path="res://Images/acariciar/acariciar0002.png" id="38_38wyi"]
+[ext_resource type="Texture2D" uid="uid://6u4mfpod7jik" path="res://Images/acariciar centrado/acariciarcentrado0001.png" id="38_3sh72"]
 [ext_resource type="Texture2D" uid="uid://bo4llvqcvwy3x" path="res://Images/ilum suelo 2.png" id="38_68v08"]
 [ext_resource type="Texture2D" uid="uid://wqvxnakql30v" path="res://Images/ilum2.png" id="38_aecbm"]
-[ext_resource type="Texture2D" uid="uid://dtw41ksdellqb" path="res://Images/acariciar/acariciar0003.png" id="39_olc0y"]
-[ext_resource type="Texture2D" uid="uid://bdbll441wqxgw" path="res://Images/acariciar/acariciar0004.png" id="40_y1yob"]
+[ext_resource type="Texture2D" uid="uid://du0cavs31qnmn" path="res://Images/acariciar centrado/acariciarcentrado0002.png" id="39_dwser"]
+[ext_resource type="Texture2D" uid="uid://bctpkko4xri20" path="res://Images/acariciar centrado/acariciarcentrado0003.png" id="40_k6fth"]
 [ext_resource type="Texture2D" uid="uid://bop713ynaeav2" path="res://Images/ilum 3.png" id="40_y3u85"]
-[ext_resource type="Texture2D" uid="uid://gbfcynijm4tp" path="res://Images/acariciar/acariciar0005.png" id="41_2cpmy"]
+[ext_resource type="Texture2D" uid="uid://mxct5vv3wibv" path="res://Images/acariciar centrado/acariciarcentrado0004.png" id="41_0bme3"]
 [ext_resource type="Texture2D" uid="uid://c3ewlmdqv23a" path="res://Images/ilum suelo buhardilla.png" id="41_qlss1"]
+[ext_resource type="Texture2D" uid="uid://cxq5bj2udnml8" path="res://Images/acariciar centrado/acariciarcentrado0006.png" id="42_q7cw3"]
 [ext_resource type="Texture2D" uid="uid://bcr7vug34wtgi" path="res://Images/ilum buhardilla.png" id="42_swuu4"]
-[ext_resource type="Texture2D" uid="uid://07dx1fk0sbhy" path="res://Images/acariciar/acariciar0006.png" id="42_t2phf"]
-[ext_resource type="Texture2D" uid="uid://17dlrfj2rq6b" path="res://Images/acariciar/acariciar0007.png" id="43_8v445"]
+[ext_resource type="Texture2D" uid="uid://dlou7rvb1blo7" path="res://Images/acariciar centrado/acariciarcentrado0007.png" id="43_71stg"]
 [ext_resource type="Texture2D" uid="uid://bshevujjg4hi3" path="res://Images/ilum suelo dormitorio.png" id="43_ey5m7"]
 [ext_resource type="Texture2D" uid="uid://bv2ml5jl1tdb8" path="res://Images/suelo detalle salon 2.png" id="43_pxu3q"]
-[ext_resource type="Texture2D" uid="uid://cn8kqb2et6kor" path="res://Images/acariciar/acariciar0008.png" id="44_au5km"]
+[ext_resource type="Texture2D" uid="uid://txt0hcjpxb0f" path="res://Images/acariciar centrado/acariciarcentrado0008.png" id="44_8rgmy"]
 [ext_resource type="AudioStream" uid="uid://dj1d1c6pfg3eh" path="res://Music/desesperacion/A definitivo.mp3" id="44_g6eko"]
 [ext_resource type="Texture2D" uid="uid://b35qjo2ntd7tm" path="res://Images/salon luz 2.png" id="44_r4hhc"]
 [ext_resource type="Texture2D" uid="uid://bcaw08ihri0rb" path="res://Images/ilum dormitorio.png" id="44_whxl0"]
-[ext_resource type="Texture2D" uid="uid://58y7q8m16rlq" path="res://Images/acariciar/acariciar0009.png" id="45_0s5n3"]
+[ext_resource type="Texture2D" uid="uid://bjqp18o0krr2b" path="res://Images/acariciar centrado/acariciarcentrado0009.png" id="45_cma8n"]
 [ext_resource type="Texture2D" uid="uid://drvsthgclasin" path="res://Images/TITULO.png" id="45_g40rn"]
-[ext_resource type="Texture2D" uid="uid://dt2rybhfnqdam" path="res://Images/acariciar/acariciar0010.png" id="46_anjjl"]
+[ext_resource type="Texture2D" uid="uid://bfy7qfxwp0480" path="res://Images/acariciar centrado/acariciarcentrado0010.png" id="46_4uxgl"]
 [ext_resource type="FontFile" uid="uid://djlc0jlsskgd8" path="res://fuentes/Witches Friend Script.ttf" id="46_wc5us"]
-[ext_resource type="Texture2D" uid="uid://co8qicypyltrs" path="res://Images/acariciar/acariciar0011.png" id="47_fur70"]
+[ext_resource type="Texture2D" uid="uid://cq7vgejw16jdd" path="res://Images/acariciar centrado/acariciarcentrado0011.png" id="47_p36o0"]
 [ext_resource type="Texture2D" uid="uid://ddbdc28moknao" path="res://Images/cosas salon/sofa y reposapies.png" id="48_d4wyc"]
-[ext_resource type="Texture2D" uid="uid://nttle552uvk1" path="res://Images/acariciar/acariciar0012.png" id="48_do1ui"]
-[ext_resource type="Texture2D" uid="uid://cbici5lifii7w" path="res://Images/acariciar/acariciar0013.png" id="49_6wp5i"]
-[ext_resource type="Texture2D" uid="uid://cqx0h0u6mmjyc" path="res://Images/acariciar/acariciar0014.png" id="50_fuyg2"]
-[ext_resource type="Texture2D" uid="uid://b6nah8iowjv5s" path="res://Images/acariciar/acariciar0015.png" id="51_4q44e"]
+[ext_resource type="Texture2D" uid="uid://dygso6tkkvar" path="res://Images/acariciar centrado/acariciarcentrado0012.png" id="48_mg7y6"]
+[ext_resource type="Texture2D" uid="uid://vgmm6477jvwm" path="res://Images/idle centrado/idlecentrado0001.png" id="49_yh7nr"]
+[ext_resource type="Texture2D" uid="uid://cp4ioln1frhdm" path="res://Images/idle centrado/idlecentrado0002.png" id="50_bj041"]
+[ext_resource type="Texture2D" uid="uid://bl5dt57l2w1ch" path="res://Images/idle centrado/idlecentrado0003.png" id="51_mc6j7"]
+[ext_resource type="Texture2D" uid="uid://c7ps0xw2qtfnf" path="res://Images/idle centrado/idlecentrado0004.png" id="52_ho6fp"]
+[ext_resource type="Texture2D" uid="uid://b8ubnun4xx4x3" path="res://Images/idle centrado/idlecentrado0005.png" id="53_yjaa6"]
+[ext_resource type="Texture2D" uid="uid://b5vuojhuxvxts" path="res://Images/idle centrado/idlecentrado0006.png" id="54_0l11m"]
+[ext_resource type="Texture2D" uid="uid://ck401oqi7uupq" path="res://Images/idle centrado/idlecentrado0007.png" id="55_baggq"]
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
@@ -88,9 +84,9 @@
 [ext_resource type="Texture2D" uid="uid://tdlj1pxuxk18" path="res://Images/comic del principio/comic6.png" id="74_sdavg"]
 [ext_resource type="Texture2D" uid="uid://sih6kut2kuqn" path="res://Images/comic del principio/comic7.png" id="75_7b52c"]
 [ext_resource type="Texture2D" uid="uid://ttwck73oiyj0" path="res://Images/comic del principio/comic8.png" id="76_6sf4n"]
-[ext_resource type="PackedScene" uid="uid://d01k3lj37o4ew" path="res://Scenes/cat.tscn" id="76_dhhc0"]
 [ext_resource type="PackedScene" uid="uid://dpxk6i0v0e85o" path="res://Scenes/Estrofa_anim_FinalA.tscn" id="76_yj7jp"]
 [ext_resource type="PackedScene" uid="uid://dphbgkys8t8ow" path="res://Scenes/Estrofa_anim_FinalB.tscn" id="77_b487o"]
+[ext_resource type="PackedScene" uid="uid://cgijylqb4lsq6" path="res://Scenes/cat2.tscn" id="87_47kyd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pdo1l"]
 shader = ExtResource("3_nfp3t")
@@ -174,13 +170,16 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("37_wvq4a")
+"texture": ExtResource("38_3sh72")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_38wyi")
+"texture": ExtResource("39_dwser")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_olc0y")
+"texture": ExtResource("40_k6fth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0bme3")
 }],
 "loop": false,
 "name": &"acariciar_1",
@@ -188,73 +187,55 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_olc0y")
+"texture": ExtResource("42_q7cw3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_y1yob")
+"texture": ExtResource("43_71stg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_2cpmy")
+"texture": ExtResource("44_8rgmy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_t2phf")
+"texture": ExtResource("45_cma8n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_8v445")
+"texture": ExtResource("46_4uxgl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_au5km")
+"texture": ExtResource("47_p36o0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_0s5n3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_anjjl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_fur70")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_do1ui")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_6wp5i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_fuyg2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_4q44e")
+"texture": ExtResource("48_mg7y6")
 }],
 "loop": true,
 "name": &"acariciar_2",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("30_jmnmp")
+"texture": ExtResource("49_yh7nr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_vwjjs")
+"texture": ExtResource("50_bj041")
 }, {
 "duration": 2.0,
-"texture": ExtResource("32_2d3qg")
+"texture": ExtResource("51_mc6j7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_ostsi")
+"texture": ExtResource("52_ho6fp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_si0f2")
+"texture": ExtResource("53_yjaa6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_4pbga")
+"texture": ExtResource("54_0l11m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_f212t")
+"texture": ExtResource("55_baggq")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ou4gg"]
@@ -428,108 +409,6 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvr4g"]
 
-[sub_resource type="Animation" id="Animation_3l07b"]
-resource_name = "Final2"
-length = 39.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(18.6667, 23.4667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(363, 604), Vector2(1887, -1085)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera2D:position_smoothing_enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera2D:zoom")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 18.7667, 21.8667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.5, 1.5)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("PJ/AnimatedSprite2D:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_5mp4c"]
-resource_name = "Final1"
-length = 40.0
-
-[sub_resource type="Animation" id="Animation_b4r58"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position_smoothing_enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera2D:zoom")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, 2)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(363, 604)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojhjg"]
-_data = {
-"FinalA": SubResource("Animation_3l07b"),
-"FinalB": SubResource("Animation_5mp4c"),
-"RESET": SubResource("Animation_b4r58")
-}
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
 
@@ -558,48 +437,50 @@ position = Vector2(-534, 139)
 texture = ExtResource("2_ouf3b")
 
 [node name="CieloPlaceholder" type="Sprite2D" parent="."]
-position = Vector2(1985, -1417)
-scale = Vector2(1.93069, 1.84475)
+position = Vector2(1985, -1495)
+scale = Vector2(2.2, 2.102)
 texture = ExtResource("2_2fuvx")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(47, 19)
-
-[node name="Nube1" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube1" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2731, -1270)
+position = Vector2(2778, -1251)
 texture = ExtResource("4_u7bpo")
 
-[node name="Nube5" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube5" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(1074, -1785)
+position = Vector2(1355, -2120)
 texture = ExtResource("4_u7bpo")
 
-[node name="Nube2" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2141, -1484)
+position = Vector2(2188, -1465)
 texture = ExtResource("5_gdafl")
 
-[node name="Nube4" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube4" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(829, -975)
+position = Vector2(876, -956)
 texture = ExtResource("5_gdafl")
 
-[node name="Nube3" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube3" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(1550, -1232)
+position = Vector2(1597, -1213)
 texture = ExtResource("6_uw50t")
 
-[node name="Nube6" type="Sprite2D" parent="Parallax2D"]
+[node name="Nube6" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_pdo1l")
-position = Vector2(2749, -1741)
+position = Vector2(2796, -1722)
+texture = ExtResource("6_uw50t")
+
+[node name="Nube7" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+material = SubResource("ShaderMaterial_pdo1l")
+position = Vector2(668, -1512)
 texture = ExtResource("6_uw50t")
 
 [node name="Salon" type="Sprite2D" parent="."]
@@ -882,17 +763,20 @@ imagen = ExtResource("24_wfr3v")
 cancion = "Estrofa 3B.wav"
 anim = 6
 
+[node name="Cat2" parent="." instance=ExtResource("87_47kyd")]
+position = Vector2(1883, -922)
+
+[node name="Cat cocina" parent="." instance=ExtResource("87_47kyd")]
+position = Vector2(1735, 690)
+
 [node name="PJ" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(227, 615)
+position = Vector2(234, 601)
 motion_mode = 1
 script = ExtResource("4_hxefk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PJ"]
 modulate = Color(1, 1, 1, 0.784314)
-position = Vector2(105, -13)
 sprite_frames = SubResource("SpriteFrames_dgg74")
-animation = &"acariciar_1"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PJ"]
@@ -1100,11 +984,6 @@ shape = SubResource("RectangleShape2D_wvr4g")
 
 [node name="EstrofaAnim" parent="." instance=ExtResource("31_7lenv")]
 
-[node name="Finales" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ojhjg")
-}
-
 [node name="Comic" type="Node2D" parent="."]
 light_mask = 2
 z_index = 2
@@ -1195,16 +1074,8 @@ position = Vector2(1440, -810)
 [node name="EstrofaAnim5" parent="." instance=ExtResource("71_i5x32")]
 position = Vector2(1440, -810)
 
-[node name="Cat" parent="." instance=ExtResource("76_dhhc0")]
-position = Vector2(1760, 710)
-
-[node name="Cat2" parent="." instance=ExtResource("76_dhhc0")]
-position = Vector2(1878, -922)
-
 [node name="EstrofaAnim6" parent="." instance=ExtResource("76_yj7jp")]
 position = Vector2(1440, -1620)
 
 [node name="EstrofaAnim7" parent="." instance=ExtResource("77_b487o")]
 position = Vector2(1440, -1620)
-
-[connection signal="animation_finished" from="Finales" to="." method="_on_finales_animation_finished"]

@@ -5,6 +5,7 @@ const SPEED = 350
 const ACCELERATION = 800
 const DRAG = 300
 var can_move = false
+var finishloop = false
 
 var target_angle = 6 #cosas tween
 const ROTATION_DURATION = 1.5
@@ -22,19 +23,20 @@ func _ready():
 func start_rotation():
 	if tween:  # Si hay un tween activo, detenerlo
 		tween.kill()
-		
-	tween = get_tree().create_tween()
-
-	tween.tween_property(
-		self,                  # Nodo objetivo
-		"rotation",             # Propiedad a interpolar
-		deg_to_rad(target_angle),         # Valor final
-		ROTATION_DURATION         # Duración
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	target_angle = -target_angle
+	if(finishloop == false):	
+		tween = get_tree().create_tween()
 
-	tween.connect("finished",Callable(self,"start_rotation"))
+		tween.tween_property(
+			self,                  # Nodo objetivo
+			"rotation",             # Propiedad a interpolar
+			deg_to_rad(target_angle),         # Valor final
+			ROTATION_DURATION         # Duración
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		
+		target_angle = -target_angle
+
+		tween.connect("finished",Callable(self,"start_rotation"))
 
 func _on_tween_completed():
 	# Cambiar la dirección de rotación
@@ -62,10 +64,10 @@ func _physics_process(delta):
 	if direction_R != 0 && can_move:
 		velocity.x = move_toward(velocity.x, direction_R * SPEED, ACCELERATION * delta)
 		
-		#if direction_R < 0:
-		#	$AnimatedSprite2D.flip_h = true 
-		#else:
-		#	$AnimatedSprite2D.flip_h = false 
+		if direction_R < 0:
+			$AnimatedSprite2D.flip_h = true 
+		else:
+			$AnimatedSprite2D.flip_h = false 
 			
 	else:
 		velocity.x = move_toward(velocity.x, 0, DRAG * delta)
