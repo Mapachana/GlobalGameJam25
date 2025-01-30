@@ -12,12 +12,19 @@ var nivel
 var ultima_decision = 0
 
 var current_scene = null
+
+var timer_music = null
+
+var start_loop = 0
+var end_loop = 54
  
+var tween_musica
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
+	
 	pass # Replace with function body.
 
 
@@ -35,46 +42,75 @@ func setupmusica(eleccion):
 	var fichero_quedarse = "A definitivo.mp3"
 	var fichero_irse = "B definitivo.mp3"
 	var pos = 0
+	var sec_timer = 0
 	
 	if eleccion == "C":
 		print("WTF")
 	
 	print("SETUPMUSICA")
 	
+	if tween_musica:
+		tween_musica.kill()
+	nodo_musica.volume_db = 0
 	match ultima_decision:
 		0:
 			if eleccion == "A":
 				pos = 0
 			else:
 				pos = 0
+			
 			nodo_musica.stream = load(ruta+fichero_quedarse)
+			
+			sec_timer = 53
 
 		1:
 			if eleccion == "A":
 				pos = 56
 				nodo_musica.stream = load(ruta+fichero_quedarse)
-
+				
+				sec_timer = 96
 			else:
 				pos = 0
 				nodo_musica.stream = load(ruta+fichero_irse)
+				
+				sec_timer = 96
 
 		2:
 			if eleccion == "A":
 				pos = 156
 				nodo_musica.stream = load(ruta+fichero_quedarse)
+				
+				sec_timer = 97
 
 			else:
 				pos = 100
 				nodo_musica.stream = load(ruta+fichero_irse)
+				
+				sec_timer = 96
+			
 		3:
 			if eleccion == "A":
 				pos = 256
 				nodo_musica.stream = load(ruta+fichero_quedarse)
+				
+				sec_timer = 44
+				
 
 			else:
 				pos = 200
 				nodo_musica.stream = load(ruta+fichero_irse)
+				
+				sec_timer = 47
 			
+			if timer_music:
+				timer_music.stop()
+	
+	if ultima_decision != 3:
+		print("bb")
+		timer_music.autostart = true
+		timer_music.wait_time = sec_timer
+		timer_music.start()
+		print(timer_music.wait_time)
 	
 	print("DECISION")
 	print(ultima_decision)
@@ -86,6 +122,19 @@ func setupmusica(eleccion):
 	print("dec")
 	print(ultima_decision)
 
+func timer_musica():
+	print("TIMER")
+	tween_musica = get_tree().create_tween()
+#AQUI HAY QUE PONER EL SONIDO DE INICIO
+	tween_musica.tween_property(
+		nodo_musica,                  # Nodo objetivo
+		"volume_db",             # Propiedad a interpolar
+		-60,         # Valor final
+		2        # Duración
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	print("AAAAAAAAAAAA TIMER")
+
 
 func musica_final():
 	var ruta = "res://Music/desesperacion/"
@@ -96,6 +145,10 @@ func musica_final():
 	else:
 		nodo_musica.stream = load(ruta+fichero_irse)
 	
+	if tween_musica:
+		tween_musica.kill()
+	nodo_musica.volume_db = 0
+	print("musica final")
 	nodo_musica.play()
 
 	

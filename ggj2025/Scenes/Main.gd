@@ -9,7 +9,7 @@ extends Node2D
 @onready var animacionE5 = $EstrofaAnim4/AnimationPlayer
 @onready var animacionE6 = $EstrofaAnim5/AnimationPlayer
 
-const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL
+const DURACION_ESTROFA = 44 #CAMBIAR ANTES DEL FINAL 44
 const DURACION_MINITRANS = 1
 
 #variables de cosas del control de cámara
@@ -23,11 +23,18 @@ var has_started = false
 # Contador de decisiones
 var cont_decision = 0
 
+@onready var timerr = $TimerMusica
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ScriptGlobal.nivel = self
 	ScriptGlobal.nodo_musica = $AudioStreamPlayer
 	ScriptGlobal.cont_decision = cont_decision
+	timerr = Timer.new()
+	ScriptGlobal.timer_music = $TimerMusica
+	
+	
+	
 	
 
 	#ScriptGlobal.setupmusica("A")
@@ -418,4 +425,10 @@ func room4_camera_1():
 func _on_finales_animation_finished(anim_name: StringName) -> void:
 	await get_tree().create_timer(39).timeout  #espera a que termine la estrofa
 	ScriptGlobal.goto_scene("res://Scenes/mainmenu.tscn")
+	pass # Replace with function body.
+
+
+func _on_timer_musica_timeout() -> void:
+	print("llamod esde main a timer")
+	ScriptGlobal.timer_musica()
 	pass # Replace with function body.
