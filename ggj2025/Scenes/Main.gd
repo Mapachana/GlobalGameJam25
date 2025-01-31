@@ -32,7 +32,7 @@ func _ready():
 	ScriptGlobal.cont_decision = cont_decision
 	timerr = Timer.new()
 	ScriptGlobal.timer_music = $TimerMusica
-	
+	ScriptGlobal.ha_empezado = has_started
 	
 	
 	

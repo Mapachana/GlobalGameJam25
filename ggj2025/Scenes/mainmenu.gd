@@ -12,5 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	#ScriptGlobal.current_scene.queue_free()
+	ScriptGlobal.reset_var()
 	ScriptGlobal.goto_scene("res://Scenes/Main.tscn")
 	pass # Replace with function body.

@@ -20,6 +20,8 @@ var end_loop = 54
  
 var tween_musica
 
+var ha_empezado = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var root = get_tree().root
@@ -150,6 +152,18 @@ func musica_final():
 	nodo_musica.volume_db = 0
 	print("musica final")
 	nodo_musica.play()
+
+func reset_var():
+	nodo_musica = null
+
+# Contador de decisiones del nivel
+	cont_decision = 0
+	
+	ha_empezado = false
+
+	ultima_decision = 0
+
+	timer_music = null
 
 	
 func acariciar_gato():
