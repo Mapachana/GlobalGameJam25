@@ -1,0 +1,107 @@
+[gd_scene load_steps=22 format=3 uid="uid://bpo5d10eglqim"]
+
+[ext_resource type="Script" path="res://Scenes/cat_2.gd" id="1_o526m"]
+[ext_resource type="Texture2D" uid="uid://dfsa232fl75qk" path="res://Images/gatoandar centrado/gatoandarcentrado0001.png" id="2_hunw5"]
+[ext_resource type="Texture2D" uid="uid://cielwafnu5j2h" path="res://Images/gatoandar centrado/gatoandarcentrado0002.png" id="3_joywf"]
+[ext_resource type="Texture2D" uid="uid://bidr36j2urf1d" path="res://Images/gatoandar centrado/gatoandarcentrado0003.png" id="4_kaif3"]
+[ext_resource type="Texture2D" uid="uid://cnna557d352hp" path="res://Images/gatoandar centrado/gatoandarcentrado0004.png" id="5_3xcb0"]
+[ext_resource type="Texture2D" uid="uid://qlos2wwd8ud5" path="res://Images/gatoandar centrado/gatoandarcentrado0005.png" id="6_ewdr1"]
+[ext_resource type="Texture2D" uid="uid://br8j0vdnhxj4o" path="res://Images/gatoandar centrado/gatoandarcentrado0006.png" id="7_1hasp"]
+[ext_resource type="Texture2D" uid="uid://s83pdslpemti" path="res://Images/gatoandar centrado/gatoandarcentrado0007.png" id="8_4xf24"]
+[ext_resource type="Texture2D" uid="uid://cum22wfqa6pn0" path="res://Images/gatoandar centrado/gatoandarcentrado0008.png" id="9_q7bp8"]
+[ext_resource type="Texture2D" uid="uid://dswlsabcu8sqr" path="res://Images/gatoidle centrado/gatoidlecentrado0001.png" id="10_g1qg5"]
+[ext_resource type="Texture2D" uid="uid://b0qv87r38oxmx" path="res://Images/gatoidle centrado/gatoidlecentrado0002.png" id="11_i8m70"]
+[ext_resource type="Texture2D" uid="uid://covoxkit13lo5" path="res://Images/gatoidle centrado/gatoidlecentrado0003.png" id="12_0tk0i"]
+[ext_resource type="Texture2D" uid="uid://dqf3y4swf2gbr" path="res://Images/gatoidle centrado/gatoidlecentrado0004.png" id="13_aajpu"]
+[ext_resource type="Texture2D" uid="uid://baeaxj83f4n53" path="res://Images/gatoacariciar centrado/acariciar0001.png" id="14_8bgjj"]
+[ext_resource type="Texture2D" uid="uid://2wivma7c20ph" path="res://Images/gatoacariciar centrado/acariciar0002.png" id="15_govlb"]
+[ext_resource type="Texture2D" uid="uid://b54vetk2rw6ky" path="res://Images/gatoacariciar centrado/acariciar0003.png" id="16_4mc4i"]
+[ext_resource type="Texture2D" uid="uid://diaaxao8mr0wr" path="res://Images/gatoacariciar centrado/acariciar0004.png" id="17_7e4y8"]
+[ext_resource type="Texture2D" uid="uid://d3jgbieiuv8na" path="res://Images/gatoacariciar centrado/acariciar0005.png" id="18_rb375"]
+[ext_resource type="Texture2D" uid="uid://xyfpic1dwf51" path="res://Images/gatoacariciar centrado/acariciar0006.png" id="19_3sw2y"]
+[ext_resource type="Texture2D" uid="uid://cthgr5d3he8gw" path="res://Images/gatoacariciar centrado/acariciar0007.png" id="20_ox6gl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5qret"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hunw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_joywf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kaif3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3xcb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ewdr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1hasp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4xf24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q7bp8")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_g1qg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i8m70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0tk0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aajpu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("14_8bgjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_govlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4mc4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7e4y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rb375")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3sw2y")
+}, {
+"duration": 6.0,
+"texture": ExtResource("20_ox6gl")
+}],
+"loop": true,
+"name": &"pet",
+"speed": 12.0
+}]
+
+[node name="Cat" type="Node2D"]
+script = ExtResource("1_o526m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5qret")
+animation = &"pet"
+autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

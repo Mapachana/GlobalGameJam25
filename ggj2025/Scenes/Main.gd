@@ -164,7 +164,9 @@ func activar_animacion(numero):
 			$Obj4.desaparecer()
 			animacionE3.play("estrofa")
 			print("He hecho play de 3")
-			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout  #espera a que termine la estrofa
+			$CatCocina.visible=false
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout
 			pj.can_move = true
 			room2_camera_1()
 		4:
@@ -172,7 +174,9 @@ func activar_animacion(numero):
 			$Obj4.desaparecer()
 			animacionE4.play("estrofa")
 			print("He hecho play de 4")
-			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout  #espera a que termine la estrofa
+			$CatCocina.visible=false
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout
 			pj.can_move = true
 			room2_camera_1()
 		5:			
@@ -180,7 +184,9 @@ func activar_animacion(numero):
 			$Obj6.desaparecer()
 			animacionE5.play("estrofa")
 			print("He hecho play de 5")
-			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout  #espera a que termine la estrofa
+			$CatCuarto.visible=false
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout
 			pj.can_move = true
 			room3_camera_1()
 		6:
@@ -188,7 +194,9 @@ func activar_animacion(numero):
 			$Obj6.desaparecer()
 			animacionE6.play("estrofa")
 			print("He hecho play de 6")
-			await get_tree().create_timer(DURACION_ESTROFA).timeout  #espera a que termine la estrofa
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout  #espera a que termine la estrofa
+			$CatCuarto.visible=false
+			await get_tree().create_timer(DURACION_ESTROFA/2).timeout
 			pj.can_move = true
 			room3_camera_1()
 			
@@ -200,6 +208,7 @@ func activar_animacion(numero):
 	
 func begin_game_1():
 	#Animación de cámara para enfocar la sala 1
+	$AnimGatos.play("GatoCocina")
 	camera_follows = false
 	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
 	var tween = get_tree().create_tween()
@@ -269,7 +278,7 @@ func room2_camera():
 	
 func room2_camera_1():
 	#await get_tree().create_timer(2).timeout  #ESPERAR A ELEGIR OBJETO
-	
+	$AnimGatos.play("GatoDormitorio")
 	camera_follows = false
 	var tween = get_tree().create_tween()
 

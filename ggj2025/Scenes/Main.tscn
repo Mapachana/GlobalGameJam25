@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://bqak8awkxwt4m"]
+[gd_scene load_steps=121 format=3 uid="uid://bqak8awkxwt4m"]
 
 [ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nxvp8"]
 [ext_resource type="Texture2D" uid="uid://c0wixk35j0yrm" path="res://Images/cielo placeholder.png" id="2_2fuvx"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://30ds5amj75rs" path="res://Images/cosas salon/fuego animacion/fuego 3.png" id="9_yfbeq"]
 [ext_resource type="Texture2D" uid="uid://6x5xjg8wkvsw" path="res://Images/cosas salon/fuego animacion/fuego 4.png" id="10_tfqec"]
 [ext_resource type="Texture2D" uid="uid://drnpgi7pmcc42" path="res://Images/cocina/cocina fondo.png" id="12_63q05"]
-[ext_resource type="PackedScene" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
+[ext_resource type="PackedScene" uid="uid://du4yd8papaddt" path="res://Scenes/Objeto_anim.tscn" id="12_rexyk"]
 [ext_resource type="Texture2D" uid="uid://dd2kr3ghadcmh" path="res://Images/cocina/marco cocina (1).png" id="13_i8347"]
 [ext_resource type="Texture2D" uid="uid://dugal1afo1jdw" path="res://Images/cocina/encimera.png" id="14_wi0mp"]
 [ext_resource type="Texture2D" uid="uid://bpmn5gb3gp4d8" path="res://Images/cocina/cuencos.png" id="17_0b3ln"]
@@ -33,10 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://bh80yfqkyhkpd" path="res://Images/estudio/pluma y tintero.png" id="26_y2mfo"]
 [ext_resource type="PackedScene" uid="uid://cn4vkdw2tsnmq" path="res://Scenes/Objeto2.tscn" id="29_si3sq"]
 [ext_resource type="PackedScene" uid="uid://cajr53a1en2na" path="res://Scenes/Objeto3.tscn" id="30_drx7s"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
+[ext_resource type="PackedScene" uid="uid://d0k865fill0bf" path="res://Scenes/Estrofa_anim_A.tscn" id="31_7lenv"]
 [ext_resource type="PackedScene" uid="uid://cc00daoysjxu6" path="res://Scenes/Objeto4.tscn" id="31_rnbpu"]
 [ext_resource type="Texture2D" uid="uid://2dj7butiymn" path="res://Images/vignette.png" id="34_kqd0y"]
 [ext_resource type="Texture2D" uid="uid://dy02xfu0cnidq" path="res://Images/detalle luz1.png" id="37_w7hww"]
+[ext_resource type="PackedScene" uid="uid://bpo5d10eglqim" path="res://Scenes/cat_pettable.tscn" id="37_wp03k"]
 [ext_resource type="Texture2D" uid="uid://6u4mfpod7jik" path="res://Images/acariciar centrado/acariciarcentrado0001.png" id="38_3sh72"]
 [ext_resource type="Texture2D" uid="uid://bo4llvqcvwy3x" path="res://Images/ilum suelo 2.png" id="38_68v08"]
 [ext_resource type="Texture2D" uid="uid://wqvxnakql30v" path="res://Images/ilum2.png" id="38_aecbm"]
@@ -71,11 +72,11 @@
 [ext_resource type="Texture2D" uid="uid://bg2ochegero2l" path="res://Images/cocina/planta colgante.png" id="59_fb0l2"]
 [ext_resource type="PackedScene" uid="uid://bt2pusam2jl08" path="res://Scenes/Objeto1.tscn" id="67_dh8yg"]
 [ext_resource type="Texture2D" uid="uid://doei2q0o2fb58" path="res://Images/fondo negro.png" id="68_56saj"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
+[ext_resource type="PackedScene" uid="uid://cpjjtnjjaeku" path="res://Scenes/Estrofa_anim_B.tscn" id="68_fl2l4"]
 [ext_resource type="Texture2D" uid="uid://b6lph0o1kb566" path="res://Images/comic del principio/comic1.png" id="69_a2kew"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
-[ext_resource type="PackedScene" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
+[ext_resource type="PackedScene" uid="uid://b00whpv2mbiyi" path="res://Scenes/Estrofa_anim_2B.tscn" id="69_macof"]
+[ext_resource type="PackedScene" uid="uid://cjd7wemj6xopr" path="res://Scenes/Estrofa_anim_2A.tscn" id="69_ym8xt"]
+[ext_resource type="PackedScene" uid="uid://d3hooksholg8d" path="res://Scenes/Estrofa_anim_3A.tscn" id="70_wrsnf"]
 [ext_resource type="Texture2D" uid="uid://cr3s6rem6k2u5" path="res://Images/comic del principio/comic2.png" id="70_x5lkr"]
 [ext_resource type="PackedScene" uid="uid://doxn3jpg80uu" path="res://Scenes/Estrofa_anim_3B.tscn" id="71_i5x32"]
 [ext_resource type="Texture2D" uid="uid://3gqhs5l6pgwp" path="res://Images/comic del principio/comic3.png" id="71_xtf5y"]
@@ -408,6 +409,105 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvr4g"]
+
+[sub_resource type="Animation" id="Animation_qducx"]
+resource_name = "GatoCocina"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CatCocina:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1923, 689), Vector2(1649, 689)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CatCocina")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"walk"
+}, {
+"args": [],
+"method": &"idle"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_7fjff"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CatCocina:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1923, 689)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CatCuarto:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2019, -307)]
+}
+
+[sub_resource type="Animation" id="Animation_tnc0c"]
+resource_name = "GatoDormitorio"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CatCuarto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2019, -307), Vector2(2144, -307)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CatCuarto")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"walk"
+}, {
+"args": [],
+"method": &"idle"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6x6np"]
+_data = {
+"GatoCocina": SubResource("Animation_qducx"),
+"GatoDormitorio": SubResource("Animation_tnc0c"),
+"RESET": SubResource("Animation_7fjff")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxvp8")
@@ -766,8 +866,12 @@ anim = 6
 [node name="Cat2" parent="." instance=ExtResource("87_47kyd")]
 position = Vector2(1883, -922)
 
-[node name="Cat cocina" parent="." instance=ExtResource("87_47kyd")]
-position = Vector2(1735, 690)
+[node name="CatCocina" parent="." instance=ExtResource("37_wp03k")]
+position = Vector2(1923, 689)
+scale = Vector2(-1, 1)
+
+[node name="CatCuarto" parent="." instance=ExtResource("37_wp03k")]
+position = Vector2(2019, -307)
 
 [node name="PJ" type="CharacterBody2D" parent="."]
 visible = false
@@ -1083,5 +1187,10 @@ position = Vector2(1440, -1620)
 
 [node name="TimerMusica" type="Timer" parent="."]
 one_shot = true
+
+[node name="AnimGatos" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6x6np")
+}
 
 [connection signal="timeout" from="TimerMusica" to="." method="_on_timer_musica_timeout"]

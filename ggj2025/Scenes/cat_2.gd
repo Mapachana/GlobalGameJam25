@@ -11,5 +11,10 @@ func _process(delta):
 	pass
 
 func acariciar():
-	position += Vector2(64,-107)
-	$AnimatedSprite2D.play("acariciar")
+	$AnimatedSprite2D.play("pet")
+
+func idle():
+	$AnimatedSprite2D.play("idle")
+	
+func walk():
+	$AnimatedSprite2D.play("Move")
